@@ -1,21 +1,15 @@
 /**
- * app.js — Entry point. Wires up every module needed by the sections
- * currently built (header navigation + Hero). Later stages register
- * themselves here without touching what's already wired.
+ * app.js — Bastione application entry point.
  */
 
 import { initThemeSwitcher } from './modules/theme-switcher.js';
 import { initNavigation } from './modules/navigation.js';
-import { initReveal } from './modules/observer.js';
-import { initDashboard } from './modules/dashboard.js';
-import { initI18n } from './modules/i18n.js?v=20260724-2';
-import { initProductModal } from './modules/product-modal.js';
+import { initI18n } from './modules/i18n.js';
+import { initHeader } from './modules/header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeSwitcher();
   initNavigation();
-  initReveal();
-  initDashboard();
   initI18n();
-  initProductModal();
+  initHeader();
 });

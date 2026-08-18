@@ -59,7 +59,7 @@ export function initNavigation() {
   // Collapse the mobile menu automatically if the viewport grows
   // into the desktop breakpoint while it's open.
   window.addEventListener('resize', () => {
-    if (isOpen && window.innerWidth >= 960) {
+    if (isOpen && window.innerWidth >= 1180) {
       isOpen = false;
       setMenuState(toggleBtn, menu, false);
     }

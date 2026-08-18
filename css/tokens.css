@@ -1,50 +1,93 @@
 /**
- * tokens.css — VIRTUHAI Design Tokens
- * ----------------------------------------------------------------
- * Single source of truth for color, type, spacing and motion.
- * Values below were sampled directly from the approved mockups
- * (LANDING_DESIGN1*.jpg) so implementation stays color-accurate.
- * Only primitives live here — no component-specific rules.
+ * tokens.css — Bastione Design System
+ *
+ * Editorial hospitality / Lake Garda / contemporary Italian restaurant.
+ * All primitive design values live here.
  */
 
-:root {
-  /* ── Color: dark theme (default) ───────────────────────────── */
-  --color-void: #04060b;             /* page background */
-  --color-surface: #0a0f1a;          /* header, panels, elevated blocks */
-  --color-surface-raised: #10182a;   /* solid buttons, hovered surfaces */
-  --color-surface-card: #0d1320;     /* feature / node cards on dark */
+ :root {
+  /* ─────────────────────────────────────────────────────────────
+     COLOR
+     ──────────────────────────────────────────────────────────── */
 
-  --color-signal: #0057d8;           /* primary accent — brand blue */
-  --color-signal-bright: #2e8bff;    /* lighter blue for lines/glow */
-  --color-signal-dim: #0a2a63;       /* deep blue for ambient glow */
+  --color-bg: #f3f1ec;
+  --color-surface: #faf9f6;
+  --color-surface-raised: #e9e6de;
+  --color-surface-dark: #1b1d1b;
 
-  --color-beacon: #f5790c;           /* secondary accent — brand orange */
-  --color-beacon-bright: #ff9a3d;    /* lighter orange for hover/glow */
+  --color-ink: #20221f;
+  --color-ink-soft: #555852;
+  --color-ink-faint: #777a73;
 
-  --color-ink: #f5f6f8;              /* primary text on dark */
-  --color-mist: #8891a0;             /* muted text on dark */
-  --color-line: rgba(245, 246, 248, 0.10); /* hairlines / borders on dark */
+  --color-line: rgba(32, 34, 31, 0.14);
+  --color-line-strong: rgba(32, 34, 31, 0.24);
 
-  /* ── Typography ─────────────────────────────────────────────── */
-  --font-sans: 'Inter', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-accent: #7d8068;
+  --color-accent-dark: #656851;
 
-  --fs-hero: clamp(2.25rem, 3.4vw + 1.2rem, 3.55rem);
-  --fs-h2: clamp(1.55rem, 1.5vw + 1.1rem, 2.25rem);
-  --fs-h3: clamp(1.25rem, 0.6vw + 1rem, 1.5rem);
+  --color-white: #ffffff;
+
+  /* Dark theme */
+  --dark-bg: #171916;
+  --dark-surface: #20231f;
+  --dark-surface-raised: #292c27;
+
+  --dark-ink: #f1eee7;
+  --dark-ink-soft: #bdbcb2;
+  --dark-ink-faint: #898b83;
+
+  --dark-line: rgba(241, 238, 231, 0.15);
+  --dark-line-strong: rgba(241, 238, 231, 0.25);
+
+  --dark-accent: #a9aa8f;
+
+
+  /* ─────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ──────────────────────────────────────────────────────────── */
+
+  --font-display: Georgia, 'Times New Roman', serif;
+
+  --font-sans:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+
+  --fs-hero:
+    clamp(3.25rem, 8vw, 8.5rem);
+
+  --fs-display:
+    clamp(2.75rem, 5vw, 5.75rem);
+
+  --fs-h2:
+    clamp(2.2rem, 4vw, 4.5rem);
+
+  --fs-h3:
+    clamp(1.4rem, 2vw, 2rem);
+
   --fs-body: 1rem;
-  --fs-extrasmall: 0.675rem;
-  --fs-small: 0.875rem;
-  --fs-eyebrow: 0.8125rem;
-  --fs-label: 0.75rem;
+  --fs-body-large: clamp(1.1rem, 1.2vw, 1.35rem);
 
-  --lh-tight: 1.15;
+  --fs-small: 0.82rem;
+  --fs-label: 0.68rem;
+
+  --lh-tight: 0.98;
+  --lh-display: 1.05;
   --lh-normal: 1.6;
 
-  --tracking-tight: -0.01em;
-  --tracking-wide: 0.09em;
-  --tracking-wider: 0.14em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.12em;
+  --tracking-wider: 0.2em;
 
-  /* ── Spacing scale (4px base) ───────────────────────────────── */
+
+  /* ─────────────────────────────────────────────────────────────
+     SPACING
+     ──────────────────────────────────────────────────────────── */
+
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -55,50 +98,76 @@
   --space-10: 5rem;
   --space-12: 6rem;
   --space-16: 8rem;
+  --space-20: 10rem;
+  --space-24: 12rem;
 
-  /* ── Layout ─────────────────────────────────────────────────── */
-  --container-max: 1440px;
-  --container-pad: clamp(1.25rem, 4vw, 4rem);
-  --header-height: 76px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+
+  /* ─────────────────────────────────────────────────────────────
+     LAYOUT
+     ──────────────────────────────────────────────────────────── */
+
+  --container-max: 1600px;
+  --container-pad: clamp(1.25rem, 4vw, 5rem);
+
+  --header-height: 78px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
   --radius-pill: 999px;
 
-  /* ── Motion ─────────────────────────────────────────────────── */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-fast: 200ms;
-  --dur-med: 450ms;
-  --dur-slow: 900ms;
-  --dur-sweep: 6000ms;   /* orbit ring rotation — mirrors CONFIG.orbit.sweepDurationMs */
-  --dur-travel: 2600ms;  /* signal-dot travel along connector lines */
 
-  /* ── Z-index scale ──────────────────────────────────────────── */
+  /* ─────────────────────────────────────────────────────────────
+     MOTION
+     ──────────────────────────────────────────────────────────── */
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dur-fast: 180ms;
+  --dur-med: 400ms;
+  --dur-slow: 800ms;
+
+
+  /* ─────────────────────────────────────────────────────────────
+     Z-INDEX
+     ──────────────────────────────────────────────────────────── */
+
   --z-header: 100;
   --z-menu: 200;
+  --z-overlay: 300;
 }
 
-/* ── Light theme override ──────────────────────────────────────
-   Toggled via [data-theme="light"] on <html>, set by theme-switcher.js */
-[data-theme='light'] {
-  --color-void: #f1f1ef;
-  --color-surface: #ffffff;
-  --color-surface-raised: #eceef2;
-  --color-surface-card: #ffffff;
 
-  --color-signal-dim: #d8e6ff;
+/* ─────────────────────────────────────────────────────────────
+   DARK THEME
+   ──────────────────────────────────────────────────────────── */
 
-  --color-ink: #14161b;
-  --color-mist: #5b6270;
-  --color-line: rgba(20, 22, 27, 0.12);
+[data-theme='dark'] {
+  --color-bg: var(--dark-bg);
+  --color-surface: var(--dark-surface);
+  --color-surface-raised: var(--dark-surface-raised);
+
+  --color-ink: var(--dark-ink);
+  --color-ink-soft: var(--dark-ink-soft);
+  --color-ink-faint: var(--dark-ink-faint);
+
+  --color-line: var(--dark-line);
+  --color-line-strong: var(--dark-line-strong);
+
+  --color-accent: var(--dark-accent);
+  --color-accent-dark: #8f9179;
 }
+
+
+/* ─────────────────────────────────────────────────────────────
+   REDUCED MOTION
+   ──────────────────────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
   :root {
     --dur-fast: 0ms;
     --dur-med: 0ms;
     --dur-slow: 0ms;
-    --dur-sweep: 0ms;
-    --dur-travel: 0ms;
   }
 }

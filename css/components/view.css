@@ -1,0 +1,281 @@
+/**
+ * view.css — Bastione panoramic view section.
+ *
+ * Editorial composition:
+ * text + oversized photographic frame + location detail.
+ */
+
+ .view {
+    position: relative;
+  
+    padding-block: clamp(7rem, 13vw, 13rem);
+  
+    overflow: hidden;
+  
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     HEADER
+     ──────────────────────────────────────────────────────────── */
+  
+  .view__header {
+    display: grid;
+  
+    grid-template-columns:
+      minmax(0, 0.72fr)
+      minmax(0, 1.28fr);
+  
+    gap: clamp(3rem, 8vw, 9rem);
+  
+    align-items: end;
+  
+    margin-bottom: clamp(4rem, 8vw, 8rem);
+  }
+  
+  .view__intro {
+    max-width: 540px;
+  }
+  
+  .view__title {
+    margin-top: 1.5rem;
+  
+    max-width: 850px;
+  
+    font-family: var(--font-display);
+    font-size: var(--fs-h2);
+    font-weight: 400;
+  
+    line-height: 0.98;
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .view__description {
+    max-width: 44ch;
+  
+    margin-top: 1.75rem;
+  
+    color: var(--color-ink-soft);
+  
+    font-size: var(--fs-body-large);
+    line-height: 1.55;
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     PANORAMA
+     ──────────────────────────────────────────────────────────── */
+  
+  .view__visual {
+    position: relative;
+  
+    width: min(100%, 1380px);
+  
+    margin-left: auto;
+  }
+  
+  .view__image-frame {
+    position: relative;
+  
+    width: 100%;
+  
+    aspect-ratio: 16 / 9;
+  
+    overflow: hidden;
+  
+    background: var(--color-surface-raised);
+  }
+  
+  .view__image {
+    position: absolute;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    opacity: 0;
+  
+    transform: scale(1.015);
+  
+    transition:
+      opacity 900ms var(--ease-smooth),
+      transform 1400ms var(--ease-smooth);
+  }
+  
+  
+  /* Day is the default image */
+  
+  .view__image--day {
+    opacity: 1;
+  }
+  
+  
+  /* Dark theme switches to the evening panorama */
+  
+  [data-theme='dark'] .view__image--day {
+    opacity: 0;
+  }
+  
+  [data-theme='dark'] .view__image--night {
+    opacity: 1;
+  }
+  
+  
+  /* Subtle cinematic movement */
+  
+  .view__visual:hover .view__image {
+    transform: scale(1.035);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     IMAGE CAPTION
+     ──────────────────────────────────────────────────────────── */
+  
+  .view__caption {
+    display: flex;
+  
+    align-items: center;
+    justify-content: space-between;
+  
+    gap: 2rem;
+  
+    padding-top: 1rem;
+  
+    border-top: 1px solid var(--color-line);
+  
+    color: var(--color-ink-soft);
+  
+    font-size: var(--fs-label);
+    font-weight: 600;
+  
+    letter-spacing: var(--tracking-wide);
+  
+    text-transform: uppercase;
+  }
+  
+  .view__caption span:last-child {
+    color: var(--color-ink-faint);
+  
+    text-align: right;
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     LOCATION NOTE
+     ──────────────────────────────────────────────────────────── */
+  
+  .view__location {
+    display: grid;
+  
+    grid-template-columns:
+      minmax(180px, 0.55fr)
+      minmax(0, 1fr);
+  
+    gap: clamp(2rem, 8vw, 9rem);
+  
+    margin-top: clamp(5rem, 10vw, 10rem);
+  
+    padding-top: 1.5rem;
+  
+    border-top: 1px solid var(--color-line);
+  }
+  
+  .view__location-label {
+    color: var(--color-ink-faint);
+  
+    font-size: var(--fs-label);
+    font-weight: 600;
+  
+    letter-spacing: var(--tracking-wider);
+  
+    text-transform: uppercase;
+  }
+  
+  .view__location-text {
+    max-width: 680px;
+  
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 3.2rem);
+    font-weight: 400;
+  
+    line-height: 1.08;
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     DARK THEME
+     ──────────────────────────────────────────────────────────── */
+  
+  [data-theme='dark'] .view__image-frame {
+    background: var(--dark-surface-raised);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     RESPONSIVE
+     ──────────────────────────────────────────────────────────── */
+  
+  @media (max-width: 900px) {
+    .view__header {
+      grid-template-columns: 1fr;
+  
+      gap: 2rem;
+  
+      margin-bottom: 4rem;
+    }
+  
+    .view__description {
+      max-width: 60ch;
+    }
+  
+    .view__location {
+      grid-template-columns: 1fr;
+  
+      gap: 1.25rem;
+  
+      margin-top: 5rem;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .view {
+      padding-block: 5.5rem;
+    }
+  
+    .view__title {
+      font-size: clamp(2.5rem, 13vw, 4rem);
+    }
+  
+    .view__description {
+      font-size: 1rem;
+    }
+  
+    .view__image-frame {
+      aspect-ratio: 4 / 3;
+    }
+  
+    .view__caption {
+      align-items: flex-start;
+  
+      flex-direction: column;
+  
+      gap: 0.5rem;
+    }
+  
+    .view__caption span:last-child {
+      text-align: left;
+    }
+  
+    .view__location-text {
+      font-size: 2rem;
+    }
+  }

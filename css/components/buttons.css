@@ -1,82 +1,85 @@
 /**
- * buttons.css — Shared button/CTA styles used across all sections.
- * Three variants seen in the approved mockups:
- *   --outline-blue   e.g. "Explore Vision"
- *   --outline-orange e.g. "Roadmap"
- *   --solid-dark     e.g. header "Contact"
+ * buttons.css — Bastione actions.
  */
 
-.btn {
+ .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6em;
-  padding: 0.85rem 1.5rem;
+  justify-content: center;
+  gap: 0.75rem;
+
+  min-height: 48px;
+  padding: 0.8rem 1.35rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+
   font-family: var(--font-sans);
   font-size: var(--fs-small);
   font-weight: 600;
+
   letter-spacing: var(--tracking-wide);
+  line-height: 1;
+
   text-transform: uppercase;
   white-space: nowrap;
-  border-radius: var(--radius-md);
-  border: 1.5px solid transparent;
-  background: transparent;
-  transition: background var(--dur-fast) var(--ease-out),
-              border-color var(--dur-fast) var(--ease-out),
-              transform var(--dur-fast) var(--ease-out),
-              color var(--dur-fast) var(--ease-out);
+
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn:active {
   transform: translateY(0);
 }
 
-.btn svg {
-  width: 1.2em;
-  height: 1.2em;
+
+/* Primary */
+
+.btn--primary {
+  background: var(--color-ink);
+  color: var(--color-bg);
 }
 
-/* Primary action — blue outline */
-.btn--outline-blue {
-  border-color: var(--color-signal-bright);
-  color: var(--color-signal-bright);
+.btn--primary:hover {
+  background: var(--color-accent-dark);
 }
 
-.btn--outline-blue:hover {
-  background: color-mix(in srgb, var(--color-signal-bright) 12%, transparent);
+
+/* Outline */
+
+.btn--outline {
+  border-color: var(--color-line-strong);
+  color: var(--color-ink);
 }
 
-/* Secondary action — orange outline */
-.btn--outline-orange {
-  border-color: var(--color-beacon);
-  color: var(--color-beacon);
+.btn--outline:hover {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
 }
 
-.btn--outline-orange:hover {
-  background: color-mix(in srgb, var(--color-beacon) 12%, transparent);
+
+/* Light button for image overlays */
+
+.btn--light {
+  background: var(--color-white);
+  color: #20221f;
 }
 
-/* Tertiary / chrome action — solid dark, used in the header.
-   Deliberately NOT theme-variable: the mockup keeps this pill a fixed
-   dark accent in both light and dark mode rather than following
-   --color-surface-raised (which would make it blend into a light
-   page background). */
-.btn--solid-dark {
-  background: #14161b;
-  color: #f5f6f8;
-  border-color: transparent;
-  padding: 0.7rem 1.3rem;
+.btn--light:hover {
+  background: #eceae4;
 }
 
-.btn--solid-dark:hover {
-  background: #23262e;
-}
 
-/* Compact size used inside the mobile menu */
+/* Full width */
+
 .btn--block {
   width: 100%;
-  justify-content: center;
 }

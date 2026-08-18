@@ -1,381 +1,568 @@
 /**
- * hero.css — Hero section, rebuilt to match the approved mockups
- * (LANDING_DESIGN1*.jpg). Layout: two-column grid — copy + feature
- * badges on the left, the orbit diagram on the right — followed by
- * a full-bleed procedurally generated "night earth" band.
+ * hero.css — Bastione photographic hero.
+ *
+ * Full-screen editorial composition.
+ * Photography remains completely visible.
+ * Readability is created through typography, subtle shadows
+ * and a restrained top navigation gradient.
  */
 
-.hero {
-  position: relative;
-  isolation: isolate;
-  min-height: calc(100svh - var(--header-height));
-  overflow: hidden;
-  background: var(--color-void);
-}
 
-/* ── Grid ── */
-.hero__grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  grid-template-areas:
-    "content orbit"
-    "features orbit";
-  column-gap: var(--space-8);
-  row-gap: var(--space-4);
-  align-items: start;
-  padding-block: var(--space-8) var(--space-10);
-}
+/* ─────────────────────────────────────────────────────────────
+   HERO
+   ──────────────────────────────────────────────────────────── */
 
-.hero__content {
-  grid-area: content;
-  max-width: 640px;
-}
-
-.hero__content > * + * {
-  margin-top: var(--space-3);
-}
-
-.hero__badge {
-  display: inline-flex;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-pill);
-}
-
-.hero__title {
-  font-size: var(--fs-hero);
-  margin-top: var(--space-4);
-}
-
-.hero__title .accent {
-  color: var(--color-beacon);
-}
-
-.hero__subtext {
-  font-size: 1.0625rem;
-  color: var(--color-mist);
-  max-width: 46ch;
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
-}
-
-.hero__features {
-  grid-area: features;
-}
-
-/* ── Orbit diagram ── */
-.hero__orbit-wrap {
-  grid-area: orbit;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: var(--space-4);
-}
-
-.orbit {
-  position: relative;
-  width: min(35vw, 29rem);
-  aspect-ratio: 1;
-}
-
-.orbit__glow {
-  position: absolute;
-  inset: -20%;
-  background: radial-gradient(circle, var(--color-signal-dim) 0%, transparent 65%);
-  opacity: 0.65;
-  animation: glow-pulse 5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.orbit__rings {
-  position: absolute;
-  inset: 0;
-  animation: orbit-rotate 140s linear infinite;
-}
-
-.orbit__ring {
-  position: absolute;
-  border: 1px dashed var(--color-line);
-  border-radius: 50%;
-  inset: 0;
-}
-
-.orbit__ring--2 { inset: 15%; }
-.orbit__ring--3 { inset: 30%; }
-
-.orbit__lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.orbit__line {
-  stroke: var(--color-line);
-  stroke-width: 1;
-}
-
-.orbit__pulse {
-  fill: var(--color-signal-bright);
-}
-
-.orbit__core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 56%;
-  z-index: 1;
-}
-
-.orbit__core img {
-  width: 100%;
-  height: auto;
-}
-
-.orbit__nodes {
-  position: absolute;
-  inset: 0;
-}
-
-/* ── Earth horizon band (full-bleed) ──
-   Expects assets/images/earth-horizon.webp (see README for exact
-   spec). background-color is the fallback shown while that file is
-   missing/loading, so there is never a broken-image glyph. */
-.hero__earth {
-  position: absolute;
-  z-index: 1;
-  inset: auto 0 0;
-  width: 100%;
-  height: clamp(14rem, 30vw, 26.25rem);
-  background-color: var(--color-void);
-  background-image: url('../../assets/images/earth-horizon.webp');
-  /* The source image is taller than this horizon band. Keeping its
-     full width and shifting the crop down makes the globe visible on
-     wide displays instead of showing only the dark sky. */
-  background-size: 100% auto;
-  background-position: center 68%;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-.hero__earth::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, var(--color-void) 0%, transparent 45%);
-  pointer-events: none;
-}
-
-.hero__scroll {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  width: max-content;
-  inset: auto 0 var(--space-2);
-  margin: 0 auto;
-}
-
-.hero__scroll-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-surface);
-  border: 1px solid var(--color-line);
-  color: var(--color-ink);
-  animation: scroll-bounce 2.4s var(--ease-out) infinite;
-}
-
-.hero__scroll-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-.hero__scroll-label {
-  font-size: var(--fs-label);
-  font-weight: 600;
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  color: var(--color-mist);
-}
-
-/* ── Responsive ── */
-@media (max-width: 959.98px) {
   .hero {
-    height: calc(100svh - var(--header-height));
-    min-height: 30rem;
-  }
-
-  .hero__grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "orbit"
-      "features";
-    row-gap: var(--space-4);
-    padding-block: var(--space-4) var(--space-6);
-  }
-
-  .hero__orbit-wrap {
-    padding-top: 0;
-  }
-
-  .orbit {
-    width: min(75vw, 420px);
-  }
-
-  .hero__earth {
-    height: clamp(11rem, 48vw, 17rem);
-    background-size: cover;
-    background-position: center bottom;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .hero__grid {
-    display: block;
-    padding-block: 1rem;
-  }
-
-  .hero__content {
-    max-width: none;
-  }
-
-  .hero__badge {
-    padding: 0.3rem 0.65rem;
-    font-size: 0.625rem;
-    letter-spacing: 0.1em;
-  }
-
-  .hero__title {
-    font-size: clamp(1.75rem, 7.4vw, 2.25rem);
-    line-height: 1.08;
-    margin-top: 0.75rem;
-  }
-
-  .hero__subtext {
-    max-width: 36ch;
-    font-size: 0.8125rem;
-    line-height: 1.45;
-  }
-
-  .hero__content > * + * {
-    margin-top: 0.75rem;
-  }
-
-  .hero__actions {
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .hero__actions .btn {
-    flex: 1 1 0;
-    justify-content: center;
-    gap: 0.45em;
-    min-width: 0;
-    padding: 0.7rem 0.55rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-  }
-
-  /* Keep the project capabilities visible directly below the CTA, but
-     present them as compact cards so they fit with the animated orbit. */
-  .hero__features {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .hero__features .feature-badge {
-    align-items: center;
-    gap: 0.5rem;
-    min-height: 3.5rem;
-    padding: 0.5rem 0.625rem;
-    border: 1px solid var(--color-line);
-    border-radius: var(--radius-md);
-    background: color-mix(in srgb, var(--color-surface-card) 88%, transparent);
-  }
-
-  .hero__features .feature-badge__icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .hero__features .feature-badge__icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .hero__features .feature-badge__label {
-    font-size: 0.725rem;
-  }
-
-  .hero__orbit-wrap {
+    position: relative;
+  
+    min-height: 100svh;
+  
     display: flex;
-    justify-content: center;
-    padding-top: 0.15rem;
+    align-items: center;
+  
+    overflow: hidden;
+  
+    background: #343732;
+  
+    color: #ffffff;
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     PHOTOGRAPHY
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__media {
+    position: absolute;
+    inset: 0;
+  
+    z-index: 0;
+  
+    overflow: hidden;
+  }
+  
+  .hero__image {
+    position: absolute;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center center;
+  
+    opacity: 0;
+  
+    transform: scale(1.01);
+  
+    transition:
+      opacity 1000ms var(--ease-smooth),
+      transform 1600ms var(--ease-smooth);
+  }
+  
+  
+  /* Day is the default image */
+  
+  .hero__image--day {
+    opacity: 1;
+  }
+  
+  
+  /* Dark theme switches to the night photograph */
+  
+  html[data-theme='dark'] .hero__image--day {
+    opacity: 0;
+  }
+  
+  html[data-theme='dark'] .hero__image--night {
+    opacity: 1;
+  }
+  
+  
+  /* Very subtle cinematic movement */
+  
+  .hero:hover .hero__image {
+    transform: scale(1.025);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     TOP NAVIGATION GRADIENT
+     ──────────────────────────────────────────────────────────── */
+  
+  /*
+   * IMPORTANT:
+   * There is deliberately NO full-image dark overlay here.
+   *
+   * The gradient exists only behind the header/navigation area.
+   * It gradually disappears into the photograph.
+   */
+  
+   .hero__overlay {
+    position: absolute;
+    inset: 0;
+  
+    z-index: 1;
+  
+    pointer-events: none;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.34) 0%,
+        rgba(0, 0, 0, 0.18) 10%,
+        rgba(0, 0, 0, 0.04) 25%,
+        rgba(0, 0, 0, 0) 38%,
+        rgba(0, 0, 0, 0.08) 48%,
+        rgba(0, 0, 0, 0.25) 60%,
+        rgba(0, 0, 0, 0.48) 72%,
+        rgba(0, 0, 0, 0.68) 86%,
+        rgba(0, 0, 0, 0.78) 100%
+      );
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     CONTENT
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__content {
+    position: relative;
+  
+    z-index: 2;
+  
+    width: 100%;
+  
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 2rem;
+  
+    text-shadow:
+      0 2px 3px rgba(0, 0, 0, 0.22),
+      0 6px 18px rgba(0, 0, 0, 0.18);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     EYEBROW
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__eyebrow {
+    width: fit-content;
+  
+    color: rgba(255, 255, 255, 0.92);
+  
+    -webkit-text-stroke:
+      0.15px rgba(255, 255, 255, 0.20);
+  
+    text-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.48),
+      0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     TITLE
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__title {
+    max-width: 930px;
+
+    overflow-wrap: normal;
+    word-break: normal;
+  
+    margin-top: 1.5rem;
+  
+    color: #ffffff;
+  
+    font-family: var(--font-display);
+    font-size: var(--fs-hero);
+    font-weight: 400;
+  
+    line-height: 0.91;
+  
+    letter-spacing: -0.035em;
+  
+    -webkit-text-stroke:
+      0.25px rgba(255, 255, 255, 0.30);
+  
+    text-shadow:
+      0 2px 3px rgba(0, 0, 0, 0.34),
+      0 6px 16px rgba(0, 0, 0, 0.28),
+      0 14px 34px rgba(0, 0, 0, 0.18);
   }
 
-  .orbit {
-    width: min(75vw, 17rem);
-  }
 
-  .orbit__node-label {
-    display: none;
-  }
+  /* ─────────────────────────────────────────────────────────────
+   ITALIAN FLAG ACCENTS
+   ──────────────────────────────────────────────────────────── */
 
-  .orbit__node-icon {
-    width: 34px;
-    height: 34px;
-  }
+    .hero__title-word {
+      display: inline;
+      position: relative;
 
-  .orbit__node-icon svg {
-    width: 18px;
-    height: 18px;
-  }
+      text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.42),
+        0 5px 16px rgba(0, 0, 0, 0.34),
+        0 12px 34px rgba(0, 0, 0, 0.24);
 
-  .hero__earth {
-    height: clamp(10rem, 48vw, 14rem);
-  }
+      -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.08);
+    }
 
+    .hero__title-word--green {
+      color: #39ff42;
+    
+      text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.55),
+        0 5px 14px rgba(0, 0, 0, 0.38),
+        0 0 1px rgba(255, 255, 255, 0.12);
+    }
+    
+    .hero__title-word--red {
+      color: #ff4444;
+    
+      text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.55),
+        0 5px 14px rgba(0, 0, 0, 0.38),
+        0 0 1px rgba(255, 255, 255, 0.12);
+    }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     LOCATION
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__location {
+    margin-top: 1.75rem;
+  
+    color: rgba(255, 255, 255, 0.88);
+  
+    font-size: var(--fs-small);
+    font-weight: 600;
+  
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  
+    text-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.58),
+      0 5px 14px rgba(0, 0, 0, 0.28);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     DESCRIPTION
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__description {
+    max-width: 570px;
+  
+    margin-top: 1.25rem;
+  
+    color: rgba(255, 255, 255, 0.90);
+  
+    font-size: var(--fs-body-large);
+    line-height: 1.5;
+  
+    text-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.60),
+      0 5px 14px rgba(0, 0, 0, 0.30);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     ACTIONS
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero__actions {
+    display: flex;
+    align-items: center;
+  
+    flex-wrap: wrap;
+  
+    gap: 0.75rem;
+  
+    margin-top: 2rem;
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     HERO BUTTONS
+     ──────────────────────────────────────────────────────────── */
+  
+  .hero .btn--primary {
+    background: #ffffff;
+    color: #20221f;
+  
+    box-shadow:
+      0 4px 18px rgba(0, 0, 0, 0.16);
+  }
+  
+  .hero .btn--primary:hover {
+    background: #ebe9e2;
+  
+    box-shadow:
+      0 6px 24px rgba(0, 0, 0, 0.20);
+  }
+  
+  .hero .btn--outline {
+    border-color: rgba(255, 255, 255, 0.62);
+  
+    color: #ffffff;
+  
+    background: rgba(255, 255, 255, 0.02);
+  
+    box-shadow:
+      0 3px 14px rgba(0, 0, 0, 0.10);
+  }
+  
+  .hero .btn--outline:hover {
+    border-color: #ffffff;
+  
+    background: #ffffff;
+  
+    color: #20221f;
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     SCROLL INDICATOR
+     ──────────────────────────────────────────────────────────── */
+  
   .hero__scroll {
-    bottom: 0.75rem;
+    position: absolute;
+  
+    right: var(--container-pad);
+    bottom: 2.5rem;
+  
+    z-index: 3;
+  
+    display: flex;
+    align-items: center;
+  
+    gap: 0.75rem;
+  
+    color: rgba(255, 255, 255, 0.82);
+  
+    font-size: var(--fs-label);
+    font-weight: 600;
+  
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+  
+    writing-mode: vertical-rl;
+  
+    text-shadow:
+      0 2px 5px rgba(0, 0, 0, 0.35);
   }
+  
+  .hero__scroll-line {
+    width: 1px;
+    height: 52px;
+  
+    background: rgba(255, 255, 255, 0.55);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     LIGHT THEME
+     ──────────────────────────────────────────────────────────── */
+  
+  [data-theme='light'] .hero__title {
+    text-shadow:
+      0 2px 3px rgba(0, 0, 0, 0.38),
+      0 6px 16px rgba(0, 0, 0, 0.30),
+      0 14px 34px rgba(0, 0, 0, 0.18);
+  }
+  
+  [data-theme='light'] .hero__eyebrow,
+  [data-theme='light'] .hero__location,
+  [data-theme='light'] .hero__description {
+    text-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.62),
+      0 5px 14px rgba(0, 0, 0, 0.30);
+  }
+  
+  
+  /* ─────────────────────────────────────────────────────────────
+     DARK THEME
+     ──────────────────────────────────────────────────────────── */
+  
+  [data-theme='dark'] .hero__title {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.30),
+      0 8px 22px rgba(0, 0, 0, 0.24);
+  }
+  
+  [data-theme='dark'] .hero__eyebrow,
+  [data-theme='dark'] .hero__location,
+  [data-theme='dark'] .hero__description {
+    text-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.46),
+      0 5px 16px rgba(0, 0, 0, 0.24);
+  }
+  
+  
+/* ─────────────────────────────────────────────────────────────
+   MOBILE
+   ──────────────────────────────────────────────────────────── */
 
-  .hero__scroll-btn {
-    width: 42px;
-    height: 42px;
-  }
+   @media (max-width: 700px) {
 
-  .hero__scroll-btn svg {
-    width: 16px;
-    height: 16px;
+    .hero {
+      min-height: 100svh;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       MOBILE IMAGE
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__image {
+      object-position: center center;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       MOBILE OVERLAYS
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__overlay {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.48) 0%,
+          rgba(0, 0, 0, 0.16) 22%,
+          rgba(0, 0, 0, 0.04) 42%,
+          rgba(0, 0, 0, 0.18) 62%,
+          rgba(0, 0, 0, 0.72) 82%,
+          rgba(0, 0, 0, 0.88) 100%
+        );
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       CONTENT
+       ───────────────────────────────────────────────────────── */
+  
+      .hero__content {
+        position: relative;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        width: 100%;
+      
+        padding-top: calc(var(--header-height) + 2rem);
+        padding-bottom: 1rem;
+      
+        text-align: center;
+      
+        transform: translateY(8vh);
+      }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       EYEBROW
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__eyebrow {
+      margin-inline: auto;
+  
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       TITLE
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__title {
+      max-width: 100%;
+  
+      margin-top: 1.15rem;
+  
+      font-size: clamp(3rem, 13vw, 4.6rem);
+  
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+  
+      text-align: center;
+  
+      text-wrap: balance;
+    }
+  
+  
+    .hero__title-word {
+      display: inline;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       LOCATION
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__location {
+      margin-top: 1.4rem;
+  
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+  
+      text-align: center;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       DESCRIPTION
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__description {
+      max-width: 31rem;
+  
+      margin-top: 1rem;
+  
+      padding-inline: 1rem;
+  
+      font-size: 0.98rem;
+      line-height: 1.5;
+  
+      text-align: center;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       ACTIONS
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__actions {
+      display: grid;
+  
+      grid-template-columns: 1fr;
+  
+      width: min(100%, 330px);
+  
+      gap: 0.65rem;
+  
+      margin-top: 1.5rem;
+    }
+  
+  
+    .hero__actions .btn {
+      width: 100%;
+  
+      justify-content: center;
+    }
+  
+  
+    /* ─────────────────────────────────────────────────────────
+       SCROLL
+       ───────────────────────────────────────────────────────── */
+  
+    .hero__scroll {
+      display: none;
+    }
   }
-
-  .hero__scroll-label {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .orbit__glow,
-  .orbit__rings,
-  .hero__scroll-btn {
-    animation: none !important;
-  }
-}

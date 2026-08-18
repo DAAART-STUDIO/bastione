@@ -17,6 +17,9 @@
   },
 
   "hero": {
+    "titlePrefix": "A table above",
+    "titleLake": "Lake",
+    "titleGarda": "Garda",
     "eyebrow": "Lounge & Restaurant",
     "title": "A table above Lake Garda.",
     "location": "Riva del Garda · Trentino · Italy",
@@ -29,7 +32,11 @@
   "view": {
     "eyebrow": "The View",
     "title": "Lake Garda from another perspective.",
-    "description": "A panoramic terrace above Riva del Garda, where the landscape becomes part of the experience."
+    "description": "A panoramic terrace above Riva del Garda, where the landscape becomes part of the experience.",
+    "caption": "Riva del Garda · Lake Garda",
+    "captionDetail": "Trentino · Italy",
+    "locationLabel": "The location",
+    "locationText": "Between the lake, the mountains and the historic centre of Riva del Garda."
   },
 
   "experience": {

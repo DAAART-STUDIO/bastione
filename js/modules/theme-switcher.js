@@ -43,7 +43,7 @@ export function initThemeSwitcher() {
   const toggles = document.querySelectorAll('[data-theme-toggle]');
   if (toggles.length === 0) return;
 
-  const initialTheme = getStoredTheme() || getSystemTheme();
+  const initialTheme = getStoredTheme() || CONFIG.theme.default;
   applyTheme(initialTheme, toggles);
 
   toggles.forEach((group) => {

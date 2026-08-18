@@ -1,0 +1,15 @@
+/**
+ * sections.css — Shared section presentation.
+ */
+
+ .section {
+    background: var(--color-bg);
+  }
+  
+  .section:nth-child(even) {
+    background: var(--color-surface);
+  }
+  
+  .section h2 {
+    max-width: 900px;
+  }

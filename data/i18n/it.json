@@ -17,9 +17,12 @@
   },
   
   "hero": {
+    "titlePrefix": "Un tavolo sopra",
+    "titleLake": "il Lago",
+    "titleGarda": "di Garda",
     "eyebrow": "Lounge & Restaurant",
-    "title": "A table above Lake Garda.",
-    "location": "Riva del Garda · Trentino · Italy",
+    "title": "Un tavolo sopra il Lago di Garda.",
+    "location": "Riva del Garda · Trentino · Italia",
     "description": "Un'esperienza sospesa tra il lago, la montagna e la cucina.",
     "primaryCta": "Prenota un tavolo",
     "secondaryCta": "Scopri Bastione",
@@ -27,9 +30,13 @@
   },
   
   "view": {
-    "eyebrow": "The View",
-    "title": "Lake Garda from another perspective.",
-    "description": "Una terrazza panoramica sopra Riva del Garda, dove il paesaggio diventa parte dell'esperienza."
+    "eyebrow": "La vista",
+    "title": "Il Lago di Garda da un'altra prospettiva.",
+    "description": "Una terrazza panoramica sopra Riva del Garda, dove il paesaggio diventa parte dell'esperienza.",
+    "caption": "Riva del Garda · Lago di Garda",
+    "captionDetail": "Trentino · Italia",
+    "locationLabel": "La posizione",
+    "locationText": "Tra il lago, le montagne e il centro storico di Riva del Garda."
   },
 
   "experience": {
