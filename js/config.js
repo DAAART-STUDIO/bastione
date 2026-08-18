@@ -6,8 +6,9 @@ export const CONFIG = Object.freeze({
     storageKey: 'virtuhai:theme',
   },
   locale: {
-    default: 'uk',
-    storageKey: 'virtuhai:language',
+    default: 'it',
+    supported: ['it', 'en', 'de'],
+    storageKey: 'bastione:language',
   },
   motion: {
     reducedQuery: '(prefers-reduced-motion: reduce)',
