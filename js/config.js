@@ -2,8 +2,8 @@
 
 export const CONFIG = Object.freeze({
   theme: {
-    default: 'dark',
-    storageKey: 'virtuhai:theme',
+    default: 'light',
+    storageKey: 'bastione:theme',
   },
   locale: {
     default: 'it',
