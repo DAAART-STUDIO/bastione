@@ -1,79 +1,86 @@
 {
-    "navigation": {
-      "view": "View",
-      "experience": "Experience",
-      "cuisine": "Cuisine",
-      "menu": "Menu",
-      "place": "The Place",
-      "moments": "Moments",
-      "events": "Events",
-      "visit": "Visit"
-    },
-  
-    "hero": {
-      "eyebrow": "Lounge & Restaurant",
-      "title": "A table above Lake Garda.",
-      "location": "Riva del Garda · Trentino · Italy",
-      "description": "An experience suspended between the lake, the mountains and the table.",
-      "primaryCta": "Reserve a table",
-      "secondaryCta": "Discover Bastione",
-      "scroll": "Discover"
-    },
-  
-    "view": {
-      "eyebrow": "The View",
-      "title": "Lake Garda from another perspective.",
-      "description": "A panoramic terrace above Riva del Garda, where the landscape becomes part of the experience."
-    },
-  
-    "experience": {
-      "eyebrow": "The Experience",
-      "title": "Arrive. Ascend. Stay.",
-      "description": "A place to reach slowly and experience without rushing."
-    },
-  
-    "cuisine": {
-      "eyebrow": "The Cuisine",
-      "title": "Mountain meets Mediterranean.",
-      "description": "Trentino flavours meet Mediterranean inspiration."
-    },
-  
-    "menu": {
-      "eyebrow": "The Menu",
-      "title": "Taste the moment.",
-      "description": "Discover our gastronomic offering.",
-      "cta": "Explore the menu"
-    },
-  
-    "place": {
-      "eyebrow": "The Place",
-      "title": "History above the lake.",
-      "description": "A historic place transformed into a contemporary experience."
-    },
-  
-    "moments": {
-      "eyebrow": "Moments",
-      "title": "Made for the moment.",
-      "description": "Light, table, lake and time shared."
-    },
-  
-    "events": {
-      "eyebrow": "Events",
-      "title": "Make it yours.",
-      "description": "Celebrations, private dinners and special experiences.",
-      "cta": "Explore events"
-    },
-  
-    "visit": {
-      "eyebrow": "Visit Bastione",
-      "title": "Come up.",
-      "address": "Via Monte Oro, 26 · Riva del Garda · Trentino, Italy",
-      "cta": "Get directions",
-      "reservation": "Reserve a table"
-    },
-  
-    "footer": {
-      "tagline": "Lounge & Restaurant above Lake Garda.",
-      "rights": "All rights reserved."
-    }
+
+  "meta": {
+    "title": "Bastione — Lounge & Restaurant | Riva del Garda",
+    "description": "Bastione Lounge & Restaurant above Lake Garda in Riva del Garda, Trentino."
+  },
+
+  "navigation": {
+    "view": "View",
+    "experience": "Experience",
+    "cuisine": "Cuisine",
+    "menu": "Menu",
+    "place": "The Place",
+    "moments": "Moments",
+    "events": "Events",
+    "visit": "Visit"
+  },
+
+  "hero": {
+    "eyebrow": "Lounge & Restaurant",
+    "title": "A table above Lake Garda.",
+    "location": "Riva del Garda · Trentino · Italy",
+    "description": "An experience suspended between the lake, the mountains and the table.",
+    "primaryCta": "Reserve a table",
+    "secondaryCta": "Discover Bastione",
+    "scroll": "Discover"
+  },
+
+  "view": {
+    "eyebrow": "The View",
+    "title": "Lake Garda from another perspective.",
+    "description": "A panoramic terrace above Riva del Garda, where the landscape becomes part of the experience."
+  },
+
+  "experience": {
+    "eyebrow": "The Experience",
+    "title": "Arrive. Ascend. Stay.",
+    "description": "A place to reach slowly and experience without rushing."
+  },
+
+  "cuisine": {
+    "eyebrow": "The Cuisine",
+    "title": "Mountain meets Mediterranean.",
+    "description": "Trentino flavours meet Mediterranean inspiration."
+  },
+
+  "menu": {
+    "eyebrow": "The Menu",
+    "title": "Taste the moment.",
+    "description": "Discover our gastronomic offering.",
+    "cta": "Explore the menu"
+  },
+
+  "place": {
+    "eyebrow": "The Place",
+    "title": "History above the lake.",
+    "description": "A historic place transformed into a contemporary experience."
+  },
+
+  "moments": {
+    "eyebrow": "Moments",
+    "title": "Made for the moment.",
+    "description": "Light, table, lake and time shared."
+  },
+
+  "events": {
+    "eyebrow": "Events",
+    "title": "Make it yours.",
+    "description": "Celebrations, private dinners and special experiences.",
+    "cta": "Explore events"
+  },
+
+  "visit": {
+    "eyebrow": "Visit Bastione",
+    "title": "Come up.",
+    "address": "Via Monte Oro, 26 · Riva del Garda · Trentino, Italy",
+    "cta": "Get directions",
+    "reservation": "Reserve a table"
+  },
+
+  "footer": {
+    "tagline": "Lounge & Restaurant above Lake Garda.",
+    "rights": "All rights reserved."
+  }
+
 }
