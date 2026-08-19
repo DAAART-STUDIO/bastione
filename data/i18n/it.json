@@ -31,10 +31,12 @@
   
   "view": {
     "eyebrow": "La vista",
-    "title": "Il Lago di Garda da un'altra prospettiva.",
+    "title": "Il Lago di Garda da un'altra prospettiva",
     "description": "Una terrazza panoramica sopra Riva del Garda, dove il paesaggio diventa parte dell'esperienza.",
-    "caption": "Riva del Garda · Lago di Garda",
-    "captionDetail": "Trentino · Italia",
+    "lakeCaption": "Riva del Garda · Lago di Garda",
+    "lakeDetail": "Dalla terrazza del Bastione",
+    "cityCaption": "Riva del Garda · Centro storico",
+    "cityDetail": "Trentino · Italia",
     "locationLabel": "La posizione",
     "locationText": "Tra il lago, le montagne e il centro storico di Riva del Garda."
   },

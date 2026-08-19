@@ -31,10 +31,12 @@
   
   "view": {
     "eyebrow": "Der Ausblick",
-    "title": "Der Gardasee aus einer anderen Perspektive.",
+    "title": "Der Gardasee aus einer anderen Perspektive",
     "description": "Eine Panoramaterrasse über Riva del Garda, wo die Landschaft Teil des Erlebnisses wird.",
-    "caption": "Riva del Garda · Gardasee",
-    "captionDetail": "Trentino · Italien",
+    "lakeCaption": "Riva del Garda · Gardasee",
+    "lakeDetail": "Von der Terrasse des Bastione",
+    "cityCaption": "Riva del Garda · Historisches Zentrum",
+    "cityDetail": "Trentino · Italien",
     "locationLabel": "Die Lage",
     "locationText": "Zwischen See, Bergen und der historischen Altstadt von Riva del Garda."
   },

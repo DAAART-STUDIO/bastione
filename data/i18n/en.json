@@ -31,10 +31,12 @@
 
   "view": {
     "eyebrow": "The View",
-    "title": "Lake Garda from another perspective.",
+    "title": "Lake Garda from another perspective",
     "description": "A panoramic terrace above Riva del Garda, where the landscape becomes part of the experience.",
-    "caption": "Riva del Garda · Lake Garda",
-    "captionDetail": "Trentino · Italy",
+    "lakeCaption": "Riva del Garda · Lake Garda",
+    "lakeDetail": "From the Bastione terrace",
+    "cityCaption": "Riva del Garda · Historic centre",
+    "cityDetail": "Trentino · Italy",
     "locationLabel": "The location",
     "locationText": "Between the lake, the mountains and the historic centre of Riva del Garda."
   },
