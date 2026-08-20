@@ -31,6 +31,7 @@
   
   "view": {
     "eyebrow": "Der Ausblick",
+    "explore": "Entdecken",
     "title": "Der Gardasee aus einer anderen Perspektive",
     "description": "Eine Panoramaterrasse über Riva del Garda, wo die Landschaft Teil des Erlebnisses wird.",
     "lakeCaption": "Riva del Garda · Gardasee",
@@ -42,9 +43,38 @@
   },
 
   "experience": {
-    "eyebrow": "The Experience",
+    "eyebrow": "Das Erlebnis",
     "title": "Ankommen. Aufsteigen. Bleiben.",
-    "description": "Ein Ort, den man langsam erreicht und ohne Eile erlebt."
+    "description": "Mehr als ein Ziel. Ein Rhythmus, der sich vom ersten Schritt bis zum letzten Drink entfaltet.",
+    "core": "Lounge & Restaurant",
+    "nodes": {
+      "arrive": {
+        "title": "Ankommen",
+        "text": "Lassen Sie den See hinter sich und beginnen Sie den Weg nach oben.",
+        "detail": "Min. · durch den Wald"
+      },
+      "view": {
+        "title": "Blicken",
+        "text": "Riva, der See und die Berge öffnen sich vor Ihnen von oben.",
+        "detail": "m · über dem See"
+      },
+      "taste": {
+        "title": "Genießen",
+        "text": "Aromen aus dem Trentino treffen bei Tisch auf mediterrane Inspiration.",
+        "detail": "Berge · Mittelmeer"
+      },
+      "aperitivo": {
+        "title": "Aperitivo",
+        "text": "Bleiben Sie für das Licht, den Ausblick und den langsamen Übergang in den Abend.",
+        "detail": "vom Tag · in den Abend"
+      },
+      "stay": {
+        "title": "Bleiben",
+        "text": "Nehmen Sie sich Zeit. Frühstück, Mittagessen, Aperitivo, Dinner und After-Dinner.",
+        "detail": "den ganzen Tag · bis in die Nacht"
+      }
+    },
+    "footer": "Vom ersten Schritt bis zum letzten Drink."
   },
 
   "cuisine": {

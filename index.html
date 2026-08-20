@@ -3,73 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <meta
-    name="description"
-    content="Bastione Lounge & Restaurant above Lake Garda in Riva del Garda, Trentino."
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bastione Lounge & Restaurant above Lake Garda in Riva del Garda, Trentino.">
   <meta name="theme-color" content="#f3f1ec">
 
   <title>Bastione — Lounge & Restaurant | Riva del Garda</title>
 
   <link rel="icon" href="favicon.ico" sizes="any">
-  <link
-    rel="icon"
-    href="assets/logo/favicon-32.png"
-    type="image/png"
-    sizes="32x32"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="apple-touch-icon.png"
-  >
-
-  <link
-    rel="manifest"
-    href="site.webmanifest"
-  >
-
+  <link rel="icon" href="assets/logo/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest"   href="site.webmanifest">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-
-  <link
-    rel="stylesheet"
-    href="css/components/buttons.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/components/navigation.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/components/sections.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/components/hero.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/components/view.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/animations.css"
-  >
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/navigation.css">
+  <link rel="stylesheet" href="css/components/sections.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/view.css">
+  <link rel="stylesheet" href="css/components/experience.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 
 
@@ -82,157 +36,50 @@
   <header class="site-header" data-header>
 
     <div class="container site-header__inner">
-
-      <a
-        class="brand"
-        href="#hero"
-        aria-label="Bastione"
-      >
-        Bastione
-      </a>
-
-
-      <nav
-        class="nav-links"
-        aria-label="Main navigation"
-      >
-
-        <a href="#view" data-i18n="navigation.view">
-          View
-        </a>
-
-        <a href="#experience" data-i18n="navigation.experience">
-          Experience
-        </a>
-
-        <a href="#cuisine" data-i18n="navigation.cuisine">
-          Cuisine
-        </a>
-
-        <a href="#menu" data-i18n="navigation.menu">
-          Menu
-        </a>
-
-        <a href="#place" data-i18n="navigation.place">
-          The Place
-        </a>
-
-        <a href="#moments" data-i18n="navigation.moments">
-          Moments
-        </a>
-
-        <a href="#events" data-i18n="navigation.events">
-          Events
-        </a>
-
-        <a href="#visit" data-i18n="navigation.visit">
-          Visit
-        </a>
-
+      <a class="brand" href="#hero" aria-label="Bastione">Bastione</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#view" data-i18n="navigation.view">View</a>
+        <a href="#experience" data-i18n="navigation.experience">Experience</a>
+        <a href="#cuisine" data-i18n="navigation.cuisine">Cuisine</a>
+        <a href="#menu" data-i18n="navigation.menu">Menu</a>
+        <a href="#place" data-i18n="navigation.place">The Place</a>
+        <a href="#moments" data-i18n="navigation.moments">Moments</a>
+        <a href="#events" data-i18n="navigation.events">Events</a>
+        <a href="#visit" data-i18n="navigation.visit">Visit</a>
       </nav>
-
-
       <div class="site-header__actions">
-
         <!-- Language -->
-
-        <div
-          class="language-toggle"
-          data-language-toggle
-          aria-label="Language"
-        >
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="it"
-            aria-pressed="true"
-          >
+        <div class="language-toggle" data-language-toggle aria-label="Language">
+          <button class="language-toggle__btn" type="button" data-language-option="it" aria-pressed="true">
             IT
           </button>
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="en"
-            aria-pressed="false"
-          >
+          <button class="language-toggle__btn" type="button" data-language-option="en" aria-pressed="false">
             EN
           </button>
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="de"
-            aria-pressed="false"
-          >
+          <button class="language-toggle__btn" type="button" data-language-option="de" aria-pressed="false">
             DE
           </button>
-
         </div>
-
 
         <!-- Theme -->
-
-        <div
-          class="theme-toggle"
-          data-theme-toggle
-          aria-label="Theme"
-        >
-
-          <button
-            class="theme-toggle__btn"
-            type="button"
-            data-theme-option="light"
-            aria-label="Light theme"
-            aria-pressed="true"
-          >
+        <div class="theme-toggle" data-theme-toggle aria-label="Theme">
+          <button class="theme-toggle__btn" type="button" data-theme-option="light" aria-label="Light theme" aria-pressed="true">
             ☼
           </button>
-
-          <button
-            class="theme-toggle__btn"
-            type="button"
-            data-theme-option="dark"
-            aria-label="Dark theme"
-            aria-pressed="false"
-          >
+          <button class="theme-toggle__btn" type="button" data-theme-option="dark" aria-label="Dark theme" aria-pressed="false">
             ◐
           </button>
-
         </div>
 
-
         <!-- Reservation -->
-
-        <a
-          class="btn btn--primary"
-          href="#visit"
-          data-i18n="hero.primaryCta"
-        >
-          Reserve a table
-        </a>
-
+        <a class="btn btn--primary" href="#visit" data-i18n="hero.primaryCta">Reserve a table</a>
 
         <!-- Mobile -->
-
-        <button
-          class="hamburger"
-          type="button"
-          data-menu-toggle
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-
+        <button class="hamburger" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
           <span class="sr-only">
             Menu
           </span>
-
-          <svg
-            data-menu-icon-open
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <svg data-menu-icon-open viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M4 7h16M4 12h16M4 17h16"
               fill="none"
@@ -240,12 +87,7 @@
               stroke-width="1.5"
             />
           </svg>
-
-          <svg
-            data-menu-icon-close
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <svg data-menu-icon-close viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M5 5l14 14M19 5L5 19"
               fill="none"
@@ -253,283 +95,116 @@
               stroke-width="1.5"
             />
           </svg>
-
         </button>
-
       </div>
-
     </div>
-
 
     <!-- =======================================================
          MOBILE MENU
          ======================================================= -->
-
-    <nav
-      class="mobile-menu"
-      data-mobile-menu
-      hidden
-      aria-label="Mobile navigation"
-    >
-
+    <nav class="mobile-menu" data-mobile-menu hidden aria-label="Mobile navigation">
       <div class="mobile-menu__links">
-
-        <a href="#view" data-i18n="navigation.view">
-          View
-        </a>
-
-        <a href="#experience" data-i18n="navigation.experience">
-          Experience
-        </a>
-
-        <a href="#cuisine" data-i18n="navigation.cuisine">
-          Cuisine
-        </a>
-
-        <a href="#menu" data-i18n="navigation.menu">
-          Menu
-        </a>
-
-        <a href="#place" data-i18n="navigation.place">
-          The Place
-        </a>
-
-        <a href="#moments" data-i18n="navigation.moments">
-          Moments
-        </a>
-
-        <a href="#events" data-i18n="navigation.events">
-          Events
-        </a>
-
-        <a href="#visit" data-i18n="navigation.visit">
-          Visit
-        </a>
-
+        <a href="#view" data-i18n="navigation.view">View</a>
+        <a href="#experience" data-i18n="navigation.experience">Experience</a>
+        <a href="#cuisine" data-i18n="navigation.cuisine">Cuisine</a>
+        <a href="#menu" data-i18n="navigation.menu">Menu</a>
+        <a href="#place" data-i18n="navigation.place">The Place</a>
+        <a href="#moments" data-i18n="navigation.moments">Moments</a>
+        <a href="#events" data-i18n="navigation.events">Events</a>
+        <a href="#visit" data-i18n="navigation.visit">Visit</a>
       </div>
-
-
       <div class="mobile-menu__footer">
-
-        <div
-          class="language-toggle"
-          data-language-toggle
-        >
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="it"
-            aria-pressed="true"
-          >
+        <div class="language-toggle" data-language-toggle>
+          <button class="language-toggle__btn" type="button" data-language-option="it" aria-pressed="true">
             IT
           </button>
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="en"
-            aria-pressed="false"
-          >
+          <button class="language-toggle__btn" type="button" data-language-option="en" aria-pressed="false">
             EN
           </button>
-
-          <button
-            class="language-toggle__btn"
-            type="button"
-            data-language-option="de"
-            aria-pressed="false"
-          >
+          <button class="language-toggle__btn" type="button" data-language-option="de" aria-pressed="false">
             DE
           </button>
-
         </div>
-
-
-        <div
-          class="theme-toggle"
-          data-theme-toggle
-        >
-
-          <button
-            class="theme-toggle__btn"
-            type="button"
-            data-theme-option="light"
-            aria-label="Light theme"
-            aria-pressed="true"
-          >
+        <div class="theme-toggle" data-theme-toggle>
+          <button class="theme-toggle__btn" type="button" data-theme-option="light" aria-label="Light theme" aria-pressed="true">
             ☼
           </button>
-
-          <button
-            class="theme-toggle__btn"
-            type="button"
-            data-theme-option="dark"
-            aria-label="Dark theme"
-            aria-pressed="false"
-          >
+          <button class="theme-toggle__btn" type="button" data-theme-option="dark" aria-label="Dark theme" aria-pressed="false">
             ◐
           </button>
-
         </div>
-
-
-        <a
-          class="btn btn--primary btn--block"
-          href="#visit"
-          data-i18n="hero.primaryCta"
-        >
+        <a class="btn btn--primary btn--block" href="#visit" data-i18n="hero.primaryCta">
           Reserve a table
         </a>
-
       </div>
-
     </nav>
 
   </header>
 
-
   <!-- =========================================================
        MAIN
        ========================================================= -->
-
   <main>
 
-    <section
-      class="hero"
-      id="hero"
-      data-section="hero"
-      aria-labelledby="hero-title"
-    >
-    
+    <section class="hero" id="hero"  data-section="hero" aria-labelledby="hero-title">
       <!-- =======================================================
           HERO PHOTOGRAPHY
           ======================================================= -->
-    
       <div class="hero__media" aria-hidden="true">
-    
-        <img
-          class="hero__image hero__image--day"
-          src="assets/images/bastione/hero/hero-day.webp"
-          alt=""
-          fetchpriority="high"
-        >
-    
-        <img
-          class="hero__image hero__image--night"
-          src="assets/images/bastione/hero/hero-night.webp"
-          alt=""
-        >
-    
+        <img class="hero__image hero__image--day" src="assets/images/bastione/hero/hero-day.webp" alt="" fetchpriority="high">
+        <img class="hero__image hero__image--night" src="assets/images/bastione/hero/hero-night.webp" alt="">
       </div>
-    
-    
       <div class="hero__overlay" aria-hidden="true"></div>
-    
-    
       <!-- =======================================================
           HERO CONTENT
           ======================================================= -->
-    
       <div class="container hero__content">
-    
-        <p
-          class="eyebrow hero__eyebrow"
-          data-i18n="hero.eyebrow"
-        >
+        <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">
           Lounge & Restaurant
-        </p>
-    
-    
-        <h1
-          class="hero__title"
-          id="hero-title"
-        >
-          <span
-            data-i18n="hero.titlePrefix"
-          >
+        </p> 
+        <h1 class="hero__title" id="hero-title">
+          <span data-i18n="hero.titlePrefix">
             A table above
           </span>
-        
-          <span
-            class="hero__title-word hero__title-word--green"
-            data-i18n="hero.titleLake"
-          >
+          <span class="hero__title-word hero__title-word--green" data-i18n="hero.titleLake">
             Lake
           </span>
-        
-          <span
-            class="hero__title-word hero__title-word--red"
-            data-i18n="hero.titleGarda"
-          >
+          <span class="hero__title-word hero__title-word--red" data-i18n="hero.titleGarda">
             Garda
           </span>
         </h1>
-    
-    
-        <p
-          class="hero__location"
-          data-i18n="hero.location"
-        >
+        <p class="hero__location"  data-i18n="hero.location">
           Riva del Garda · Trentino · Italy
-        </p>
-    
-    
-        <p
-          class="hero__description"
-          data-i18n="hero.description"
-        >
+        </p>    
+        <p class="hero__description" data-i18n="hero.description">
           An experience suspended between the lake,
           the mountains and the table.
         </p>
-    
-    
         <div class="hero__actions">
-    
-          <a
-            class="btn btn--primary"
-            href="#visit"
-            data-i18n="hero.primaryCta"
-          >
+          <a class="btn btn--primary" href="#visit" data-i18n="hero.primaryCta">
             Reserve a table
           </a>
-    
-          <a
-            class="btn btn--outline"
-            href="#experience"
-            data-i18n="hero.secondaryCta"
-          >
+          <a class="btn btn--outline" href="#experience" data-i18n="hero.secondaryCta">
             Discover Bastione
           </a>
-    
         </div>
-    
       </div>
-    
-    
+  
       <!-- =======================================================
           SCROLL
           ======================================================= -->
-    
-      <a
-        class="hero__scroll"
-        href="#view"
-        aria-label="Discover"
-      >
-    
-        <span
-          class="hero__scroll-line"
-          aria-hidden="true"
-        ></span>
-    
+      <a class="hero__scroll" href="#view" aria-label="Discover">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
         <span data-i18n="hero.scroll">
           Discover
         </span>
-    
       </a>
-    
     </section>
 
+    
+    <!-- =======================================================
+    VIEW CONTENT
+      ======================================================= -->
     <section class="view" id="view" data-section="view" aria-labelledby="view-title">
       <div class="view__gallery">
         <div class="view__header">
@@ -594,24 +269,268 @@
       </div>
     </section>
 
-    <section
-      id="experience"
-      data-section="experience"
-      class="section"
-    >
-      <div class="container">
-        <h2 data-i18n="experience.title">
-          Arrive. Ascend. Stay.
-        </h2>
+    <!-- EXPERIENCE -->
+    <section id="experience" data-section="experience" class="experience" aria-labelledby="experience-title">
+      <div class="container experience__container">
+
+        <header class="experience__header">
+          <p class="experience__eyebrow" data-i18n="experience.eyebrow">
+            The Experience
+          </p>
+
+          <h2 class="experience__title" id="experience-title">
+            <span data-i18n="experience.title">Arrive. Ascend. Stay.</span>
+          </h2>
+
+          <p class="experience__description" data-i18n="experience.description">
+            A place to reach slowly and experience without rushing.
+          </p>
+        </header>
+
+        <div class="experience__stage">
+
+          <div class="experience__visual" aria-hidden="true">
+
+            <svg
+              class="experience__map"
+              viewBox="0 0 900 700"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <filter id="experience-glow">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- CONNECTING PATHS -->
+              <path
+                class="experience__path experience__path--arrive"
+                d="M450 350 C330 360 240 420 150 535"
+              />
+
+              <path
+                class="experience__path experience__path--view"
+                d="M450 350 C420 250 360 170 275 110"
+              />
+
+              <path
+                class="experience__path experience__path--taste"
+                d="M450 350 C560 300 650 250 760 190"
+              />
+
+              <path
+                class="experience__path experience__path--aperitivo"
+                d="M450 350 C575 410 690 455 795 500"
+              />
+
+              <path
+                class="experience__path experience__path--stay"
+                d="M450 350 C430 470 430 560 450 650"
+              />
+
+              <!-- AMBIENT CONTOURS -->
+              <ellipse
+                class="experience__contour experience__contour--outer"
+                cx="450"
+                cy="350"
+                rx="335"
+                ry="255"
+              />
+
+              <ellipse
+                class="experience__contour experience__contour--inner"
+                cx="450"
+                cy="350"
+                rx="235"
+                ry="175"
+              />
+
+              <!-- PULSE -->
+              <circle
+                class="experience__pulse"
+                cx="450"
+                cy="350"
+                r="4"
+                filter="url(#experience-glow)"
+              />
+            </svg>
+
+            <!-- CENTRAL CORE -->
+            <div class="experience__core">
+              <span class="experience__core-ring"></span>
+              <span class="experience__core-ring experience__core-ring--inner"></span>
+
+              <span class="experience__core-name">
+                Bastione
+              </span>
+
+              <span
+                class="experience__core-label"
+                data-i18n="experience.core"
+              >
+                Lounge &amp; Restaurant
+              </span>
+            </div>
+
+            <!-- ARRIVE -->
+            <button
+              class="experience__node experience__node--arrive"
+              type="button"
+              data-experience-node="arrive"
+              aria-pressed="false"
+            >
+              <span class="experience__node-icon">
+                <svg viewBox="0 0 48 48">
+                  <path d="M8 39C17 32 22 24 26 10" />
+                  <path d="M20 13h12" />
+                  <path d="M26 10l-5 7" />
+                  <path d="M26 10l5 7" />
+                </svg>
+              </span>
+
+              <span class="experience__node-label">
+                <small>01</small>
+                <strong data-i18n="experience.nodes.arrive.title">Arrive</strong>
+              </span>
+            </button>
+
+            <!-- VIEW -->
+            <button
+              class="experience__node experience__node--view"
+              type="button"
+              data-experience-node="view"
+              aria-pressed="false"
+            >
+              <span class="experience__node-icon">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="34" cy="13" r="5" />
+                  <path d="M6 34h36" />
+                  <path d="M6 34c7-8 12-11 18-11 6 0 10 4 18 11" />
+                </svg>
+              </span>
+
+              <span class="experience__node-label">
+                <small>02</small>
+                <strong data-i18n="experience.nodes.view.title">View</strong>
+              </span>
+            </button>
+
+            <!-- TASTE -->
+            <button
+              class="experience__node experience__node--taste"
+              type="button"
+              data-experience-node="taste"
+              aria-pressed="false"
+            >
+              <span class="experience__node-icon">
+                <svg viewBox="0 0 48 48">
+                  <path d="M5 34c6-9 11-14 17-14s10 6 15 6 6-2 6-2" />
+                  <path d="M5 38c8-4 14-5 20-5 7 0 11 2 18 2" />
+                </svg>
+              </span>
+
+              <span class="experience__node-label">
+                <small>03</small>
+                <strong data-i18n="experience.nodes.taste.title">Taste</strong>
+              </span>
+            </button>
+
+            <!-- APERITIVO -->
+            <button
+              class="experience__node experience__node--aperitivo"
+              type="button"
+              data-experience-node="aperitivo"
+              aria-pressed="false"
+            >
+              <span class="experience__node-icon">
+                <svg viewBox="0 0 48 48">
+                  <path d="M13 9h22l-2 13c-1 7-5 11-9 11s-8-4-9-11z" />
+                  <path d="M24 33v8" />
+                  <path d="M17 41h14" />
+                </svg>
+              </span>
+
+              <span class="experience__node-label">
+                <small>04</small>
+                <strong data-i18n="experience.nodes.aperitivo.title">Aperitivo</strong>
+              </span>
+            </button>
+
+            <!-- STAY -->
+            <button
+              class="experience__node experience__node--stay"
+              type="button"
+              data-experience-node="stay"
+              aria-pressed="false"
+            >
+              <span class="experience__node-icon">
+                <svg viewBox="0 0 48 48">
+                  <path d="M7 32h34" />
+                  <path d="M13 32v9M35 32v9" />
+                  <path d="M10 41h28" />
+                  <circle cx="34" cy="14" r="5" />
+                </svg>
+              </span>
+
+              <span class="experience__node-label">
+                <small>05</small>
+                <strong data-i18n="experience.nodes.stay.title">Stay</strong>
+              </span>
+            </button>
+
+          </div>
+
+          <!-- ACTIVE STORY -->
+          <div class="experience__story">
+
+            <div class="experience__story-meta">
+              <span class="experience__story-index">01</span>
+              <span class="experience__story-line"></span>
+            </div>
+
+            <h3
+              class="experience__story-title"
+              data-experience-story-title
+              data-i18n="experience.nodes.arrive.title"
+            >
+              Arrive
+            </h3>
+
+            <p
+              class="experience__story-text"
+              data-experience-story-text
+              data-i18n="experience.nodes.arrive.text"
+            >
+              Leave the lake behind and begin the journey upward.
+            </p>
+
+            <div class="experience__story-detail">
+              <span class="experience__story-detail-value" data-experience-story-value>
+                20
+              </span>
+              <span class="experience__story-detail-label" data-experience-story-label data-i18n="experience.nodes.arrive.detail">
+                min · through the woods
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="experience__footer">
+          <span data-i18n="experience.footer">
+            From the first step to the last drink.
+          </span>
+        </div>
+
       </div>
     </section>
 
-
-    <section
-      id="cuisine"
-      data-section="cuisine"
-      class="section"
-    >
+    <section id="cuisine" data-section="cuisine" class="section">
       <div class="container">
         <h2 data-i18n="cuisine.title">
           Cuisine
@@ -619,12 +538,7 @@
       </div>
     </section>
 
-
-    <section
-      id="menu"
-      data-section="menu"
-      class="section"
-    >
+    <section id="menu" data-section="menu" class="section">
       <div class="container">
         <h2 data-i18n="menu.title">
           Menu
@@ -632,12 +546,7 @@
       </div>
     </section>
 
-
-    <section
-      id="place"
-      data-section="place"
-      class="section"
-    >
+    <section id="place" data-section="place" class="section">
       <div class="container">
         <h2 data-i18n="place.title">
           The Place
@@ -645,12 +554,7 @@
       </div>
     </section>
 
-
-    <section
-      id="moments"
-      data-section="moments"
-      class="section"
-    >
+    <section id="moments" data-section="moments" class="section">
       <div class="container">
         <h2 data-i18n="moments.title">
           Moments
@@ -658,12 +562,7 @@
       </div>
     </section>
 
-
-    <section
-      id="events"
-      data-section="events"
-      class="section"
-    >
+    <section id="events" data-section="events" class="section">
       <div class="container">
         <h2 data-i18n="events.title">
           Events
@@ -671,12 +570,7 @@
       </div>
     </section>
 
-
-    <section
-      id="visit"
-      data-section="visit"
-      class="section"
-    >
+    <section id="visit" data-section="visit" class="section">
       <div class="container">
         <h2 data-i18n="visit.title">
           Visit Bastione
@@ -685,7 +579,6 @@
     </section>
 
   </main>
-
 
   <!-- =========================================================
        FOOTER

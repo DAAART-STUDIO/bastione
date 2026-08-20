@@ -7,6 +7,7 @@ import { initNavigation } from './modules/navigation.js';
 import { initI18n } from './modules/i18n.js';
 import { initHeader } from './modules/header.js';
 import { initViewGallery } from './modules/view-gallery.js';
+import initExperience from './modules/experience.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeSwitcher();
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initI18n();
   initHeader();
   initViewGallery();
+  initExperience();
 });

@@ -31,6 +31,7 @@
   
   "view": {
     "eyebrow": "La vista",
+    "explore": "Scopri",
     "title": "Il Lago di Garda da un'altra prospettiva",
     "description": "Una terrazza panoramica sopra Riva del Garda, dove il paesaggio diventa parte dell'esperienza.",
     "lakeCaption": "Riva del Garda · Lago di Garda",
@@ -42,9 +43,38 @@
   },
 
   "experience": {
-    "eyebrow": "The Experience",
-    "title": "Arrive. Ascend. Stay.",
-    "description": "Un luogo da raggiungere lentamente e da vivere senza fretta."
+    "eyebrow": "L'esperienza",
+    "title": "Arriva. Sali. Resta.",
+    "description": "Più di una destinazione. Un ritmo che si svela dal primo passo all'ultimo drink.",
+    "core": "Lounge & Restaurant",
+    "nodes": {
+      "arrive": {
+        "title": "Arriva",
+        "text": "Lascia il lago alle spalle e inizia il percorso verso l'alto.",
+        "detail": "min · attraverso il bosco"
+      },
+      "view": {
+        "title": "Guarda",
+        "text": "Riva, il lago e le montagne si aprono davanti a te dall'alto.",
+        "detail": "m · sopra il lago"
+      },
+      "taste": {
+        "title": "Assaggia",
+        "text": "I sapori del Trentino incontrano l'ispirazione mediterranea a tavola.",
+        "detail": "montagna · mediterraneo"
+      },
+      "aperitivo": {
+        "title": "Aperitivo",
+        "text": "Resta per la luce, la vista e il lento passaggio verso la sera.",
+        "detail": "dal giorno · alla sera"
+      },
+      "stay": {
+        "title": "Resta",
+        "text": "Prenditi il tuo tempo. Colazione, pranzo, aperitivo, cena e dopocena.",
+        "detail": "tutto il giorno · fino a notte"
+      }
+    },
+    "footer": "Dal primo passo all'ultimo drink."
   },
   
   "cuisine": {
