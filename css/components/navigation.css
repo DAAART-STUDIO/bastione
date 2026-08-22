@@ -95,27 +95,74 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   LOGO
+   BASTIONE BRAND + LOGO
    ──────────────────────────────────────────────────────────── */
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-
-  flex-shrink: 0;
-
-  font-size: 1.05rem;
-  font-weight: 600;
-
-  letter-spacing: 0.2em;
-  line-height: 1;
-
-  text-transform: uppercase;
-}
-
-.brand:hover {
-  opacity: 0.75;
-}
+   .brand {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 42px;
+    padding-left: 0;
+    color: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    text-transform: uppercase;
+    isolation: isolate;
+  }
+  
+  /* декоративний герб */
+  .brand__logo {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 27px;
+    height: 37px;
+    transform: translateY(-50%);
+    color: currentColor;
+    opacity: 0.66;
+    z-index: -1;
+    pointer-events: none;
+    transition:
+      opacity var(--dur-med) var(--ease-smooth),
+      transform var(--dur-med) var(--ease-smooth);
+  }
+  
+  .brand__logo svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+  
+  .brand__logo .cls-1 {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-miterlimit: 10;
+  }
+  
+  /* сам текст */
+  .brand__name {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* hover */
+  .brand:hover {
+    opacity: 1;
+  }
+  
+  .brand:hover .brand__logo {
+    opacity: 0.42;
+    transform:
+      translateY(-50%)
+      translateX(-2px)
+      rotate(-5deg)
+      scale(1.04);
+  }
 
 
 /* ─────────────────────────────────────────────────────────────
@@ -496,7 +543,14 @@
 
 @media (max-width: 600px) {
   .brand {
+    height: 38px;
     font-size: 0.95rem;
+  }
+
+  .brand__logo {
+    left: -9px;
+    width: 24px;
+    height: 33px;
   }
 }
 

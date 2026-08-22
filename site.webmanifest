@@ -1,13 +1,13 @@
 {
-  "name": "VIRTUHAI — AI Situational Awareness Platform",
-  "short_name": "VIRTUHAI",
-  "description": "AI-powered situational awareness: drone detection, weather intelligence, air quality and official alerts in one platform.",
+  "name": "Bastione — Lounge & Restaurant",
+  "short_name": "Bastione",
+  "description": "Bastione Lounge & Restaurant above Lake Garda in Riva del Garda, Trentino, Italy.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#04060b",
-  "theme_color": "#04060b",
-  "lang": "uk",
+  "background_color": "#f3f1ec",
+  "theme_color": "#f3f1ec",
+  "lang": "en",
   "icons": [
     {
       "src": "assets/logo/favicon-192.png",

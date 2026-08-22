@@ -1,169 +1,227 @@
 /**
- * experience.js — Interactive Bastione experience constellation.
+ * experience.js — Bastione EXPERIENCE floating cards.
+ *
+ * Desktop only (≥1024px): five cards drop in with a soft bounce,
+ * drift gently at rest, tilt toward the cursor on hover, and the
+ * whole group parallaxes with the mouse. GSAP + ScrollTrigger
+ * drive it, loaded via CDN in index.html.
+ *
+ * Mobile, prefers-reduced-motion, or GSAP failing to load (e.g. no
+ * network): cards simply sit in the static CSS grid defined in
+ * experience.css. No JS branch below is required for that state —
+ * it's the default appearance before this module touches anything.
  */
 
-const EXPERIENCE_DATA = {
-    arrive: {
-      index: '01',
-      titleKey: 'experience.nodes.arrive.title',
-      textKey: 'experience.nodes.arrive.text',
-      value: '20',
-      detailKey: 'experience.nodes.arrive.detail',
-    },
-  
-    view: {
-      index: '02',
-      titleKey: 'experience.nodes.view.title',
-      textKey: 'experience.nodes.view.text',
-      value: '130',
-      detailKey: 'experience.nodes.view.detail',
-    },
-  
-    taste: {
-      index: '03',
-      titleKey: 'experience.nodes.taste.title',
-      textKey: 'experience.nodes.taste.text',
-      value: '2',
-      detailKey: 'experience.nodes.taste.detail',
-    },
-  
-    aperitivo: {
-      index: '04',
-      titleKey: 'experience.nodes.aperitivo.title',
-      textKey: 'experience.nodes.aperitivo.text',
-      value: '1',
-      detailKey: 'experience.nodes.aperitivo.detail',
-    },
-  
-    stay: {
-      index: '05',
-      titleKey: 'experience.nodes.stay.title',
-      textKey: 'experience.nodes.stay.text',
-      value: '∞',
-      detailKey: 'experience.nodes.stay.detail',
-    },
-  };
-  
-  const getTranslation = (key) => {
-    const element = document.querySelector(`[data-i18n="${key}"]`);
-  
-    return element?.textContent.trim() || '';
-  };
-  
-  const initExperience = () => {
+const initExperience = () => {
     const section = document.querySelector('#experience');
   
-    if (!section) {
+    if (!section || !window.gsap) {
       return;
     }
   
-    const visual = section.querySelector('.experience__visual');
-    const nodes = [...section.querySelectorAll('[data-experience-node]')];
-    const storyIndex = section.querySelector('.experience__story-index');
-    const storyTitle = section.querySelector('[data-experience-story-title]');
-    const storyText = section.querySelector('[data-experience-story-text]');
-    const storyValue = section.querySelector('[data-experience-story-value]');
-    const storyLabel = section.querySelector('[data-experience-story-label]');
+    const { gsap, ScrollTrigger } = window;
   
-    if (
-      !visual ||
-      !nodes.length ||
-      !storyIndex ||
-      !storyTitle ||
-      !storyText ||
-      !storyValue ||
-      !storyLabel
-    ) {
+    if (ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+  
+    const cards = [...section.querySelectorAll('[data-experience-card]')];
+    const indexItems = [...section.querySelectorAll('.experience__index li')];
+    const stage = section.querySelector('[data-experience-stage]');
+  
+    if (!cards.length || !stage) {
       return;
     }
   
-    let activeNode = 'arrive';
+    const mm = gsap.matchMedia();
   
-    const updateStory = (key, animate = true) => {
-      const data = EXPERIENCE_DATA[key];
+    mm.add('(min-width: 1024px)', () => {
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   
-      if (!data) {
-        return;
-      }
-  
-      if (animate) {
-        storyTitle.classList.add('is-changing');
-        storyText.classList.add('is-changing');
-  
-        window.setTimeout(() => {
-          storyIndex.textContent = data.index;
-          storyTitle.textContent = getTranslation(data.titleKey);
-          storyText.textContent = getTranslation(data.textKey);
-          storyValue.textContent = data.value;
-          storyLabel.textContent = getTranslation(data.detailKey);
-  
-          storyTitle.classList.remove('is-changing');
-          storyText.classList.remove('is-changing');
-        }, 180);
-  
-        return;
-      }
-  
-      storyIndex.textContent = data.index;
-      storyTitle.textContent = getTranslation(data.titleKey);
-      storyText.textContent = getTranslation(data.textKey);
-      storyValue.textContent = data.value;
-      storyLabel.textContent = getTranslation(data.detailKey);
-    };
-  
-    const activateNode = (key, animate = true) => {
-      if (!EXPERIENCE_DATA[key] || key === activeNode && animate) {
-        return;
-      }
-  
-      activeNode = key;
-  
-      nodes.forEach((node) => {
-        const isActive = node.dataset.experienceNode === key;
-  
-        node.classList.toggle('is-active', isActive);
-        node.setAttribute('aria-pressed', String(isActive));
+      cards.forEach((card) => {
+        card.dataset.restRot = parseFloat(card.dataset.rot) || 0;
       });
   
-      visual.classList.add('is-active');
-  
-      updateStory(key, animate);
-    };
-  
-    nodes.forEach((node) => {
-      node.addEventListener('click', () => {
-        activateNode(node.dataset.experienceNode);
-      });
-  
-      node.addEventListener('focus', () => {
-        activateNode(node.dataset.experienceNode);
-      });
-    });
-  
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-  
-        visual.classList.add('is-active');
-  
-        nodes.forEach((node, index) => {
-          window.setTimeout(() => {
-            node.classList.add('is-visible');
-          }, 180 + index * 110);
+      /*
+       * Reduced motion: land everything in its resting place
+       * instantly, skip entrance, idle float, parallax and tilt.
+       */
+      if (reduced) {
+        gsap.set(cards, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotation: (i, el) => parseFloat(el.dataset.restRot) || 0,
         });
   
-        observer.unobserve(section);
-      },
-      {
-        threshold: 0.2,
+        if (indexItems.length) {
+          gsap.set(indexItems, { opacity: 1, x: 0 });
+        }
+  
+        return;
       }
-    );
   
-    observer.observe(section);
+      /*
+       * ----------------------------------------------------------
+       * Entrance
+       * ----------------------------------------------------------
+       */
   
-    updateStory(activeNode, false);
-};
+      gsap.set(cards, {
+        y: -70,
+        opacity: 0,
+        scale: 0.85,
+        rotation: (i, el) => (parseFloat(el.dataset.restRot) || 0) + 18,
+      });
   
-export default initExperience;
+      if (indexItems.length) {
+        gsap.set(indexItems, { opacity: 0, x: 12 });
+      }
+  
+      const entrance = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 75%',
+          once: true,
+        },
+        defaults: { ease: 'power3.out' },
+      });
+  
+      entrance
+        .to(indexItems, { opacity: 1, x: 0, duration: 0.6, stagger: 0.06 }, 0)
+        .to(
+          cards,
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotation: (i, el) => parseFloat(el.dataset.restRot) || 0,
+            duration: 1,
+            stagger: { each: 0.09, from: 'center' },
+            ease: 'back.out(1.5)',
+          },
+          0.1
+        );
+  
+      /*
+       * ----------------------------------------------------------
+       * Continuous idle float
+       * ----------------------------------------------------------
+       */
+  
+      const floats = cards.map((card, i) =>
+        gsap.to(card, {
+          y: `+=${5 + (i % 3) * 3}`,
+          duration: 2.6 + (i % 3) * 0.5,
+          delay: 0.6 + i * 0.08,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+        })
+      );
+  
+      /*
+       * ----------------------------------------------------------
+       * Pointer-only: mouse parallax on the group + per-card tilt
+       * ----------------------------------------------------------
+       */
+  
+      const cleanups = [];
+  
+      if (window.matchMedia('(pointer: fine)').matches) {
+        let mx = 0;
+        let my = 0;
+        let tx = 0;
+        let ty = 0;
+        let raf;
+  
+        const onStageMove = (event) => {
+          const rect = stage.getBoundingClientRect();
+          mx = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+          my = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+        };
+  
+        const onStageLeave = () => {
+          mx = 0;
+          my = 0;
+        };
+  
+        const tick = () => {
+          tx += (mx - tx) * 0.06;
+          ty += (my - ty) * 0.06;
+  
+          cards.forEach((card, i) => {
+            const depth = 6 + (i % 4) * 2;
+            card.style.translate = `${tx * depth}px ${ty * depth * 0.6}px`;
+          });
+  
+          raf = requestAnimationFrame(tick);
+        };
+  
+        stage.addEventListener('mousemove', onStageMove);
+        stage.addEventListener('mouseleave', onStageLeave);
+        raf = requestAnimationFrame(tick);
+  
+        cleanups.push(() => {
+          cancelAnimationFrame(raf);
+          stage.removeEventListener('mousemove', onStageMove);
+          stage.removeEventListener('mouseleave', onStageLeave);
+        });
+  
+        cards.forEach((card, i) => {
+          const restRot = parseFloat(card.dataset.restRot) || 0;
+          const indexItem = indexItems[i];
+  
+          const onCardMove = (event) => {
+            const rect = card.getBoundingClientRect();
+            const px = (event.clientX - rect.left) / rect.width - 0.5;
+            const py = (event.clientY - rect.top) / rect.height - 0.5;
+  
+            gsap.to(card, {
+              rotateX: -py * 10,
+              rotateY: px * 10,
+              rotation: restRot * 0.3,
+              scale: 1.08,
+              zIndex: 20,
+              duration: 0.4,
+              ease: 'power2.out',
+              transformPerspective: 700,
+              overwrite: 'auto',
+            });
+  
+            indexItem?.classList.add('is-focused');
+          };
+  
+          const onCardLeave = () => {
+            gsap.to(card, {
+              rotateX: 0,
+              rotateY: 0,
+              rotation: restRot,
+              scale: 1,
+              zIndex: '',
+              duration: 0.7,
+              ease: 'elastic.out(1, 0.6)',
+              overwrite: 'auto',
+            });
+  
+            indexItem?.classList.remove('is-focused');
+          };
+  
+          card.addEventListener('mousemove', onCardMove);
+          card.addEventListener('mouseleave', onCardLeave);
+  
+          cleanups.push(() => {
+            card.removeEventListener('mousemove', onCardMove);
+            card.removeEventListener('mouseleave', onCardLeave);
+          });
+        });
+      }
+  
+      return () => {
+        floats.forEach((tween) => tween.kill());
+        cleanups.forEach((cleanup) => cleanup());
+      };
+    });
+  };
+  
+  export default initExperience;
