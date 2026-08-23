@@ -2,12 +2,16 @@
  * layout.css — Shared Bastione layout primitives.
  */
 
- .container {
+.container {
   width: 100%;
   max-width: var(--container-max);
 
   margin-inline: auto;
   padding-inline: var(--container-pad);
+}
+
+main {
+  position: relative;
 }
 
 section[data-section] {

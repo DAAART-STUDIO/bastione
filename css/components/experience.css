@@ -1,99 +1,98 @@
-/* EXPERIENCE — floating cards */
+/**
+ * EXPERIENCE — photo strip overlaid on the View gallery.
+ *
+ * This no longer renders as its own section. `.experience__wave` is
+ * an absolutely-positioned child living inside `.view__gallery`
+ * (see index.html) so its five photos float over the View photo,
+ * on the same screen. View's own markup/CSS is untouched — this
+ * only adds a new layer on top of it.
+ *
+ * z-index sits above `.view__gallery::before` (20) and below
+ * `.view__visual.is-preview` (25) and `.view__header` /
+ * `.view__gallery-hint` (30), so View's own existing controls
+ * always win if anything ever overlaps.
+ */
 
-.experience {
+.experience__wave {
+    position: absolute;
+    top: calc(100svh - 9rem);
+    right: 1rem;
+    z-index: 22;
+    width: 34vw;
+    height: 13rem;
+    padding: 0 5px;
+    box-shadow:
+        inset 0px 0px 80px 20px rgba(0, 0, 0, 0.5),
+        0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 601px) {
+    .experience__wave {
+        top: calc(100svh - 9rem);
+        right: clamp(3rem, 3vw, 2.5rem);
+        width: 34vw;
+        height: 25rem;
+        padding: 0 10px;
+    }
+}
+  
+@media (min-width: 900px) {
+    .experience__wave {
+        top: calc(100svh - 7rem);
+        right: clamp(3rem, 5vw, 6rem);
+        width: min(33vw, 20rem);
+        height: 26rem;
+        padding: 0 20px;
+    }
+}
+  
+.experience__wave-track {
     position: relative;
-    overflow: hidden;
-    padding-block: clamp(2.25rem, 5.5vh, 4rem);
-  }
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
   
-  .experience__container {
-    position: relative;
-  }
-  
-  .experience__eyebrow {
-    margin: 0;
-    color: var(--color-ink-soft);
-    font-size: var(--fs-label);
-    letter-spacing: var(--tracking-wider);
-    text-transform: uppercase;
-  }
-  
-  
-  /* ─────────────────────────────────────────────────────────────
-     INDEX — small stage list, desktop only (see enhancement below)
-     ──────────────────────────────────────────────────────────── */
-  
-  .experience__index {
+  .experience__wave-track::-webkit-scrollbar {
     display: none;
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
   
-  
-  /* ─────────────────────────────────────────────────────────────
-     CARDS — mobile-first default: a simple static photo grid.
-     The floating/absolute treatment is a desktop enhancement,
-     added in the min-width block below.
-     ──────────────────────────────────────────────────────────── */
-  
-  .experience__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    margin-top: clamp(1.5rem, 4vh, 2.5rem);
+  .experience__wave-track.is-dragging {
+    cursor: grabbing;
   }
   
-  .experience__card {
+  .experience__wave-track:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.8);
+    outline-offset: -4px;
+  }
+  
+  .experience__wave-strip {
+    padding-block: 0.5rem;
+    user-select: none;
+  }
+  
+  .experience__wave-item {
     position: relative;
+    margin-bottom: 0.6rem;
     overflow: hidden;
-    border: 1px solid var(--color-line);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-md);
     background: var(--color-surface-raised);
-    aspect-ratio: 4 / 5;
+    box-shadow: 0 1rem 2.5rem -1rem rgba(0, 0, 0, 0.5);
+    will-change: transform;
   }
   
-  .experience__card--02,
-  .experience__card--05 {
-    grid-column: span 2;
-    aspect-ratio: 16 / 9;
-  }
-  
-  .experience__card-media {
-    position: absolute;
-    inset: 0;
-  }
-  
-  .experience__card-media img {
+  .experience__wave-item img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    pointer-events: none;
   }
   
-  .experience__card--placeholder .experience__card-media {
-    background: linear-gradient(160deg, var(--color-surface-raised), var(--color-bg));
-  }
-  
-  .experience__card-motif {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    opacity: 0.22;
-  }
-  
-  .experience__card-motif svg {
-    width: 34%;
-    height: 34%;
-    fill: none;
-    stroke: var(--color-ink);
-    stroke-width: 0.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  
-  .experience__card-caption {
+  .experience__wave-item figcaption {
     position: absolute;
     inset-inline: 0;
     bottom: 0;
@@ -101,125 +100,25 @@
     display: flex;
     align-items: baseline;
     gap: 0.4rem;
-    padding: 0.6rem 0.75rem;
-    color: var(--color-white);
-    font-size: var(--fs-label);
+    padding: 0.5rem 0.6rem;
+    background: linear-gradient(180deg, rgba(15, 15, 12, 0) 0%, rgba(15, 15, 12, 0.65) 100%);
+    color: #fff;
+    font-size: 0.62rem;
     letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
   }
   
-  .experience__card:not(.experience__card--placeholder) .experience__card-caption {
-    background: linear-gradient(180deg, rgba(15, 15, 12, 0) 0%, rgba(15, 15, 12, 0.6) 100%);
-  }
-  
-  .experience__card--placeholder .experience__card-caption {
-    color: var(--color-ink-soft);
-  }
-  
-  .experience__card-index {
+  .experience__wave-index {
     opacity: 0.7;
   }
   
   
   /* ─────────────────────────────────────────────────────────────
-     HEADLINE / DESCRIPTION
+     REDUCED MOTION
      ──────────────────────────────────────────────────────────── */
   
-  .experience__headline {
-    position: relative;
-    z-index: 2;
-    margin: clamp(1.25rem, 3.5vh, 2.25rem) 0 0;
-    max-width: 42rem;
-    color: var(--color-ink);
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: clamp(2.5rem, 4vw, 4.25rem);
-    line-height: 0.92;
-    letter-spacing: -0.03em;
-  }
-  
-  .experience__description {
-    max-width: 28rem;
-    margin: clamp(0.75rem, 2vh, 1.25rem) 0 0;
-    color: var(--color-ink-soft);
-    font-size: var(--fs-body);
-    line-height: var(--lh-normal);
-  }
-  
-  
-  /* ─────────────────────────────────────────────────────────────
-     DESKTOP ENHANCEMENT — floating scatter, index list, GSAP hooks
-     ──────────────────────────────────────────────────────────── */
-  
-  @media (min-width: 1024px) {
-  
-    .experience__index {
-      position: absolute;
-      top: 0.2rem;
-      right: 0;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      text-align: right;
-      color: var(--color-ink-faint);
-      font-size: var(--fs-label);
-      letter-spacing: var(--tracking-wide);
-      text-transform: uppercase;
-    }
-  
-    .experience__index li {
-      transition: color var(--dur-med) var(--ease-out);
-    }
-  
-    .experience__index li.is-focused {
-      color: var(--color-ink);
-    }
-  
-    .experience__stage {
-      position: relative;
-      height: clamp(14rem, 36vh, 20rem);
-    }
-  
-    .experience__cards {
-      position: absolute;
-      inset: 0;
-      display: block;
-      margin-top: 0;
-    }
-  
-    .experience__card {
-      position: absolute;
-      aspect-ratio: auto;
-      cursor: default;
-      box-shadow: 0 1.25rem 2.5rem -1.25rem rgba(20, 18, 12, 0.35);
-      will-change: transform;
-    }
-  
-    .experience__card--01 { width: 8.5rem; height: 11rem;  left: 1%;  top: 6%;  z-index: 2; }
-    .experience__card--02 { width: 13rem;  height: 16rem;  left: 18%; top: -2%; z-index: 5; }
-    .experience__card--03 { width: 10rem;  height: 7.5rem; left: 39%; top: 16%; z-index: 3; }
-    .experience__card--04 { width: 10rem;  height: 13rem;  left: 56%; top: 0%;  z-index: 4; }
-    .experience__card--05 { width: 11rem;  height: 14rem;  left: 75%; top: 8%;  z-index: 3; }
-  }
-  
-  
-  /* ─────────────────────────────────────────────────────────────
-     RESPONSIVE — tighten type on small phones
-     ──────────────────────────────────────────────────────────── */
-  
-  @media (max-width: 480px) {
-    .experience__headline {
-      font-size: clamp(2.1rem, 9vw, 2.75rem);
-    }
-  
-    .experience__cards {
-      grid-template-columns: 1fr;
-    }
-  
-    .experience__card--02,
-    .experience__card--05 {
-      grid-column: auto;
-      aspect-ratio: 4 / 3;
+  @media (prefers-reduced-motion: reduce) {
+    .experience__wave-item {
+      transition: none;
     }
   }

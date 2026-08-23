@@ -43,9 +43,6 @@
   },
 
   "experience": {
-    "eyebrow": "Das Erlebnis",
-    "title": "Ankommen. Aufsteigen. Bleiben.",
-    "description": "Mehr als ein Ziel. Ein Rhythmus, der sich vom ersten Schritt bis zum letzten Drink entfaltet.",
     "nodes": {
       "arrive": {
         "title": "Ankommen",
@@ -72,8 +69,7 @@
         "text": "Nehmen Sie sich Zeit. Frühstück, Mittagessen, Aperitivo, Dinner und After-Dinner.",
         "detail": "den ganzen Tag · bis in die Nacht"
       }
-    },
-    "footer": "Vom ersten Schritt bis zum letzten Drink."
+    }
   },
 
   "cuisine": {

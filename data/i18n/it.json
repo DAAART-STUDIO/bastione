@@ -43,9 +43,6 @@
   },
 
   "experience": {
-    "eyebrow": "L'esperienza",
-    "title": "Arriva. Sali. Resta.",
-    "description": "Più di una destinazione. Un ritmo che si svela dal primo passo all'ultimo drink.",
     "nodes": {
       "arrive": {
         "title": "Arriva",
@@ -72,8 +69,7 @@
         "text": "Prenditi il tuo tempo. Colazione, pranzo, aperitivo, cena e dopocena.",
         "detail": "tutto il giorno · fino a notte"
       }
-    },
-    "footer": "Dal primo passo all'ultimo drink."
+    }
   },
   
   "cuisine": {

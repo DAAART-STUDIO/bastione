@@ -233,7 +233,8 @@
   
     z-index: 25;
   
-    border-radius: 4px;
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   
     transform:
       translate3d(0, 0, 0)
@@ -718,7 +719,7 @@
     }
 
     .view__header {
-        top: 1.5rem;
+        top: 3.5rem;
         left: 1.25rem;
     
         width: calc(100% - 2.5rem);
