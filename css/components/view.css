@@ -499,69 +499,6 @@
   }
   
   
-  /* ============================================================
-     LOCATION
-     ============================================================ */
-  
-  .view__location {
-    display: grid;
-  
-    grid-template-columns:
-      minmax(180px, 0.55fr)
-      minmax(0, 1fr);
-  
-    gap:
-      clamp(2rem, 8vw, 9rem);
-  
-    margin-top:
-      clamp(5rem, 10vw, 10rem);
-  
-    padding-top:
-      1.5rem;
-  
-    border-top:
-      1px solid var(--color-line);
-  }
-  
-  
-  .view__location-label {
-    color:
-      var(--color-ink-faint);
-  
-    font-size:
-      var(--fs-label);
-  
-    font-weight:
-      600;
-  
-    letter-spacing:
-      var(--tracking-wider);
-  
-    text-transform:
-      uppercase;
-  }
-  
-  
-  .view__location-text {
-    max-width:
-      680px;
-  
-    font-family:
-      var(--font-display);
-  
-    font-size:
-      clamp(1.8rem, 3vw, 3.2rem);
-  
-    font-weight:
-      400;
-  
-    line-height:
-      1.08;
-  
-    letter-spacing:
-      var(--tracking-tight);
-  }
-  
   
   /* ============================================================
      DARK THEME

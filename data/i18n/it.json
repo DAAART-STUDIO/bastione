@@ -43,6 +43,10 @@
   },
 
   "experience": {
+    "eyebrow": "Dal 1507",
+    "title": "Costruito per difendere. Restaurato per accogliere.",
+    "text": "Nel 1507 la Repubblica di Venezia fece erigere un bastione di pietra sulle pendici del Monte Rocchetta, a guardia di Riva del Garda e del suo porto. Il dominio veneziano si concluse prima che la fortezza vedesse battaglia, e per secoli rimase in rovina sopra il lago. Una funivia panoramica la ricollegò alla città negli anni '50, e un attento restauro la restituì a Riva nel 2008 — la stessa terrazza dove oggi Bastione propone una cucina tra Trentino e Mediterraneo, dalla colazione al dopocena.",
+    "year": "1507",
     "nodes": {
       "arrive": {
         "title": "Arriva",

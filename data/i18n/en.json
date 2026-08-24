@@ -43,6 +43,10 @@
   },
 
   "experience": {
+    "eyebrow": "Since 1507",
+    "title": "Built to defend. Restored to welcome.",
+    "text": "In 1507, the Republic of Venice raised a stone bastion on the slopes of Monte Rocchetta to guard Riva del Garda and its port. Venetian rule over the town ended before the fortress ever saw battle, and for centuries it stood in ruin above the lake. A panoramic lift reconnected it to the town in the 1950s, and a careful restoration returned it to the city in 2008 — the same terrace where Bastione now serves Trentino and Mediterranean cooking, from morning until after dark.",
+    "year": "1507",
     "nodes": {
       "arrive": {
         "title": "Arrive",

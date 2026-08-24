@@ -43,6 +43,10 @@
   },
 
   "experience": {
+    "eyebrow": "Seit 1507",
+    "title": "Erbaut zur Verteidigung. Restauriert für Gastfreundschaft.",
+    "text": "1507 errichtete die Republik Venedig an den Hängen des Monte Rocchetta eine steinerne Bastion zum Schutz von Riva del Garda und seines Hafens. Die venezianische Herrschaft endete, bevor die Festung je in eine Schlacht verwickelt wurde, und jahrhundertelang lag sie als Ruine über dem See. In den 1950er-Jahren verband eine Panoramabahn sie wieder mit der Stadt, 2008 gab eine sorgfältige Restaurierung sie Riva zurück — dieselbe Terrasse, auf der Bastione heute Küche zwischen Trentino und Mittelmeer serviert, vom Frühstück bis zum Absacker.",
+    "year": "1507",
     "nodes": {
       "arrive": {
         "title": "Ankommen",

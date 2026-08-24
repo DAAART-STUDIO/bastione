@@ -272,15 +272,6 @@
         <span data-i18n="view.explore">Explore</span>
         <span class="view__gallery-hint-line"></span>
       </div>
-      <!-- LOCATION -->
-      <div class="view__location">
-        <p class="view__location-label" data-i18n="view.locationLabel">
-          The location
-        </p>
-        <p class="view__location-text" data-i18n="view.locationText">
-          Between the lake, the mountains and the historic centre of Riva del Garda.
-        </p>
-      </div>
     </section>
     <!-- EXPERIENCE OVERLAY — photo strip laid over the View gallery -->
     <div class="experience__wave" data-experience-wave>
@@ -357,11 +348,32 @@
     </div>
 
     <!-- EXPERIENCE -->
-    <section id="experience" data-section="experience" class="experience">
-      <div class="container">
-        <h2 data-i18n="experience.title">
-          Cuisine
-        </h2>
+    <section id="experience" data-section="experience" class="experience" aria-labelledby="experience-title">
+      <div class="experience__visual" aria-hidden="true">
+        <img
+          class="experience__visual-image experience__visual-image--light"
+          src="assets/images/bastione/Since1507_light.jpg"
+          alt=""
+          loading="lazy"
+        >
+        <img
+          class="experience__visual-image experience__visual-image--dark"
+          src="assets/images/bastione/Since1507_dark.jpg"
+          alt=""
+          loading="lazy"
+        >
+      </div>
+      <div class="container experience__container">
+        <div class="experience__year" aria-hidden="true" data-i18n="experience.year">1507</div>
+        <div class="experience__content" data-reveal>
+          <p class="experience__eyebrow" data-i18n="experience.eyebrow">Since 1507</p>
+          <h2 class="experience__title" id="experience-title" data-i18n="experience.title">
+            Built to defend. Restored to welcome.
+          </h2>
+          <p class="experience__text" data-i18n="experience.text">
+            In 1507, the Republic of Venice raised a stone bastion on the slopes of Monte Rocchetta to guard Riva del Garda and its port. Venetian rule over the town ended before the fortress ever saw battle, and for centuries it stood in ruin above the lake. A panoramic lift reconnected it to the town in the 1950s, and a careful restoration returned it to the city in 2008 — the same terrace where Bastione now serves Trentino and Mediterranean cooking, from morning until after dark.
+          </p>
+        </div>
       </div>
     </section>
 
