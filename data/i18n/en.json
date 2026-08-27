@@ -76,6 +76,38 @@
     }
   },
 
+  "moments": {
+    "eyebrow": "Captured at Bastione",
+    "title": "Moments above the lake.",
+    "description": "Some places are meant to be remembered.",
+
+    "cards": {
+      "01": {
+        "label": "Riva del Garda",
+        "meta": "Above the lake"
+      },
+      "02": {
+        "label": "A table above the lake",
+        "meta": "Bastione"
+      },
+      "03": {
+        "label": "The view",
+        "meta": "Riva del Garda"
+      },
+      "04": {
+        "label": "Golden hour",
+        "meta": "Lake Garda"
+      },
+      "05": {
+        "label": "A moment to remember",
+        "meta": "Bastione"
+      }
+    },
+
+    "note": "Keep the moment.",
+    "footer": "Every visit leaves a memory."
+  },
+
   "cuisine": {
     "eyebrow": "The Cuisine",
     "title": "Mountain meets Mediterranean.",
@@ -93,12 +125,6 @@
     "eyebrow": "The Place",
     "title": "History above the lake.",
     "description": "A historic place transformed into a contemporary experience."
-  },
-
-  "moments": {
-    "eyebrow": "Moments",
-    "title": "Made for the moment.",
-    "description": "Light, table, lake and time shared."
   },
 
   "events": {

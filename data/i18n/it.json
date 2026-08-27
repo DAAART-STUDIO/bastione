@@ -75,6 +75,38 @@
       }
     }
   },
+
+  "moments": {
+    "eyebrow": "Momenti al Bastione",
+    "title": "Momenti sopra il lago.",
+    "description": "Ci sono luoghi fatti per essere ricordati.",
+
+    "cards": {
+      "01": {
+        "label": "Riva del Garda",
+        "meta": "Sopra il lago"
+      },
+      "02": {
+        "label": "Una tavola sopra il lago",
+        "meta": "Bastione"
+      },
+      "03": {
+        "label": "La vista",
+        "meta": "Riva del Garda"
+      },
+      "04": {
+        "label": "Golden hour",
+        "meta": "Lago di Garda"
+      },
+      "05": {
+        "label": "Un momento da ricordare",
+        "meta": "Bastione"
+      }
+    },
+
+    "note": "Conserva il momento.",
+    "footer": "Ogni visita lascia un ricordo."
+  },
   
   "cuisine": {
     "eyebrow": "The Cuisine",
@@ -93,12 +125,6 @@
     "eyebrow": "The Place",
     "title": "History above the lake.",
     "description": "Un luogo storico trasformato in un'esperienza contemporanea."
-  },
-  
-  "moments": {
-    "eyebrow": "Moments",
-    "title": "Made for the moment.",
-    "description": "Luce, tavola, lago e tempo condiviso."
   },
   
   "events": {

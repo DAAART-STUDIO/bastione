@@ -205,6 +205,9 @@
         top: 7%;
         right: -15%;
     }
+    .experience__text {
+        font-size: var(--fs-body);
+    }
 }
   
 @media (min-width: 900px) {
@@ -221,13 +224,8 @@
     }
     .experience__visual-image {
       width: min(92vw, 1500px);
-    }
-    .experience__text {
-        font-size: var(--fs-body);
-    }
-    .experience__visual-image {
-        top: 3%;
-        right: -10%;
+      top: 3%;
+      right: -10%;
     }
 }
   

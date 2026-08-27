@@ -76,6 +76,38 @@
     }
   },
 
+  "moments": {
+    "eyebrow": "Momente im Bastione",
+    "title": "Momente über dem See.",
+    "description": "Manche Orte bleiben in Erinnerung.",
+
+    "cards": {
+      "01": {
+        "label": "Riva del Garda",
+        "meta": "Über dem See"
+      },
+      "02": {
+        "label": "Ein Tisch über dem See",
+        "meta": "Bastione"
+      },
+      "03": {
+        "label": "Der Ausblick",
+        "meta": "Riva del Garda"
+      },
+      "04": {
+        "label": "Goldene Stunde",
+        "meta": "Gardasee"
+      },
+      "05": {
+        "label": "Ein Moment zum Erinnern",
+        "meta": "Bastione"
+      }
+    },
+
+    "note": "Bewahre den Moment.",
+    "footer": "Jeder Besuch hinterlässt eine Erinnerung."
+  },
+
   "cuisine": {
     "eyebrow": "The Cuisine",
     "title": "Berge treffen Mittelmeer.",
@@ -93,12 +125,6 @@
     "eyebrow": "The Place",
     "title": "Geschichte über dem See.",
     "description": "Ein historischer Ort, verwandelt in ein zeitgemäßes Erlebnis."
-  },
-
-  "moments": {
-    "eyebrow": "Moments",
-    "title": "Für den Moment gemacht.",
-    "description": "Licht, Tisch, See und gemeinsam verbrachte Zeit."
   },
 
   "events": {
