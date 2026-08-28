@@ -1,603 +1,442 @@
 /* =========================================================
    MOMENTS — Captured at Bastione
    ========================================================= */
-
    .moments {
     position: relative;
-  
     padding-block: clamp(6rem, 11vw, 10rem);
-  
-    overflow: hidden;
-  
     background: var(--color-bg);
-  
     isolation: isolate;
+    overflow-x: clip;
   }
-  
-  
-  /* =========================================================
-     CONTAINER
-     ========================================================= */
-  
   .moments__container {
     position: relative;
-  
     display: flex;
     flex-direction: column;
-  
     min-height: 900px;
+    margin-top: -33vh;
+    z-index: 100;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
   }
-  
-  
-  /* =========================================================
-     INTRO
-     ========================================================= */
-  
   .moments__intro {
     position: relative;
-  
     z-index: 5;
-  
-    width: min(100%, 38rem);
-  
+    width: min(100%, 48rem);
     margin-left: auto;
     margin-right: auto;
-  
     text-align: center;
   }
-  
-  
   .moments__eyebrow {
     margin: 0 0 var(--space-3);
-  
     color: var(--color-ink-soft);
-  
     font-size: var(--fs-label);
-  
     font-weight: 500;
-  
     letter-spacing: var(--tracking-wider);
-  
     line-height: 1;
-  
     text-transform: uppercase;
   }
-  
-  
   .moments__title {
     margin: 0;
-  
     color: var(--color-ink);
-  
     font-family: var(--font-display);
-  
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-  
     font-weight: 400;
-  
     line-height: 0.98;
-  
     letter-spacing: -0.035em;
   }
-  
-  
   .moments__description {
-    max-width: 24rem;
-  
+    max-width: 34rem;
     margin: var(--space-4) auto 0;
-  
     color: var(--color-ink-soft);
-  
     font-size: var(--fs-body);
-  
     line-height: var(--lh-normal);
   }
-  
-  
   /* =========================================================
-     PHOTO STAGE
+     PHOTO
      ========================================================= */
-  
   .moments__stage {
     position: relative;
-  
     width: 100%;
     height: 650px;
-  
     margin-top: clamp(3rem, 6vw, 5rem);
-  
     touch-action: pan-y;
-  
     user-select: none;
   }
-  
-  
-  /* =========================================================
-     PHOTO CARD
-     ========================================================= */
-  
   .moments__card {
     position: absolute;
-  
     width: clamp(210px, 18vw, 285px);
-  
     margin: 0;
-  
     padding: 10px 10px 14px;
-  
     background: var(--moments-card-bg);
-  
     border: 1px solid var(--moments-card-border);
-  
     box-shadow:
       0 14px 35px rgba(0, 0, 0, 0.10),
       0 3px 10px rgba(0, 0, 0, 0.06);
-  
     cursor: grab;
-  
     transform:
       translate3d(0, 0, 0)
       rotate(var(--card-rotation, 0deg));
-  
     transform-origin: center center;
-  
     will-change: transform, box-shadow;
-  
     transition:
       transform 380ms var(--ease-smooth),
       box-shadow 350ms var(--ease-smooth),
       filter 350ms var(--ease-smooth);
-  
     z-index: 1;
-
     touch-action: none;
     -webkit-user-select: none;
     user-select: none;
   }
-
   .moments__card.is-dragging {
     cursor: grabbing;
-  
     box-shadow:
       0 30px 70px rgba(0, 0, 0, 0.22),
       0 8px 20px rgba(0, 0, 0, 0.10);
-  
     transition: none !important;
   }
-
   .moments__card img {
     -webkit-user-drag: none;
   }
-  
-  
   .moments__card:active {
     cursor: grabbing;
   }
-  
-  
   .moments__card:hover {
     z-index: 20;
-  
     box-shadow:
       0 24px 55px rgba(0, 0, 0, 0.18),
       0 5px 14px rgba(0, 0, 0, 0.08);
-  
     filter: brightness(1.015);
   }
-  
-  
-  /* =========================================================
-     CARD MEDIA
-     ========================================================= */
-  
   .moments__card-media {
     position: relative;
-  
     width: 100%;
-  
     aspect-ratio: 4 / 5;
-  
     overflow: hidden;
-  
     background: var(--color-ink-faint);
   }
-  
-  
   .moments__card-media img {
     display: block;
-  
     width: 100%;
     height: 100%;
-  
     object-fit: cover;
-  
     pointer-events: none;
-  
     user-select: none;
-  
     transform: scale(1);
-  
     transition:
       transform 700ms var(--ease-smooth);
   }
-  
-  
   .moments__card:hover .moments__card-media img {
     transform: scale(1.025);
   }
-  
-  
-  /* =========================================================
-     CARD CAPTION
-     ========================================================= */
-  
   .moments__card-caption {
     display: flex;
     flex-direction: column;
-  
     gap: 3px;
-  
     padding: 10px 3px 0;
   }
-  
-  
   .moments__card-label {
     color: var(--color-ink);
-  
     font-family: var(--font-display);
-  
     font-size: 0.9rem;
-  
     line-height: 1.15;
   }
-  
-  
   .moments__card-meta {
     color: var(--color-ink-soft);
-  
     font-size: 0.58rem;
-  
     font-weight: 500;
-  
     letter-spacing: 0.12em;
-  
     line-height: 1.2;
-  
     text-transform: uppercase;
   }
-  
   
   /* =========================================================
      INDIVIDUAL CARD POSITIONS
      ========================================================= */
-  
   /*
      Intentional asymmetry.
      These are fixed positions for the initial composition.
      Later JS can slightly randomize / animate them.
   */
-  
-  
   .moments__card--01 {
     --card-rotation: -6deg;
-  
-    left: 8%;
-    top: 15%;
+    left: 15%;
+    top: 5%;
   }
-  
-  
   .moments__card--02 {
-    --card-rotation: 4deg;
-  
-    left: 31%;
-    top: 28%;
-  
-    z-index: 3;
-  }
-  
-  
-  .moments__card--03 {
-    --card-rotation: -3deg;
-  
-    left: 55%;
-    top: 10%;
-  
+    --card-rotation: -4deg;
+    left: 18%;
+    top: 30%;
     z-index: 2;
   }
-  
-  
+  .moments__card--03 {
+    --card-rotation: -5deg;
+    left: 27%;
+    top: 10%;
+    z-index: 3;
+  }
   .moments__card--04 {
-    --card-rotation: 7deg;
-  
-    left: 69%;
+    --card-rotation: -3deg;
+    left: 35%;
     top: 38%;
-  
     z-index: 4;
   }
-  
-  
   .moments__card--05 {
-    --card-rotation: -5deg;
-  
-    left: 43%;
-    top: 54%;
-  
+    --card-rotation: 0deg;
+    left: 40%;
+    top: 1%;
     z-index: 5;
   }
-  
-  
+  .moments__card--06 {
+    --card-rotation: -2deg;
+    left: 50%;
+    top: 34%;
+    z-index: 6;
+  }
+  .moments__card--07 {
+    --card-rotation: 5deg;
+    left: 55%;
+    top: 24%;
+    z-index: 7;
+  }
+  .moments__card--08 {
+    --card-rotation: 7deg;
+    left: 60%;
+    top: 7%;
+    z-index: 8;
+  }
+  .moments__card--09 {
+    --card-rotation: 10deg;
+    left: 70%;
+    top: 40%;
+    z-index: 9;
+  }
   /* =========================================================
      STAGE NOTE
      ========================================================= */
-  
   .moments__note {
     position: absolute;
-  
     left: 2%;
     bottom: 5%;
-  
     color: var(--color-ink-faint);
-  
     font-size: 0.62rem;
-  
     font-weight: 500;
-  
     letter-spacing: 0.18em;
-  
     text-transform: uppercase;
-  
     transform: rotate(-90deg);
-  
     transform-origin: left top;
-  
     pointer-events: none;
-  
     user-select: none;
   }
-  
-  
   /* =========================================================
      FOOTER
      ========================================================= */
-  
   .moments__footer {
     position: relative;
-  
     z-index: 5;
-  
     display: flex;
-  
     justify-content: center;
-  
     margin-top: clamp(2rem, 5vw, 4rem);
-  
     text-align: center;
   }
-  
-  
   .moments__footer p {
     margin: 0;
-  
     color: var(--color-ink-soft);
-  
     font-family: var(--font-display);
-  
     font-size: clamp(1.1rem, 2vw, 1.5rem);
-  
     font-style: italic;
-  
     line-height: 1.2;
   }
-  
   
   /* =========================================================
      THEME COLORS
      ========================================================= */
-  
   /*
      Light theme
   */
-  
   :root {
     --moments-card-bg: #fdfcf8;
-  
     --moments-card-border: rgba(20, 20, 18, 0.08);
   }
-  
-  
   /* =========================================================
      TABLET
      ========================================================= */
-  
   @media (max-width: 1100px) {
-  
     .moments__container {
       min-height: 820px;
     }
-  
     .moments__stage {
       height: 580px;
     }
-  
     .moments__card {
       width: clamp(190px, 22vw, 245px);
     }
-  
     .moments__card--01 {
-      left: 3%;
+      left: 5%;
+      top: 5%;
     }
-  
     .moments__card--02 {
-      left: 28%;
+      left: 9%;
+      top: 49%;
     }
-  
     .moments__card--03 {
-      left: 53%;
+      left: 25%;
+      top: 5%;
     }
-  
     .moments__card--04 {
-      left: 70%;
+      left: 57%;
+      top: 1%;
     }
-  
     .moments__card--05 {
-      left: 40%;
+      left: 42%;
+      top: 10%;
     }
-  
+    .moments__card--06 {
+      left: 33%;
+      top: 41%;
+    }
+    .moments__card--07 {
+      left: 57%;
+      top: 39%;
+    }
+    .moments__card--08 {
+      left: 77%;
+      top: 1%;
+    }
+    .moments__card--09 {
+      left: 77%;
+      top: 49%;
+    }
   }
-  
-  
   /* =========================================================
      MOBILE
      ========================================================= */
-  
   @media (max-width: 700px) {
-  
     .moments {
       padding-block: 5rem 6rem;
     }
-  
-  
     .moments__container {
       min-height: auto;
     }
-  
-  
     .moments__intro {
       width: min(100%, 25rem);
     }
-  
-  
     .moments__title {
       font-size: clamp(2.4rem, 12vw, 3.6rem);
     }
-  
-  
     .moments__description {
       max-width: 20rem;
-  
       font-size: 0.9rem;
     }
-  
-  
     /*
        On mobile the gallery becomes a controlled
        overlapping composition rather than a wide desktop field.
     */
-  
     .moments__stage {
       height: 650px;
-  
       margin-top: 3.5rem;
     }
-  
-  
     .moments__card {
       width: min(52vw, 205px);
-  
       padding: 8px 8px 12px;
     }
-  
-  
     .moments__card-caption {
       padding-top: 8px;
     }
-  
-  
     .moments__card-label {
       font-size: 0.78rem;
     }
-  
-  
     .moments__card-meta {
       font-size: 0.5rem;
     }
-  
-  
     .moments__card--01 {
-      left: 3%;
-      top: 7%;
+      left: -8%;
+      top: 9%;
     }
-  
-  
     .moments__card--02 {
-      left: 42%;
-      top: 17%;
+      left: 2%;
+      top: 37%;
     }
-  
-  
     .moments__card--03 {
-      left: 9%;
-      top: 43%;
+      left: -9%;
+      top: 53%;
     }
-  
-  
     .moments__card--04 {
-      left: 48%;
+      left: 28%;
       top: 48%;
     }
-  
-  
     .moments__card--05 {
-      left: 24%;
-      top: 70%;
+      left: 37%;
+      top: 52%;
     }
-  
-  
+    .moments__card--06 {
+      left: 12%;
+      top: 15%;
+    }
+    .moments__card--07 {
+      left: 40%;
+      top: 11%;
+    }
+    .moments__card--08 {
+      left: 69%;
+      top: 7%;
+    }
+    .moments__card--09 {
+      left: 55%;
+      top: 52%;
+    }
     .moments__note {
       display: none;
     }
-  
-  
     .moments__footer {
       margin-top: 1rem;
     }
-  
   }
-  
-  
   /* =========================================================
      SMALL PHONES
      ========================================================= */
-  
   @media (max-width: 420px) {
-  
     .moments__stage {
       height: 590px;
     }
-  
-  
     .moments__card {
       width: 46vw;
-  
       padding: 7px 7px 10px;
     }
-  
-  
     .moments__card--01 {
-      left: 1%;
+      left: -8%;
+      top: 9%;
     }
-  
-  
     .moments__card--02 {
-      left: 45%;
+      left: 2%;
+      top: 37%;
     }
-  
-  
     .moments__card--03 {
-      left: 5%;
-      top: 42%;
+      left: -9%;
+      top: 53%;
     }
-  
-  
     .moments__card--04 {
-      left: 49%;
-      top: 47%;
+      left: 28%;
+      top: 48%;
     }
-  
-  
     .moments__card--05 {
-      left: 27%;
-      top: 70%;
+      left: 37%;
+      top: 52%;
     }
-  
+    .moments__card--06 {
+      left: 12%;
+      top: 15%;
+    }
+    .moments__card--07 {
+      left: 40%;
+      top: 11%;
+    }
+    .moments__card--08 {
+      left: 69%;
+      top: 7%;
+    }
+    .moments__card--09 {
+      left: 55%;
+      top: 52%;
+    }
   }

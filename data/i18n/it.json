@@ -78,34 +78,50 @@
 
   "moments": {
     "eyebrow": "Momenti al Bastione",
-    "title": "Momenti sopra il lago.",
-    "description": "Ci sono luoghi fatti per essere ricordati.",
+    "title": "Momenti sopra il lago",
+    "description": "Vieni al Bastione e lascia che questo momento diventi parte della tua storia. Trascorri un pomeriggio condividendo buon cibo e conversazioni sopra il Lago di Garda, guarda le montagne tingersi d’oro al tramonto o fermati per un drink mentre le luci di Riva del Garda iniziano a brillare sotto di te. Qui, ogni tavolo ha una vista, ogni tramonto diventa un ricordo e ogni visita può trasformarsi in qualcosa di indimenticabile. Vieni, rallenta e vivi un momento che vorrai ricordare.",
 
     "cards": {
       "01": {
-        "label": "Riva del Garda",
-        "meta": "Sopra il lago"
+        "label": "Riva dall’alto",
+        "meta": "La vista"
       },
       "02": {
-        "label": "Una tavola sopra il lago",
+        "label": "Una tavola con vista",
         "meta": "Bastione"
       },
       "03": {
-        "label": "La vista",
-        "meta": "Riva del Garda"
+        "label": "Aperitivo sopra il lago",
+        "meta": "Nel tardo pomeriggio"
       },
       "04": {
-        "label": "Golden hour",
-        "meta": "Lago di Garda"
+        "label": "Quando le montagne si tingono d’oro",
+        "meta": "Golden hour"
       },
       "05": {
-        "label": "Un momento da ricordare",
-        "meta": "Bastione"
+        "label": "Cena con vista",
+        "meta": "Al Bastione"
+      },
+      "06": {
+        "label": "Un brindisi sul Garda",
+        "meta": "Aperitivo"
+      },
+      "07": {
+        "label": "Quando si accendono le luci",
+        "meta": "Riva dopo il tramonto"
+      },
+      "08": {
+        "label": "Un momento per due",
+        "meta": "Sopra il Lago di Garda"
+      },
+      "09": {
+        "label": "Il Bastione",
+        "meta": "Monte Rocchetta"
       }
     },
 
     "note": "Conserva il momento.",
-    "footer": "Ogni visita lascia un ricordo."
+    "footer": "Ogni visita lascia un ricordo..."
   },
   
   "cuisine": {

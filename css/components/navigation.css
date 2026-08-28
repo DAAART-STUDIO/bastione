@@ -161,371 +161,266 @@
 /* ─────────────────────────────────────────────────────────────
    DESKTOP NAV
    ──────────────────────────────────────────────────────────── */
-
 .nav-links {
   display: none;
-
   align-items: center;
-
   gap: clamp(1rem, 1.8vw, 2rem);
-
   margin-inline: auto;
 }
-
 .nav-links a {
   position: relative;
-
   padding-block: 0.4rem;
-
   font-size: var(--fs-label);
   font-weight: 600;
-
   letter-spacing: var(--tracking-wide);
-
   text-transform: uppercase;
-
   opacity: 0.82;
-
   transition:
     opacity var(--dur-fast) var(--ease-out);
 }
-
 .nav-links a::after {
   content: '';
-
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   width: 100%;
   height: 1px;
-
   background: currentColor;
-
   transform: scaleX(0);
   transform-origin: right;
-
   transition:
     transform var(--dur-med) var(--ease-out);
 }
-
 .nav-links a:hover {
   opacity: 1;
 }
-
 .nav-links a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-
 /* ─────────────────────────────────────────────────────────────
    HEADER ACTIONS
    ──────────────────────────────────────────────────────────── */
-
 .site-header__actions {
   display: flex;
   align-items: center;
-
   gap: 0.65rem;
-
   margin-left: auto;
-
   flex-shrink: 0;
 }
 
 /* ─────────────────────────────────────────────────────────────
    LANGUAGE TOGGLE
    ──────────────────────────────────────────────────────────── */
-
    .language-toggle {
     display: inline-flex;
     align-items: center;
     gap: 0.1rem;
-  
     padding: 3px;
-  
     border: 1px solid rgba(255, 255, 255, 0.55);
     border-radius: var(--radius-pill);
-  
     background: rgba(0, 0, 0, 0.08);
-  
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-  
     transition:
       background var(--dur-med) var(--ease-smooth),
       border-color var(--dur-med) var(--ease-smooth);
   }
-  
   .language-toggle__btn {
     min-width: 31px;
     height: 28px;
-  
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
     padding-inline: 0.35rem;
-  
     border: 0;
     border-radius: var(--radius-pill);
-  
     background: transparent;
-  
     color: rgba(255, 255, 255, 0.72);
-  
     font-size: 0.62rem;
     font-weight: 700;
-  
     letter-spacing: 0.08em;
-  
     opacity: 1;
-  
     transition:
       background var(--dur-fast) var(--ease-out),
       color var(--dur-fast) var(--ease-out);
   }
-  
   .language-toggle__btn:hover {
     color: #ffffff;
   }
-  
   .language-toggle__btn[aria-pressed='true'],
   .language-toggle__btn.is-active {
     background: rgba(255, 255, 255, 0.96);
     color: #20221f;
   }
 
-
 /* ─────────────────────────────────────────────────────────────
    THEME TOGGLE
-   ──────────────────────────────────────────────────────────── */
-
+   ─────────────────────────────────────────────────────────── */
   .theme-toggle {
     display: inline-flex;
     align-items: center;
     gap: 0.1rem;
-  
     padding: 3px;
-  
     border: 1px solid rgba(255, 255, 255, 0.55);
     border-radius: var(--radius-pill);
-  
     background: rgba(0, 0, 0, 0.08);
-  
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-  
     transition:
       background var(--dur-med) var(--ease-smooth),
       border-color var(--dur-med) var(--ease-smooth);
   }
-  
   .theme-toggle__btn {
     width: 28px;
     height: 28px;
-  
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
     padding: 0;
-  
     border: 0;
     border-radius: 50%;
-  
     background: transparent;
-  
     color: rgba(255, 255, 255, 0.72);
-  
     font-size: 0.9rem;
     line-height: 1;
-  
     opacity: 1;
-  
     transition:
       background var(--dur-fast) var(--ease-out),
       color var(--dur-fast) var(--ease-out);
   }
-  
   .theme-toggle__btn svg {
     width: 15px;
     height: 15px;
   }
-  
   .theme-toggle__btn:hover {
     color: #ffffff;
   }
-  
   .theme-toggle__btn[aria-pressed='true'] {
     background: rgba(255, 255, 255, 0.96);
     color: #20221f;
   }
 
-
 /* ─────────────────────────────────────────────────────────────
    RESERVE BUTTON
    ──────────────────────────────────────────────────────────── */
-
 .site-header .btn {
   min-height: 40px;
   padding-inline: 1.15rem;
-
   font-size: 0.62rem;
 }
-
 
 /* ─────────────────────────────────────────────────────────────
    MOBILE HAMBURGER
    ──────────────────────────────────────────────────────────── */
-
 .hamburger {
   position: relative;
-
   width: 42px;
   height: 42px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   color: inherit;
 }
-
 .hamburger svg {
   position: absolute;
-
   width: 21px;
   height: 21px;
-
   transition:
     opacity var(--dur-fast) var(--ease-out),
     transform var(--dur-med) var(--ease-out);
 }
-
 .hamburger [data-menu-icon-close] {
   opacity: 0;
   transform: rotate(-90deg) scale(0.7);
 }
-
 .hamburger.is-open [data-menu-icon-open] {
   opacity: 0;
   transform: rotate(90deg) scale(0.7);
 }
-
 .hamburger.is-open [data-menu-icon-close] {
   opacity: 1;
   transform: rotate(0) scale(1);
 }
 
-
 /* ─────────────────────────────────────────────────────────────
    MOBILE MENU
    ──────────────────────────────────────────────────────────── */
-
 .mobile-menu {
   position: fixed;
-
   top: var(--header-height);
   left: 0;
   right: 0;
   bottom: 0;
-
   z-index: var(--z-menu);
-
   display: grid;
   align-content: start;
-
   padding:
     2rem
     var(--container-pad)
     3rem;
-
   background: var(--color-bg);
   color: var(--color-ink);
-
   overflow-y: auto;
-
   transform: translateY(-12px);
   opacity: 0;
   visibility: hidden;
-
   transition:
     transform var(--dur-med) var(--ease-smooth),
     opacity var(--dur-med) var(--ease-smooth),
     visibility 0s linear var(--dur-med);
 }
-
 .mobile-menu.is-open {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
-
   transition:
     transform var(--dur-med) var(--ease-smooth),
     opacity var(--dur-med) var(--ease-smooth),
     visibility 0s;
 }
-
 .mobile-menu__links {
   display: grid;
-
   gap: 0;
 }
-
 .mobile-menu__links a {
   padding-block: 1rem;
-
   border-bottom: 1px solid var(--color-line);
-
   font-family: var(--font-display);
   font-size: clamp(2rem, 7vw, 3.2rem);
   font-weight: 400;
-
   line-height: 1;
-
   transition:
     color var(--dur-fast) var(--ease-out),
     padding-left var(--dur-fast) var(--ease-out);
 }
-
 .mobile-menu__links a:hover {
   color: var(--color-accent);
   padding-left: 0.5rem;
 }
-
 .mobile-menu__footer {
   display: flex;
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 1rem;
-
   margin-top: 2rem;
   padding-top: 1.5rem;
-
   border-top: 1px solid var(--color-line);
 }
 
-
 /* ─────────────────────────────────────────────────────────────
    DESKTOP
-   ──────────────────────────────────────────────────────────── */
-
+   ─────────────────────────────────────────────────────────── */
 @media (min-width: 1180px) {
   .nav-links {
     display: flex;
   }
-
   .hamburger,
   .mobile-menu {
     display: none;
   }
 }
-
 @media (max-width: 1179.98px) {
   .site-header__actions > .language-toggle,
   .site-header__actions > .theme-toggle,
@@ -533,13 +428,11 @@
     display: none;
   }
 }
-
 @media (max-width: 600px) {
   .brand {
     height: 38px;
     font-size: 0.95rem;
   }
-
   .brand__logo {
     left: -9px;
     width: 24px;
@@ -547,41 +440,30 @@
   }
 }
 
-
 /* ─────────────────────────────────────────────────────────────
    MOBILE MENU — THEME / LANGUAGE TOGGLES
    Light theme needs dark controls on the light menu surface.
    ──────────────────────────────────────────────────────────── */
-
    @media (max-width: 959.98px) {
-
     [data-theme='light'] [data-mobile-menu] .language-toggle,
     [data-theme='light'] [data-mobile-menu] .theme-toggle {
       border-color: var(--color-line-strong);
       background: var(--color-surface-raised);
       color: var(--color-ink-soft);
     }
-  
-  
     [data-theme='light'] [data-mobile-menu] .language-toggle__btn,
     [data-theme='light'] [data-mobile-menu] .theme-toggle__btn {
       color: var(--color-ink-soft);
     }
-  
-  
     [data-theme='light'] [data-mobile-menu] .language-toggle__btn:hover,
     [data-theme='light'] [data-mobile-menu] .theme-toggle__btn:hover {
       color: var(--color-ink);
     }
-  
-  
     [data-theme='light'] [data-mobile-menu] .language-toggle__btn[aria-pressed='true'],
     [data-theme='light'] [data-mobile-menu] .theme-toggle__btn[aria-pressed='true'] {
       background: var(--color-ink);
       color: var(--color-bg);
     }
-  
-  
     [data-theme='light'] [data-mobile-menu] .language-toggle__btn svg,
     [data-theme='light'] [data-mobile-menu] .theme-toggle__btn svg {
       color: currentColor;

@@ -78,34 +78,50 @@
 
   "moments": {
     "eyebrow": "Momente im Bastione",
-    "title": "Momente über dem See.",
-    "description": "Manche Orte bleiben in Erinnerung.",
+    "title": "Momente über dem See",
+    "description": "Kommen Sie ins Bastione und lassen Sie diesen Moment Teil Ihrer Geschichte werden. Verbringen Sie einen Nachmittag bei gutem Essen und anregenden Gesprächen hoch über dem Gardasee, erleben Sie, wie die Berge im goldenen Abendlicht erstrahlen, oder genießen Sie einen Drink, während unter Ihnen die Lichter von Riva del Garda zu funkeln beginnen. Hier bietet jeder Tisch mehr als nur einen Ausblick – er schenkt einen Moment, den man nicht vergisst. Kommen Sie, lassen Sie den Alltag hinter sich und erleben Sie einen Augenblick, der in Erinnerung bleibt.",
 
     "cards": {
       "01": {
-        "label": "Riva del Garda",
-        "meta": "Über dem See"
+        "label": "Riva von oben",
+        "meta": "Der Ausblick"
       },
       "02": {
-        "label": "Ein Tisch über dem See",
+        "label": "Ein Tisch mit Aussicht",
         "meta": "Bastione"
       },
       "03": {
-        "label": "Der Ausblick",
-        "meta": "Riva del Garda"
+        "label": "Aperitivo über dem See",
+        "meta": "Am späten Nachmittag"
       },
       "04": {
-        "label": "Goldene Stunde",
-        "meta": "Gardasee"
+        "label": "Wenn die Berge golden werden",
+        "meta": "Golden Hour"
       },
       "05": {
-        "label": "Ein Moment zum Erinnern",
-        "meta": "Bastione"
+        "label": "Dinner mit Aussicht",
+        "meta": "Im Bastione"
+      },
+      "06": {
+        "label": "Ein Toast auf den Gardasee",
+        "meta": "Aperitivo"
+      },
+      "07": {
+        "label": "Wenn die Lichter angehen",
+        "meta": "Riva nach Sonnenuntergang"
+      },
+      "08": {
+        "label": "Ein Moment zu zweit",
+        "meta": "Über dem Gardasee"
+      },
+      "09": {
+        "label": "Das Bastione",
+        "meta": "Monte Rocchetta"
       }
     },
 
     "note": "Bewahre den Moment.",
-    "footer": "Jeder Besuch hinterlässt eine Erinnerung."
+    "footer": "Jeder Besuch hinterlässt eine Erinnerung..."
   },
 
   "cuisine": {
