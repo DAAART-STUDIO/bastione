@@ -50,6 +50,11 @@ export default function initMoments() {
   
     let currentX = 0;
     let currentY = 0;
+
+    let boundsMinX = 0;
+    let boundsMaxX = 0;
+    let boundsMinY = 0;
+    let boundsMaxY = 0;
   
     let initialized = false;
   
@@ -275,6 +280,15 @@ export default function initMoments() {
   
       startX = position.x;
       startY = position.y;
+
+      const stageRect = stage.getBoundingClientRect();
+      const baseLeft = card.offsetLeft;
+      const baseTop = card.offsetTop;
+
+      boundsMinX = -baseLeft - dragPadding;
+      boundsMaxX = stageRect.width - card.offsetWidth - baseLeft + dragPadding;
+      boundsMinY = -baseTop - dragPadding;
+      boundsMaxY = stageRect.height - card.offsetHeight - baseTop + dragPadding;
   
   
       currentX = startX;
@@ -342,17 +356,9 @@ export default function initMoments() {
         cardRect.height +
         dragPadding;
   
-  
-      nextX = Math.max(
-        -dragPadding,
-        Math.min(nextX, maxX)
-      );
-  
-  
-      nextY = Math.max(
-        -dragPadding,
-        Math.min(nextY, maxY)
-      );
+
+      nextX = Math.max(boundsMinX, Math.min(nextX, boundsMaxX));
+      nextY = Math.max(boundsMinY, Math.min(nextY, boundsMaxY));
   
   
       currentX = nextX;

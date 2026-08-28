@@ -9,7 +9,7 @@
   
     overflow: hidden;
   
-    background: var(--color-paper);
+    background: var(--color-bg);
   
     isolation: isolate;
   }
@@ -144,6 +144,7 @@
     will-change: transform, box-shadow;
   
     transition:
+      transform 380ms var(--ease-smooth),
       box-shadow 350ms var(--ease-smooth),
       filter 350ms var(--ease-smooth);
   
@@ -401,17 +402,6 @@
     --moments-card-bg: #fdfcf8;
   
     --moments-card-border: rgba(20, 20, 18, 0.08);
-  }
-  
-  
-  /*
-     Dark theme
-  */
-  
-  [data-theme="dark"] {
-    --moments-card-bg: #171916;
-  
-    --moments-card-border: rgba(255, 255, 255, 0.10);
   }
   
   
