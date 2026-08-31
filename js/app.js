@@ -8,6 +8,8 @@ import { initI18n } from './modules/i18n.js';
 import { initHeader } from './modules/header.js';
 import { initViewGallery } from './modules/view-gallery.js';
 import initExperience from './modules/experience.js';
+import initCuisine from './modules/cuisine.js';
+import initDishWheel from './modules/dishes-wheel.js';
 import initMoments from './modules/moments.js';
 import { initReveal } from './modules/observer.js';
 
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initViewGallery();
   initExperience();
+  initCuisine();
+  initDishWheel();
   initMoments();
   initReveal();
 });

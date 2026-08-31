@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="css/components/view.css">
   <link rel="stylesheet" href="css/components/experience.css">
   <link rel="stylesheet" href="css/components/moments.css">
+  <link rel="stylesheet" href="css/components/cuisine.css">
+  <link rel="stylesheet" href="css/components/dishes-wheel.css">
+  <link rel="stylesheet" href="css/components/menu.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 
@@ -540,20 +543,203 @@
   
     </section>
 
-    <!-- Cuisine -->
-    <section id="cuisine" data-section="cuisine" class="section">
-      <div class="container">
-        <h2 data-i18n="cuisine.title">
-          Cuisine
-        </h2>
+
+    <!-- CUISINE -->
+    <section id="cuisine" data-section="cuisine" class="cuisine" aria-labelledby="cuisine-title">
+
+      <div class="cuisine__panels" data-cuisine-panels data-reveal>
+        <!-- LAKE -->
+        <button class="cuisine__panel is-active" type="button" data-cuisine-panel="lake" aria-pressed="true">
+          <span class="cuisine__panel-media">
+            <img class="cuisine__panel-image" src="assets/images/bastione/cuisine/cuisine-lake.webp" alt="" loading="lazy">
+            <span class="cuisine__panel-overlay" aria-hidden="true"></span>
+          </span>
+          <span class="cuisine__panel-body">
+            <span class="cuisine__panel-index">01</span>
+            <span class="cuisine__panel-title" data-i18n="cuisine.panels.lake.title">The Lake</span>
+            <span class="cuisine__panel-text" data-i18n="cuisine.panels.lake.text">Trout, char and the clean flavours of Lake Garda.</span>
+          </span>
+        </button>
+        <!-- MOUNTAIN -->
+        <button class="cuisine__panel" type="button" data-cuisine-panel="mountain" aria-pressed="false">
+          <span class="cuisine__panel-media">
+            <img class="cuisine__panel-image" src="assets/images/bastione/cuisine/cuisine-mountain.webp" alt="" loading="lazy">
+            <span class="cuisine__panel-overlay" aria-hidden="true"></span>
+          </span>
+          <span class="cuisine__panel-body">
+            <span class="cuisine__panel-index">02</span>
+            <span class="cuisine__panel-title" data-i18n="cuisine.panels.mountain.title">The Mountain</span>
+            <span class="cuisine__panel-text" data-i18n="cuisine.panels.mountain.text">Speck, alpine cheeses and game from the valleys of Trentino.</span>
+          </span>
+        </button>
+        <!-- MEDITERRANEAN -->
+        <button class="cuisine__panel" type="button" data-cuisine-panel="mediterranean" aria-pressed="false">
+          <span class="cuisine__panel-media">
+            <img class="cuisine__panel-image" src="assets/images/bastione/cuisine/cuisine-mediterranean.webp" alt="" loading="lazy">
+            <span class="cuisine__panel-overlay" aria-hidden="true"></span>
+          </span>
+          <span class="cuisine__panel-body">
+            <span class="cuisine__panel-index">03</span>
+            <span class="cuisine__panel-title" data-i18n="cuisine.panels.mediterranean.title">The Mediterranean</span>
+            <span class="cuisine__panel-text" data-i18n="cuisine.panels.mediterranean.text">Oil, citrus and seafood, for a table that looks south.</span>
+          </span>
+        </button>
+        <!-- CELLAR -->
+        <button class="cuisine__panel" type="button" data-cuisine-panel="cellar" aria-pressed="false">
+          <span class="cuisine__panel-media">
+            <img class="cuisine__panel-image" src="assets/images/bastione/cuisine/cuisine-cellar.webp" alt="" loading="lazy">
+            <span class="cuisine__panel-overlay" aria-hidden="true"></span>
+          </span>
+          <span class="cuisine__panel-body">
+            <span class="cuisine__panel-index">04</span>
+            <span class="cuisine__panel-title" data-i18n="cuisine.panels.cellar.title">The Cellar</span>
+            <span class="cuisine__panel-text" data-i18n="cuisine.panels.cellar.text">Labels from Trentino and beyond, chosen to accompany every course.</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="container cuisine__content">
+        <!-- TEXT -->
+        <div class="cuisine__intro">
+          <div class="section-header" data-reveal>
+            <p class="eyebrow" data-i18n="cuisine.eyebrow">The Cuisine</p>
+            <h2 class="section-header__title" id="cuisine-title" data-i18n="cuisine.title">Mountain meets Mediterranean</h2>
+            <p data-i18n="cuisine.description">
+              The bold flavours of Trentino meet the fresh spirit of the Mediterranean. 
+              Local mountain ingredients, lake fish, alpine cheeses and traditional cured meats are reimagined with a contemporary touch. 
+              Every dish brings together the character of the mountains and the lightness of the south. 
+              A cuisine shaped by the landscape, the seasons and the view.
+            </p>
+          </div>
+        </div>
+        <!-- DISHES WHEEL -->
+        <div class="dishes-wheel" data-dishes-wheel data-reveal>
+          <div class="dishes-wheel__stage">
+            <button class="dishes-wheel__petal is-active" type="button" data-dish-petal style="--i: 0;" aria-pressed="true">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/bastione.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.bastione.name" data-dish-name>Bastione</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.bastione.description" data-dish-description>Fior di latte, mousse di Trentingrana, speck Alto Adige e noci.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 1;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/lago-affumicato.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.lagoAffumicato.name" data-dish-name>Lago Affumicato</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.lagoAffumicato.description" data-dish-description>Salmerino del Garda, polenta di Storo e un tocco di affumicatura al ciliegio.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 2;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/sapore-di-lago.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.saporeDiLago.name" data-dish-name>Sapore di Lago</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.saporeDiLago.description" data-dish-description>Spaghettoni, sardine del Garda, pinoli, pane croccante e uvetta.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 3;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/il-nostro-mare.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.ilNostroMare.name" data-dish-name>Il Nostro Mare</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.ilNostroMare.description" data-dish-description>Spaghetti, datterini gialli e rossi e frutti di mare.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 4;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/cozze-patate-baccala.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.cozzePatateBaccala.name" data-dish-name>Cozze, Patate e Baccalà</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.cozzePatateBaccala.description" data-dish-description>Paccheri verdi, lime, crema di patate e cozze, baccalà e pelle croccante.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 5;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/il-polpo-e-nero.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.ilPolpoENero.name" data-dish-name>Il Polpo è Nero</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.ilPolpoENero.description" data-dish-description>Polpo alla griglia, burrata, datterini confit e salsa al prezzemolo.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 6;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/duetto-trentino.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.duettoTrentino.name" data-dish-name>Duetto Trentino</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.duettoTrentino.description" data-dish-description>Una selezione di salumi e formaggi del territorio.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 7;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/terra-destate.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.terraDEstate.name" data-dish-name>Terra d'Estate</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.terraDEstate.description" data-dish-description>Carpaccio di manzo marinato 48 ore, mousse al gorgonzola e polenta di Storo.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 8;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/black-angus.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.blackAngus.name" data-dish-name>Black Angus</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.blackAngus.description" data-dish-description>Controfiletto, crema di patate allo zafferano e rosmarino, funghi grigliati.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 9;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/regina-margherita.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.reginaMargherita.name" data-dish-name>Regina Margherita</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.reginaMargherita.description" data-dish-description>San Marzano, mozzarella di bufala, prosciutto di Parma e basilico.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 10;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/tonnetto.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.tonnetto.name" data-dish-name>Tonnetto</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.tonnetto.description" data-dish-description>San Marzano, fior di latte, tonno scottato e cipolla stufata.</span>
+            </button>
+            <button class="dishes-wheel__petal" type="button" data-dish-petal style="--i: 11;" aria-pressed="false">
+              <img class="dishes-wheel__petal-image" src="assets/images/bastione/cuisine/dishes/diavola.webp" alt="">
+              <span class="sr-only" data-i18n="cuisine.dishes.diavola.name" data-dish-name>Diavola</span>
+              <span class="sr-only" data-i18n="cuisine.dishes.diavola.description" data-dish-description>San Marzano D.O.P., mozzarella fior di latte e salamino piccante Levoni.</span>
+            </button>
+            <!-- CENTRE PLATE -->
+            <div class="dishes-wheel__center">
+              <img class="dishes-wheel__center-image" src="assets/images/bastione/cuisine/dishes/bastione.webp" alt="" data-dishes-center-image>
+              <span class="dishes-wheel__center-scrim" aria-hidden="true"></span>
+              <div class="dishes-wheel__center-text">
+                <span class="dishes-wheel__center-label" data-i18n="cuisine.dishes.bastione.name" data-dishes-center-label>Bastione</span>
+                <span class="dishes-wheel__center-caption" data-i18n="cuisine.dishes.bastione.description" data-dishes-center-caption>Fior di latte, mousse di Trentingrana, speck Alto Adige e noci.</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="menu" data-section="menu" class="section">
-      <div class="container">
-        <h2 data-i18n="menu.title">
-          Menu
-        </h2>
+    <!-- MENU -->
+    <section id="menu" data-section="menu" class="menu" aria-labelledby="menu-title">
+      <div class="container menu__container">
+        <div class="section-header" data-reveal>
+          <p class="eyebrow" data-i18n="menu.eyebrow">The Menu</p>
+          <h2 class="section-header__title" id="menu-title" data-i18n="menu.title">Taste the moment.</h2>
+          <p data-i18n="menu.description">Scopri la nostra proposta gastronomica.</p>
+        </div>
+        <div class="menu__list" data-reveal>
+          <!-- 01 -->
+          <div class="menu__item">
+            <span class="menu__item-index">01</span>
+            <div class="menu__item-body">
+              <h3 class="menu__item-name" data-i18n="menu.items.01.name">Lake Garda whitefish risotto</h3>
+              <p class="menu__item-description" data-i18n="menu.items.01.description">Vialone Nano rice, whitefish and mountain-herb butter.</p>
+            </div>
+            <span class="menu__item-price" data-i18n="menu.items.01.price">€26</span>
+          </div>
+          <!-- 02 -->
+          <div class="menu__item">
+            <span class="menu__item-index">02</span>
+            <div class="menu__item-body">
+              <h3 class="menu__item-name" data-i18n="menu.items.02.name">Venison ragù tagliatelle</h3>
+              <p class="menu__item-description" data-i18n="menu.items.02.description">Fresh pasta, valley venison and a touch of juniper.</p>
+            </div>
+            <span class="menu__item-price" data-i18n="menu.items.02.price">€24</span>
+          </div>
+          <!-- 03 -->
+          <div class="menu__item">
+            <span class="menu__item-index">03</span>
+            <div class="menu__item-body">
+              <h3 class="menu__item-name" data-i18n="menu.items.03.name">Roasted sea bass with citrus</h3>
+              <p class="menu__item-description" data-i18n="menu.items.03.description">Sea-caught fish, citrus and Trentino extra-virgin oil.</p>
+            </div>
+            <span class="menu__item-price" data-i18n="menu.items.03.price">€32</span>
+          </div>
+          <!-- 04 -->
+          <div class="menu__item">
+            <span class="menu__item-index">04</span>
+            <div class="menu__item-body">
+              <h3 class="menu__item-name" data-i18n="menu.items.04.name">Apple strudel with vanilla gelato</h3>
+              <p class="menu__item-description" data-i18n="menu.items.04.description">Mountain apples, cinnamon and house-made gelato.</p>
+            </div>
+            <span class="menu__item-price" data-i18n="menu.items.04.price">€12</span>
+          </div>
+        </div>
+        <div class="menu__footer" data-reveal>
+          <p class="menu__note" data-i18n="menu.note">The menu changes with the seasons and market availability.</p>
+          <!-- TODO: point to the real menu PDF/page once it exists -->
+          <a class="btn btn--outline" href="#" data-i18n="menu.cta">Explore the menu</a>
+        </div>
       </div>
     </section>
 

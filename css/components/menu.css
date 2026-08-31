@@ -1,0 +1,117 @@
+/**
+ * menu.css — Bastione MENU.
+ *
+ * An editorial selection of signature dishes: no cards, just a thin
+ * rule between rows, in the rhythm of a printed menu.
+ */
+
+ .menu {
+    padding-block: clamp(5rem, 10vw, 10rem);
+    background: var(--color-bg);
+  }
+  
+  .menu__container {
+    max-width: 960px;
+  }
+  
+  .menu .section-header {
+    margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  
+  /* ============================================================
+     LIST
+     ============================================================ */
+  .menu__list {
+    border-top: 1px solid var(--color-line);
+  }
+  
+  .menu__item {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    align-items: baseline;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding-block: clamp(1.5rem, 3vw, 2.25rem);
+    border-bottom: 1px solid var(--color-line);
+    transition: padding-left var(--dur-med) var(--ease-out);
+  }
+  
+  .menu__item:hover {
+    padding-left: 0.5rem;
+  }
+  
+  .menu__item-index {
+    color: var(--color-ink-faint);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  .menu__item-name {
+    margin: 0;
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    line-height: 1.2;
+  }
+  
+  .menu__item-description {
+    margin: 0.4rem 0 0;
+    max-width: 52ch;
+    color: var(--color-ink-soft);
+    font-size: var(--fs-small);
+    line-height: var(--lh-normal);
+  }
+  
+  .menu__item-price {
+    color: var(--color-ink-soft);
+    font-size: var(--fs-body);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .menu__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  }
+  
+  .menu__note {
+    margin: 0;
+    max-width: 44ch;
+    color: var(--color-ink-faint);
+    font-size: var(--fs-small);
+    font-style: italic;
+  }
+  
+  /* ============================================================
+     MOBILE
+     ============================================================ */
+  @media (max-width: 600px) {
+    .menu__item {
+      grid-template-columns: 1.75rem 1fr;
+    }
+    .menu__item-price {
+      grid-column: 2;
+      margin-top: 0.35rem;
+    }
+    .menu__footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* ============================================================
+     REDUCED MOTION
+     ============================================================ */
+  @media (prefers-reduced-motion: reduce) {
+    .menu__item {
+      transition-duration: 1ms !important;
+    }
+  }

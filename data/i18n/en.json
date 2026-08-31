@@ -126,15 +126,70 @@
 
   "cuisine": {
     "eyebrow": "The Cuisine",
-    "title": "Mountain meets Mediterranean.",
-    "description": "Trentino flavours meet Mediterranean inspiration."
+    "title": "Mountain meets Mediterranean",
+    "description": "The bold flavours of Trentino meet the fresh spirit of the Mediterranean. Local mountain ingredients, lake fish, alpine cheeses and traditional cured meats are reimagined with a contemporary touch. Every dish brings together the character of the mountains and the lightness of the south. A cuisine shaped by the landscape, the seasons and the view.",
+    "panels": {
+      "lake": {
+        "title": "The Lake",
+        "text": "Trout, char and the clean flavours of Lake Garda."
+      },
+      "mountain": {
+        "title": "The Mountain",
+        "text": "Speck, alpine cheeses and game from the valleys of Trentino."
+      },
+      "mediterranean": {
+        "title": "The Mediterranean",
+        "text": "Oil, citrus and seafood, for a table that looks south."
+      },
+      "cellar": {
+        "title": "The Cellar",
+        "text": "Labels from Trentino and beyond, chosen to accompany every course."
+      }
+    },
+    "dishes": {
+      "bastione": { "name": "Bastione", "description": "Fior di latte, Trentingrana mousse, Alto Adige speck and walnuts." },
+      "lagoAffumicato": { "name": "Lago Affumicato", "description": "Lake Garda char, Storo polenta and a hint of cherry-wood smoke." },
+      "saporeDiLago": { "name": "Sapore di Lago", "description": "Spaghettoni, Lake Garda sardines, pine nuts, crisp bread and raisins." },
+      "ilNostroMare": { "name": "Il Nostro Mare", "description": "Spaghetti, yellow and red datterini tomatoes and seafood." },
+      "cozzePatateBaccala": { "name": "Cozze, Patate e Baccalà", "description": "Green paccheri, lime, potato and mussel cream, cod and crispy skin." },
+      "ilPolpoENero": { "name": "Il Polpo è Nero", "description": "Grilled octopus, burrata, confit datterini and parsley sauce." },
+      "duettoTrentino": { "name": "Duetto Trentino", "description": "A selection of local cured meats and cheeses." },
+      "terraDEstate": { "name": "Terra d'Estate", "description": "48-hour marinated beef carpaccio, gorgonzola mousse and Storo polenta." },
+      "blackAngus": { "name": "Black Angus", "description": "Sirloin, saffron and rosemary potato cream, grilled mushrooms." },
+      "reginaMargherita": { "name": "Regina Margherita", "description": "San Marzano, buffalo mozzarella, Parma ham and basil." },
+      "tonnetto": { "name": "Tonnetto", "description": "San Marzano, fior di latte, seared tuna and stewed onion." },
+      "diavola": { "name": "Diavola", "description": "San Marzano D.O.P. tomatoes, fior di latte mozzarella and spicy Levoni salamino." }
+    }
   },
 
   "menu": {
     "eyebrow": "The Menu",
-    "title": "Taste the moment.",
+    "title": "Taste the moment",
     "description": "Discover our gastronomic offering.",
-    "cta": "Explore the menu"
+    "cta": "Explore the menu",
+    "note": "The menu changes with the seasons and market availability.",
+    "items": {
+      "01": {
+        "name": "Lake Garda whitefish risotto",
+        "description": "Vialone Nano rice, whitefish and mountain-herb butter.",
+        "price": "€26"
+      },
+      "02": {
+        "name": "Venison ragù tagliatelle",
+        "description": "Fresh pasta, valley venison and a touch of juniper.",
+        "price": "€24"
+      },
+      "03": {
+        "name": "Roasted sea bass with citrus",
+        "description": "Sea-caught fish, citrus and Trentino extra-virgin oil.",
+        "price": "€32"
+      },
+      "04": {
+        "name": "Apple strudel with vanilla gelato",
+        "description": "Mountain apples, cinnamon and house-made gelato.",
+        "price": "€12"
+      }
+    }
   },
 
   "place": {

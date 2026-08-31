@@ -125,16 +125,71 @@
   },
   
   "cuisine": {
-    "eyebrow": "The Cuisine",
-    "title": "Mountain meets Mediterranean.",
-    "description": "Sapori del Trentino incontrano l'ispirazione mediterranea."
+    "eyebrow": "La Cucina",
+    "title": "La montagna incontra il Mediterraneo",
+    "description": "I sapori decisi del Trentino incontrano lo spirito fresco del Mediterraneo. Ingredienti di montagna, pesce di lago, formaggi d'alpeggio e salumi della tradizione vengono reinterpretati con un tocco contemporaneo. Ogni piatto unisce il carattere della montagna alla leggerezza del sud. Una cucina plasmata dal paesaggio, dalle stagioni e dalla vista.",
+    "panels": {
+      "lake": {
+        "title": "Il Lago",
+        "text": "Trota, salmerino e i sapori genuini del Lago di Garda."
+      },
+      "mountain": {
+        "title": "La Montagna",
+        "text": "Speck, formaggi d'alpeggio e la selvaggina delle valli del Trentino."
+      },
+      "mediterranean": {
+        "title": "Il Mediterraneo",
+        "text": "Olio, agrumi e pesce di mare, per una tavola che guarda a sud."
+      },
+      "cellar": {
+        "title": "La Cantina",
+        "text": "Etichette del Trentino e oltre, scelte per accompagnare ogni portata."
+      }
+    },
+    "dishes": {
+      "bastione": { "name": "Bastione", "description": "Fior di latte, mousse di Trentingrana, speck Alto Adige e noci." },
+      "lagoAffumicato": { "name": "Lago Affumicato", "description": "Salmerino del Garda, polenta di Storo e un tocco di affumicatura al ciliegio." },
+      "saporeDiLago": { "name": "Sapore di Lago", "description": "Spaghettoni, sardine del Garda, pinoli, pane croccante e uvetta." },
+      "ilNostroMare": { "name": "Il Nostro Mare", "description": "Spaghetti, datterini gialli e rossi e frutti di mare." },
+      "cozzePatateBaccala": { "name": "Cozze, Patate e Baccalà", "description": "Paccheri verdi, lime, crema di patate e cozze, baccalà e pelle croccante." },
+      "ilPolpoENero": { "name": "Il Polpo è Nero", "description": "Polpo alla griglia, burrata, datterini confit e salsa al prezzemolo." },
+      "duettoTrentino": { "name": "Duetto Trentino", "description": "Una selezione di salumi e formaggi del territorio." },
+      "terraDEstate": { "name": "Terra d'Estate", "description": "Carpaccio di manzo marinato 48 ore, mousse al gorgonzola e polenta di Storo." },
+      "blackAngus": { "name": "Black Angus", "description": "Controfiletto, crema di patate allo zafferano e rosmarino, funghi grigliati." },
+      "reginaMargherita": { "name": "Regina Margherita", "description": "San Marzano, mozzarella di bufala, prosciutto di Parma e basilico." },
+      "tonnetto": { "name": "Tonnetto", "description": "San Marzano, fior di latte, tonno scottato e cipolla stufata." },
+      "diavola": { "name": "Diavola", "description": "San Marzano D.O.P., mozzarella fior di latte e salamino piccante Levoni." }
+    }
   },
-  
+
   "menu": {
     "eyebrow": "The Menu",
-    "title": "Taste the moment.",
+    "title": "Taste the moment",
     "description": "Scopri la nostra proposta gastronomica.",
-    "cta": "Scopri il menu"
+    "cta": "Scopri il menu",
+    "note": "Il menu cambia con le stagioni e la disponibilità del mercato.",
+    "items": {
+      "01": {
+        "name": "Risotto al coregone del Garda",
+        "description": "Riso Vialone Nano, coregone e burro alle erbe di montagna.",
+        "price": "€26"
+      },
+      "02": {
+        "name": "Tagliatelle al ragù di cervo",
+        "description": "Pasta fresca, cervo delle valli e un tocco di ginepro.",
+        "price": "€24"
+      },
+      "03": {
+        "name": "Branzino al forno con agrumi",
+        "description": "Pesce di mare, agrumi e olio extravergine trentino.",
+        "price": "€32"
+      },
+      "04": {
+        "name": "Strudel di mele e gelato alla vaniglia",
+        "description": "Mele di montagna, cannella e gelato fatto in casa.",
+        "price": "€12"
+      }
+    }
   },
   
   "place": {

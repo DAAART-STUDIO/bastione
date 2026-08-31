@@ -125,16 +125,71 @@
   },
 
   "cuisine": {
-    "eyebrow": "The Cuisine",
-    "title": "Berge treffen Mittelmeer.",
-    "description": "Aromen aus dem Trentino treffen auf mediterrane Inspiration."
+    "eyebrow": "Die Küche",
+    "title": "Berge treffen Mittelmeer",
+    "description": "Die kräftigen Aromen des Trentino treffen auf den frischen Geist des Mittelmeers. Lokale Zutaten aus den Bergen, Fisch aus dem See, Almkäse und traditionelle Wurstwaren werden mit einer zeitgemäßen Note neu interpretiert. Jedes Gericht vereint den Charakter der Berge mit der Leichtigkeit des Südens. Eine Küche, geprägt von der Landschaft, den Jahreszeiten und dem Ausblick.",
+    "panels": {
+      "lake": {
+        "title": "Der See",
+        "text": "Forelle, Saibling und die reinen Aromen des Gardasees."
+      },
+      "mountain": {
+        "title": "Der Berg",
+        "text": "Speck, Almkäse und Wild aus den Tälern des Trentino."
+      },
+      "mediterranean": {
+        "title": "Das Mittelmeer",
+        "text": "Öl, Zitrusfrüchte und Meeresfrüchte für eine Tafel mit Blick nach Süden."
+      },
+      "cellar": {
+        "title": "Der Weinkeller",
+        "text": "Weine aus dem Trentino und darüber hinaus, sorgfältig zu jedem Gang ausgewählt."
+      }
+    },
+    "dishes": {
+      "bastione": { "name": "Bastione", "description": "Fior di latte, Trentingrana-Mousse, Speck Alto Adige und Walnüsse." },
+      "lagoAffumicato": { "name": "Lago Affumicato", "description": "Saibling aus dem Gardasee, Polenta aus Storo und ein Hauch Kirschholzrauch." },
+      "saporeDiLago": { "name": "Sapore di Lago", "description": "Spaghettoni, Sardinen aus dem Gardasee, Pinienkerne, Brotcrunch und Rosinen." },
+      "ilNostroMare": { "name": "Il Nostro Mare", "description": "Spaghetti, gelbe und rote Datterini-Tomaten und Meeresfrüchte." },
+      "cozzePatateBaccala": { "name": "Cozze, Patate e Baccalà", "description": "Grüne Paccheri, Limette, Kartoffel-Muschel-Creme, Kabeljau und knusprige Haut." },
+      "ilPolpoENero": { "name": "Il Polpo è Nero", "description": "Gegrillter Oktopus, Burrata, confierte Datterini und Petersiliensauce." },
+      "duettoTrentino": { "name": "Duetto Trentino", "description": "Eine Auswahl regionaler Wurst- und Käsespezialitäten." },
+      "terraDEstate": { "name": "Terra d'Estate", "description": "48 Stunden mariniertes Rindercarpaccio, Gorgonzola-Mousse und Polenta aus Storo." },
+      "blackAngus": { "name": "Black Angus", "description": "Roastbeef, Safran-Rosmarin-Kartoffelcreme, gegrillte Pilze." },
+      "reginaMargherita": { "name": "Regina Margherita", "description": "San Marzano, Büffelmozzarella, Parmaschinken und Basilikum." },
+      "tonnetto": { "name": "Tonnetto", "description": "San Marzano, Fior di latte, kurz gebratener Thunfisch und geschmorte Zwiebeln." },
+      "diavola": { "name": "Diavola", "description": "San Marzano D.O.P., Mozzarella Fior di Latte und scharfe Levoni-Salami." }
+    }
   },
-  
+
   "menu": {
     "eyebrow": "The Menu",
-    "title": "Den Moment genießen.",
+    "title": "Den Moment genießen",
     "description": "Entdecken Sie unser gastronomisches Angebot.",
-    "cta": "Menü entdecken"
+    "cta": "Menü entdecken",
+    "note": "Die Karte ändert sich mit den Jahreszeiten und dem Marktangebot.",
+    "items": {
+      "01": {
+        "name": "Risotto vom Renke aus dem Gardasee",
+        "description": "Vialone-Nano-Reis, Renke und Bergkräuterbutter.",
+        "price": "€26"
+      },
+      "02": {
+        "name": "Tagliatelle mit Hirschragout",
+        "description": "Frische Pasta, Hirsch aus den Tälern und ein Hauch Wacholder.",
+        "price": "€24"
+      },
+      "03": {
+        "name": "Gebackener Wolfsbarsch mit Zitrusfrüchten",
+        "description": "Fisch aus dem Meer, Zitrusfrüchte und Trentiner Olivenöl.",
+        "price": "€32"
+      },
+      "04": {
+        "name": "Apfelstrudel mit Vanilleeis",
+        "description": "Bergäpfel, Zimt und hausgemachtes Eis.",
+        "price": "€12"
+      }
+    }
   },
 
   "place": {
