@@ -163,31 +163,35 @@
   },
 
   "menu": {
-    "eyebrow": "The Menu",
-    "title": "Taste the moment",
-    "description": "Scopri la nostra proposta gastronomica.",
+    "eyebrow": "I Preferiti del Menù",
+    "title": "Il sapore del momento",
     "cta": "Scopri il menu",
     "note": "Il menu cambia con le stagioni e la disponibilità del mercato.",
     "items": {
       "01": {
-        "name": "Risotto al coregone del Garda",
-        "description": "Riso Vialone Nano, coregone e burro alle erbe di montagna.",
-        "price": "€26"
+        "name": "Terra d'Estate",
+        "description": "Carpaccio di manzo marinato 48 ore, mousse al gorgonzola e polenta di Storo.",
+        "price": "€19"
       },
       "02": {
-        "name": "Tagliatelle al ragù di cervo",
-        "description": "Pasta fresca, cervo delle valli e un tocco di ginepro.",
+        "name": "Lago Affumicato",
+        "description": "Salmerino del Garda, polenta di Storo e un tocco di affumicatura al ciliegio.",
         "price": "€24"
       },
       "03": {
-        "name": "Branzino al forno con agrumi",
-        "description": "Pesce di mare, agrumi e olio extravergine trentino.",
-        "price": "€32"
+        "name": "Sapore di Lago",
+        "description": "Spaghettoni, sardine del Garda, pinoli, pane croccante e uvetta.",
+        "price": "€22"
       },
       "04": {
-        "name": "Strudel di mele e gelato alla vaniglia",
-        "description": "Mele di montagna, cannella e gelato fatto in casa.",
-        "price": "€12"
+        "name": "Black Angus",
+        "description": "Controfiletto, crema di patate allo zafferano e rosmarino, funghi grigliati.",
+        "price": "€32"
+      },
+      "05": {
+        "name": "Regina Margherita",
+        "description": "San Marzano, mozzarella di bufala, prosciutto di Parma e basilico.",
+        "price": "€16"
       }
     }
   },

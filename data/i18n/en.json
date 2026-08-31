@@ -163,31 +163,35 @@
   },
 
   "menu": {
-    "eyebrow": "The Menu",
+    "eyebrow": "Menu Favourites",
     "title": "Taste the moment",
-    "description": "Discover our gastronomic offering.",
     "cta": "Explore the menu",
     "note": "The menu changes with the seasons and market availability.",
     "items": {
       "01": {
-        "name": "Lake Garda whitefish risotto",
-        "description": "Vialone Nano rice, whitefish and mountain-herb butter.",
-        "price": "€26"
+        "name": "Terra d'Estate",
+        "description": "48-hour marinated beef carpaccio, gorgonzola mousse and Storo polenta.",
+        "price": "€19"
       },
       "02": {
-        "name": "Venison ragù tagliatelle",
-        "description": "Fresh pasta, valley venison and a touch of juniper.",
+        "name": "Lago Affumicato",
+        "description": "Lake Garda char, Storo polenta and a hint of cherry-wood smoke.",
         "price": "€24"
       },
       "03": {
-        "name": "Roasted sea bass with citrus",
-        "description": "Sea-caught fish, citrus and Trentino extra-virgin oil.",
-        "price": "€32"
+        "name": "Sapore di Lago",
+        "description": "Spaghettoni, Lake Garda sardines, pine nuts, crisp bread and raisins.",
+        "price": "€22"
       },
       "04": {
-        "name": "Apple strudel with vanilla gelato",
-        "description": "Mountain apples, cinnamon and house-made gelato.",
-        "price": "€12"
+        "name": "Black Angus",
+        "description": "Sirloin, saffron and rosemary potato cream, grilled mushrooms.",
+        "price": "€32"
+      },
+      "05": {
+        "name": "Regina Margherita",
+        "description": "San Marzano, buffalo mozzarella, Parma ham and basil.",
+        "price": "€16"
       }
     }
   },

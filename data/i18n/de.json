@@ -163,31 +163,35 @@
   },
 
   "menu": {
-    "eyebrow": "The Menu",
+    "eyebrow": "Menü-Favoriten",
     "title": "Den Moment genießen",
-    "description": "Entdecken Sie unser gastronomisches Angebot.",
     "cta": "Menü entdecken",
     "note": "Die Karte ändert sich mit den Jahreszeiten und dem Marktangebot.",
     "items": {
       "01": {
-        "name": "Risotto vom Renke aus dem Gardasee",
-        "description": "Vialone-Nano-Reis, Renke und Bergkräuterbutter.",
-        "price": "€26"
+        "name": "Terra d'Estate",
+        "description": "48 Stunden mariniertes Rindercarpaccio, Gorgonzola-Mousse und Polenta aus Storo.",
+        "price": "€19"
       },
       "02": {
-        "name": "Tagliatelle mit Hirschragout",
-        "description": "Frische Pasta, Hirsch aus den Tälern und ein Hauch Wacholder.",
+        "name": "Lago Affumicato",
+        "description": "Saibling aus dem Gardasee, Polenta aus Storo und ein Hauch Kirschholzrauch.",
         "price": "€24"
       },
       "03": {
-        "name": "Gebackener Wolfsbarsch mit Zitrusfrüchten",
-        "description": "Fisch aus dem Meer, Zitrusfrüchte und Trentiner Olivenöl.",
-        "price": "€32"
+        "name": "Sapore di Lago",
+        "description": "Spaghettoni, Sardinen aus dem Gardasee, Pinienkerne, Brotcrunch und Rosinen.",
+        "price": "€22"
       },
       "04": {
-        "name": "Apfelstrudel mit Vanilleeis",
-        "description": "Bergäpfel, Zimt und hausgemachtes Eis.",
-        "price": "€12"
+        "name": "Black Angus",
+        "description": "Roastbeef, Safran-Rosmarin-Kartoffelcreme, gegrillte Pilze.",
+        "price": "€32"
+      },
+      "05": {
+        "name": "Regina Margherita",
+        "description": "San Marzano, Büffelmozzarella, Parmaschinken und Basilikum.",
+        "price": "€16"
       }
     }
   },
