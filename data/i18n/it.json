@@ -197,16 +197,22 @@
   },
   
   "place": {
-    "eyebrow": "The Place",
-    "title": "History above the lake.",
-    "description": "Un luogo storico trasformato in un'esperienza contemporanea."
+    "eyebrow": "Il luogo",
+    "title": "Storia sopra il lago.",
+    "description": "Un luogo storico trasformato in un'esperienza contemporanea.",
+    "cta": "Scopri la terrazza"
   },
-  
+
   "events": {
     "eyebrow": "Events",
-    "title": "Make it yours.",
+    "title": "Rendilo unico.",
     "description": "Celebrazioni, cene private ed esperienze speciali.",
-    "cta": "Scopri gli eventi"
+    "cta": "Scopri gli eventi",
+    "types": {
+      "privateDinners": "Cene private",
+      "celebrations": "Celebrazioni",
+      "aperitivo": "Aperitivo esclusivo"
+    }
   },
 
   "visit": {

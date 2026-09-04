@@ -197,16 +197,22 @@
   },
 
   "place": {
-    "eyebrow": "The Place",
+    "eyebrow": "Der Ort",
     "title": "Geschichte über dem See.",
-    "description": "Ein historischer Ort, verwandelt in ein zeitgemäßes Erlebnis."
+    "description": "Ein historischer Ort, verwandelt in ein zeitgemäßes Erlebnis.",
+    "cta": "Terrasse entdecken"
   },
 
   "events": {
     "eyebrow": "Events",
     "title": "Machen Sie es zu Ihrem Moment.",
     "description": "Feiern, private Dinner und besondere Erlebnisse.",
-    "cta": "Events entdecken"
+    "cta": "Events entdecken",
+    "types": {
+      "privateDinners": "Private Dinner",
+      "celebrations": "Feiern",
+      "aperitivo": "Exklusiver Aperitivo"
+    }
   },
 
   "visit": {

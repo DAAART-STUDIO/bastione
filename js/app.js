@@ -11,6 +11,7 @@ import initExperience from './modules/experience.js';
 import initCuisine from './modules/cuisine.js';
 import initDishWheel from './modules/dishes-wheel.js';
 import initMoments from './modules/moments.js';
+import { initScrollMorph } from './modules/scroll-morph.js';
 import { initReveal } from './modules/observer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,5 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCuisine();
   initDishWheel();
   initMoments();
+  initScrollMorph();
   initReveal();
 });

@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="css/components/cuisine.css">
   <link rel="stylesheet" href="css/components/dishes-wheel.css">
   <link rel="stylesheet" href="css/components/menu.css">
+  <link rel="stylesheet" href="css/components/place.css">
+  <link rel="stylesheet" href="css/components/events.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 
@@ -57,10 +59,10 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#view" data-i18n="navigation.view">View</a>
         <a href="#experience" data-i18n="navigation.experience">Experience</a>
+        <a href="#moments" data-i18n="navigation.moments">Moments</a>
         <a href="#cuisine" data-i18n="navigation.cuisine">Cuisine</a>
         <a href="#menu" data-i18n="navigation.menu">Menu</a>
         <a href="#place" data-i18n="navigation.place">The Place</a>
-        <a href="#moments" data-i18n="navigation.moments">Moments</a>
         <a href="#events" data-i18n="navigation.events">Events</a>
         <a href="#visit" data-i18n="navigation.visit">Visit</a>
       </nav>
@@ -89,7 +91,7 @@
         </div>
 
         <!-- Reservation -->
-        <a class="btn btn--primary" href="#visit" data-i18n="hero.primaryCta">Reserve a table</a>
+        <a class="btn btn--primary" href="https://bastione.eu/en/contacts/" target="_blank" data-i18n="hero.primaryCta">Reserve a table</a>
 
         <!-- Mobile -->
         <button class="hamburger" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
@@ -123,10 +125,10 @@
       <div class="mobile-menu__links">
         <a href="#view" data-i18n="navigation.view">View</a>
         <a href="#experience" data-i18n="navigation.experience">Experience</a>
+        <a href="#moments" data-i18n="navigation.moments">Moments</a>
         <a href="#cuisine" data-i18n="navigation.cuisine">Cuisine</a>
         <a href="#menu" data-i18n="navigation.menu">Menu</a>
         <a href="#place" data-i18n="navigation.place">The Place</a>
-        <a href="#moments" data-i18n="navigation.moments">Moments</a>
         <a href="#events" data-i18n="navigation.events">Events</a>
         <a href="#visit" data-i18n="navigation.visit">Visit</a>
       </div>
@@ -150,7 +152,7 @@
             ◐
           </button>
         </div>
-        <a class="btn btn--primary btn--block" href="#visit" data-i18n="hero.primaryCta">
+        <a class="btn btn--primary btn--block" href="https://bastione.eu/en/contacts/" target="_blank" data-i18n="hero.primaryCta">
           Reserve a table
         </a>
       </div>
@@ -198,7 +200,7 @@
           the mountains and the table.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#visit" data-i18n="hero.primaryCta">
+          <a class="btn btn--primary" href="https://bastione.eu/en/contacts/" target="_blank" data-i18n="hero.primaryCta">
             Reserve a table
           </a>
           <a class="btn btn--outline" href="#experience" data-i18n="hero.secondaryCta">
@@ -756,19 +758,88 @@
       </div>
     </section>
 
-    <section id="place" data-section="place" class="section">
-      <div class="container">
-        <h2 data-i18n="place.title">
-          The Place
-        </h2>
+    <!-- =========================================================
+     THE PLACE
+     ========================================================= -->
+     <section id="place" data-section="place" class="place" aria-labelledby="place-title">
+      <div class="place__pin" data-scroll-morph>
+        <div class="place__stage" data-reveal>
+          <!-- COLLAGE (start state) -->
+          <figure class="place__bg">
+            <img class="place__bg-image" src="assets/images/bastione/place/place-bg.webp" alt="" loading="lazy">
+          </figure>
+          <div class="place__bg-scrim" aria-hidden="true"></div>
+    
+          <!-- FULL IMAGE (end state) -->
+          <figure class="place__full">
+            <img class="place__full-image" src="assets/images/bastione/place/place-full.webp" alt="" loading="lazy">
+          </figure>
+    
+          <!-- FRAGMENTS -->
+          <div class="place__fragments" aria-hidden="true">
+            <figure class="place__fragment place__fragment--01"><img src="assets/images/bastione/place/place-01.webp" alt="" loading="lazy"></figure>
+            <figure class="place__fragment place__fragment--02"><img src="assets/images/bastione/place/place-02.webp" alt="" loading="lazy"></figure>
+            <figure class="place__fragment place__fragment--03"><img src="assets/images/bastione/place/place-03.webp" alt="" loading="lazy"></figure>
+            <figure class="place__fragment place__fragment--04"><img src="assets/images/bastione/place/place-04.webp" alt="" loading="lazy"></figure>
+            <figure class="place__fragment place__fragment--05"><img src="assets/images/bastione/place/place-05.webp" alt="" loading="lazy"></figure>
+            <figure class="place__fragment place__fragment--06"><img src="assets/images/bastione/place/place-06.webp" alt="" loading="lazy"></figure>
+          </div>
+    
+          <div class="place__overlay" aria-hidden="true"></div>
+    
+          <!-- CONTENT -->
+          <div class="container place__content">
+            <p class="eyebrow place__eyebrow" data-i18n="place.eyebrow">The Place</p>
+            <h2 class="place__title" id="place-title" data-i18n="place.title">History above the lake.</h2>
+            <p class="place__description" data-i18n="place.description">A historic place transformed into a contemporary experience.</p>
+            <a class="btn btn--outline place__cta" href="#visit" data-i18n="place.cta">Explore the terrace</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="events" data-section="events" class="section">
-      <div class="container">
-        <h2 data-i18n="events.title">
-          Events
-        </h2>
+    <!-- =========================================================
+     EVENTS
+     ========================================================= -->
+     <section id="events" data-section="events" class="events" aria-labelledby="events-title">
+      <div class="events__pin" data-scroll-morph>
+        <div class="events__stage" data-reveal>
+          <!-- COLLAGE (start state) -->
+          <figure class="events__bg">
+            <img class="events__bg-image" src="assets/images/bastione/events/events-bg.webp" alt="" loading="lazy">
+          </figure>
+          <div class="events__bg-scrim" aria-hidden="true"></div>
+    
+          <!-- FULL IMAGE (end state) -->
+          <figure class="events__full">
+            <img class="events__full-image" src="assets/images/bastione/events/events-full.webp" alt="" loading="lazy">
+          </figure>
+    
+          <!-- FRAGMENTS -->
+          <div class="events__fragments" aria-hidden="true">
+            <figure class="events__fragment events__fragment--01"><img src="assets/images/bastione/events/events-01.webp" alt="" loading="lazy"></figure>
+            <figure class="events__fragment events__fragment--02"><img src="assets/images/bastione/events/events-02.webp" alt="" loading="lazy"></figure>
+            <figure class="events__fragment events__fragment--03"><img src="assets/images/bastione/events/events-03.webp" alt="" loading="lazy"></figure>
+            <figure class="events__fragment events__fragment--04"><img src="assets/images/bastione/events/events-04.webp" alt="" loading="lazy"></figure>
+            <figure class="events__fragment events__fragment--05"><img src="assets/images/bastione/events/events-05.webp" alt="" loading="lazy"></figure>
+            <figure class="events__fragment events__fragment--06"><img src="assets/images/bastione/events/events-06.webp" alt="" loading="lazy"></figure>
+          </div>
+    
+          <div class="events__overlay" aria-hidden="true"></div>
+    
+          <!-- CONTENT -->
+          <div class="container events__content">
+            <p class="eyebrow events__eyebrow" data-i18n="events.eyebrow">Events</p>
+            <h2 class="events__title" id="events-title" data-i18n="events.title">Make it yours.</h2>
+            <p class="events__description" data-i18n="events.description">Celebrations, private dinners and special experiences.</p>
+            <ul class="events__types">
+              <li data-i18n="events.types.privateDinners">Private dinners</li>
+              <li data-i18n="events.types.celebrations">Celebrations</li>
+              <li data-i18n="events.types.aperitivo">Exclusive aperitivo</li>
+            </ul>
+            <a class="btn btn--outline events__cta" href="#visit" data-i18n="events.cta">Explore events</a>
+          </div>
+        </div>
       </div>
     </section>
 

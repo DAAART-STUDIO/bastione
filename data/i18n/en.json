@@ -199,14 +199,20 @@
   "place": {
     "eyebrow": "The Place",
     "title": "History above the lake.",
-    "description": "A historic place transformed into a contemporary experience."
+    "description": "A historic place transformed into a contemporary experience.",
+    "cta": "Explore the terrace"
   },
 
   "events": {
     "eyebrow": "Events",
     "title": "Make it yours.",
     "description": "Celebrations, private dinners and special experiences.",
-    "cta": "Explore events"
+    "cta": "Explore events",
+    "types": {
+      "privateDinners": "Private dinners",
+      "celebrations": "Celebrations",
+      "aperitivo": "Exclusive aperitivo"
+    }
   },
 
   "visit": {
