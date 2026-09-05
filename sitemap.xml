@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  sitemap.xml — VIRTUHAI is currently a single-page site (all sections
+  sitemap.xml — Bastione is currently a single-page site (all sections
   live as in-page anchors on index.html), so one <url> entry is
   correct. Add further <url> blocks here only if standalone pages
-  (e.g. /docs, /investment) are added later.
+  (e.g. /menu, /events) are added later.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bastione.caffe/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://daaart-studio.github.io/bastione/</loc>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
