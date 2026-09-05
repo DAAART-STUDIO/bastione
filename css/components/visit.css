@@ -145,7 +145,7 @@
         min-height: 54px;
         padding-inline: 30px;
         border: 1px solid rgba(220, 169, 82, 0.75);
-        border-radius: 999px;
+        border-radius: var(--radius-pill);
         background: rgba(150, 100, 35, 0.28);
         color: rgba(255, 235, 190, 0.95);
         text-decoration: none;

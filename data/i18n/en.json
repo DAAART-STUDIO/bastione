@@ -225,8 +225,12 @@
   },
 
   "footer": {
-    "tagline": "Lounge & Restaurant above Lake Garda.",
-    "rights": "All rights reserved."
+    "subtitle": "Lounge & Restaurant",
+    "email": "info@bastione.eu",
+    "phone": "+39 0464 07 68 61",
+    "followUs": "Follow us",
+    "legal": "Reach Bastione by panoramic lift from Via Monte Oro or on foot via the scenic SAT 404 trail. Dalila s.r.l.s. | Via Garberie, 29 – 38062 Arco TN – P.IVA 02581570229",
+    "credit": "Made with love by"
   }
 
 }

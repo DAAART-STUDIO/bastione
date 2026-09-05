@@ -41,6 +41,21 @@
 
   --dark-accent: #a9aa8f;
 
+  /* Footer duotone — fixed brand panel colors, independent of theme. */
+  --color-footer-stone: #d8c7a5;
+  --color-footer-charcoal: #1d1e1a;
+  --color-footer-stone-ink-soft: rgba(29, 30, 26, 0.68);
+  --color-footer-charcoal-ink: #d8c7a5;
+
+  --color-footer-charcoal-ink-soft: rgba(216, 199, 165, 0.68);
+
+  /* ─────────────────────────────────────────────────────────────
+   SHADOW
+   ──────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.14);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.20);
+
 
   /* ─────────────────────────────────────────────────────────────
      TYPOGRAPHY
@@ -56,17 +71,10 @@
     'Segoe UI',
     sans-serif;
 
-  --fs-hero:
-    clamp(3.25rem, 8vw, 8.5rem);
-
-  --fs-display:
-    clamp(2.75rem, 5vw, 5.75rem);
-
-  --fs-h2:
-    clamp(2.2rem, 4vw, 4.5rem);
-
-  --fs-h3:
-    clamp(1.4rem, 2vw, 2rem);
+  --fs-hero:    clamp(2.75rem, 5vw, 6.25rem);
+  --fs-display: clamp(2.25rem, 3.4vw, 4.25rem);
+  --fs-h2:      clamp(1.9rem, 2.6vw, 3.25rem);
+  --fs-h3:      clamp(1.4rem, 2vw, 2rem);
 
   --fs-body: 1rem;
   --fs-body-large: clamp(1.1rem, 1.2vw, 1.35rem);
@@ -101,12 +109,22 @@
   --space-20: 10rem;
   --space-24: 12rem;
 
+  --space-section:       clamp(3.5rem, 6vw, 6.5rem);
+  --space-section-large: clamp(4.5rem, 8vw, 9rem);
+
+
+  /* ─────────────────────────────────────────────────────────────
+   GLASS SURFACE (той самий рецепт, що в .site-header::before)
+   ──────────────────────────────────────────────────────────── */
+  --glass-bg: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  --glass-blur: 16px;
+
 
   /* ─────────────────────────────────────────────────────────────
      LAYOUT
      ──────────────────────────────────────────────────────────── */
 
-  --container-max: 1600px;
+  --container-max: 1440px;
   --container-pad: clamp(1.25rem, 4vw, 5rem);
 
   --header-height: 78px;
@@ -157,6 +175,18 @@
 
   --color-accent: var(--dark-accent);
   --color-accent-dark: #8f9179;
+  --color-footer-stone: #0e0c07;
+  --color-footer-charcoal: #11120f;
+
+  --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.42);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+
+  /* Text & icons */
+  --color-footer-stone-ink: #f1eee7;
+  --color-footer-charcoal-ink: #d8c7a5;
+  --color-footer-stone-ink-soft: rgba(241, 238, 231, 0.68);
+  --color-footer-charcoal-ink-soft: rgba(216, 199, 165, 0.68);
 }
 
 
