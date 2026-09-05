@@ -217,10 +217,11 @@
 
   "visit": {
     "eyebrow": "Visit Bastione",
-    "title": "Come up.",
+    "title": "Come up",
+    "description": "Reach Bastione above Riva del Garda and let the journey become part of the experience.",
+    "locationLabel": "Where we are",
     "address": "Via Monte Oro, 26 · Riva del Garda · Trentino, Italy",
-    "cta": "Get directions",
-    "reservation": "Reserve a table"
+    "directions": "Get directions"
   },
 
   "footer": {

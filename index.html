@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="css/components/menu.css">
   <link rel="stylesheet" href="css/components/place.css">
   <link rel="stylesheet" href="css/components/events.css">
+  <link rel="stylesheet" href="css/components/visit.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 
@@ -843,12 +844,69 @@
       </div>
     </section>
 
-    <section id="visit" data-section="visit" class="section">
-      <div class="container">
-        <h2 data-i18n="visit.title">
-          Visit Bastione
-        </h2>
+    <!-- =========================================================
+     VISIT
+     ========================================================= -->
+     <section id="visit" data-section="visit" class="visit" aria-labelledby="visit-title">
+
+      <div class="visit__stage">
+    
+        <!-- MAP BACKGROUND -->
+        <figure class="visit__bg" aria-hidden="true">
+          <img class="visit__bg-image" src="assets/images/bastione/bastionemapbg.webp" alt="" loading="lazy">
+        </figure>
+    
+        <div class="visit__bg-scrim" aria-hidden="true"></div>
+    
+        <!-- CONTENT CONTAINER -->
+        <div class="container visit__container">
+    
+          <div class="visit__intro">
+            <p class="eyebrow visit__eyebrow" data-i18n="visit.eyebrow">
+              Visit Bastione
+            </p>
+            <h2 class="visit__title" id="visit-title" data-i18n="visit.title">
+              Come up
+            </h2>
+            <p class="visit__description" data-i18n="visit.description">
+              Reach Bastione above Riva del Garda and let the journey become part of the experience.
+            </p>
+          </div>
+    
+          <div class="visit__details">
+            <div class="visit__location">
+              <p class="visit__label" data-i18n="visit.locationLabel">
+                Where we are
+              </p>
+              <address class="visit__address" data-i18n="visit.address">
+                Via Monte Oro, 26 · Riva del Garda · Trentino, Italy
+              </address>
+            </div>
+            <a
+              class="visit__cta"
+              href="https://www.google.com/maps/dir/?api=1&destination=Bastione%20Lounge%20%26%20Restaurant%2C%20Via%20Monte%20Oro%2C%2026%2C%20Riva%20del%20Garda%2C%20Italy"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="visit.directions"
+            >
+              Get directions
+            </a>
+          </div>
+
+        </div>
+    
+        <!-- BASTIONE PIN -->
+        <div class="visit__pin" aria-hidden="true">
+          <img
+            class="visit__pin-image"
+            src="assets/images/bastione/bastionepin2.webp"
+            alt=""
+            loading="lazy"
+          >
+        </div>
+    
       </div>
+    
     </section>
 
   </main>

@@ -1,0 +1,277 @@
+/* =========================================================
+   VISIT
+   ========================================================= */
+   .visit {
+    position: relative;
+    overflow: hidden;
+  }
+  .visit__stage {
+    position: relative;
+    min-height: 687px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  
+  /* =========================================================
+     BACKGROUND
+     ========================================================= */
+  .visit__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -2;
+  }
+  .visit__bg-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* =========================================================
+     GRADIENT
+     ========================================================= */
+  .visit__bg-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(3, 7, 10, 0.95) 0%,
+        rgba(3, 7, 10, 0.72) 14%,
+        rgba(3, 7, 10, 0.45) 28%,
+        rgba(3, 7, 10, 0.26) 43%,
+        rgba(3, 7, 10, 0.03) 60%,
+        transparent 75%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(3, 7, 10, 0.68) 0%,
+        rgba(3, 7, 10, 0.38) 12%,
+        rgba(3, 7, 10, 0.12) 28%,
+        transparent 48%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.55) 33%,
+        transparent 90%
+      )
+  }
+  [data-theme="light"] .visit, 
+  [data-theme="light"] .visit__title,
+  [data-theme="light"] .visit__eyebrow {
+    color: #fff;
+  }
+  .visit__description, .visit__label {
+    color: rgba(220, 169, 82, 0.55);
+  }
+  
+  
+  /* =========================================================
+     CONTENT CONTAINER
+     ========================================================= */
+  .visit__container {
+    position: relative;
+    min-height: 687px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: clamp(5rem, 9vw, 7rem);
+  }
+  
+  /* =========================================================
+     INTRO
+     ========================================================= */
+  .visit__intro {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+  }
+  .visit__eyebrow {
+    margin: 0 0 18px;
+  }
+  .visit__title {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 82px);
+    line-height: 0.95;
+    font-weight: 400;
+  }
+  .visit__description {
+    max-width: 420px;
+    margin: 28px 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  /* =========================================================
+     DETAILS
+     ========================================================= */
+  .visit__details {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    z-index: 15;
+  }
+  .visit__location {
+    max-width: 380px;
+  }
+  .visit__label {
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .visit__address {
+    margin: 0;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  /* =========================================================
+     CTA
+     ========================================================= */
+     .visit__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding-inline: 30px;
+        border: 1px solid rgba(220, 169, 82, 0.75);
+        border-radius: 999px;
+        background: rgba(150, 100, 35, 0.28);
+        color: rgba(255, 235, 190, 0.95);
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        box-shadow:
+          0 0 0 1px rgba(255, 215, 145, 0.06) inset,
+          0 8px 30px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          color 0.3s ease,
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+      }
+      .visit__cta:hover {
+        background: rgba(190, 130, 45, 0.34);
+        border-color: rgba(240, 194, 105, 0.95);
+        color: #fff5df;
+        box-shadow:
+          0 0 0 1px rgba(255, 220, 155, 0.12) inset,
+          0 8px 32px rgba(190, 130, 45, 0.18);
+        transform: translateY(-2px);
+      }
+      .visit__cta:active {
+        transform: translateY(0);
+      }
+      .visit__cta::after {
+        content: "↗";
+        margin-left: 12px;
+        margin-bottom: 6px;
+        font-size: 26px;
+        line-height: 1;
+        color: rgba(240, 194, 105, 0.9);
+        transition: transform 0.3s ease;
+      }
+      .visit__cta:hover::after {
+        transform: translate(2px, -2px);
+      }
+  
+  /* =========================================================
+     BASTIONE PIN
+     ========================================================= */
+  .visit__pin {
+    position: absolute;
+    z-index: 3;
+    /*
+     * Позиція самого об'єкта відносно всієї карти.
+     * Це НЕ позиція тексту.
+     */
+    top: 14%;
+    left: 69%;
+    width: min(360px, 28vw);
+    pointer-events: none;
+  }
+  .visit__pin-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* =========================================================
+     TABLET
+     ========================================================= */
+  @media (max-width: 900px) {
+    .visit__stage {
+      min-height: 620px;
+    }
+    .visit__container {
+      min-height: 620px;
+    }
+    .visit__intro {
+      max-width: 500px;
+    }
+    .visit__pin {
+      top: 16%;
+      left: 67%;
+      width: clamp(220px, 32vw, 300px);
+    }
+  }
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  @media (max-width: 700px) {
+    .visit__stage {
+      min-height: 720px;
+    }
+    .visit__container {
+      min-height: 720px;
+      padding-block: 4.5rem 2rem;
+    }
+    .visit__bg-image {
+      object-position: 58% center;
+    }
+    .visit__intro {
+      max-width: 100%;
+    }
+    .visit__title {
+      font-size: clamp(42px, 12vw, 60px);
+    }
+    .visit__description {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .visit__details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .visit__location {
+      max-width: 100%;
+    }
+    .visit__cta {
+      width: auto;
+    }
+    .visit__pin {
+      top: 39%;
+      left: 50%;
+      width: min(280px, 65vw);
+      transform: translateX(-50%);
+    }
+  }
