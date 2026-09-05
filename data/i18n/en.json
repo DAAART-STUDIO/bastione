@@ -198,14 +198,14 @@
 
   "place": {
     "eyebrow": "The Place",
-    "title": "History above the lake.",
+    "title": "History above the lake",
     "description": "A historic place transformed into a contemporary experience.",
     "cta": "Explore the terrace"
   },
 
   "events": {
     "eyebrow": "Events",
-    "title": "Make it yours.",
+    "title": "Make it yours",
     "description": "Celebrations, private dinners and special experiences.",
     "cta": "Explore events",
     "types": {
@@ -225,6 +225,7 @@
   },
 
   "footer": {
+    "brandTitle": "Bastione",
     "subtitle": "Lounge & Restaurant",
     "email": "info@bastione.eu",
     "phone": "+39 0464 07 68 61",

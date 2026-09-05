@@ -1,8 +1,8 @@
 {
     
   "meta": {
-      "title": "Bastione — Lounge & Restaurant | Riva del Garda",
-      "description": "Bastione Lounge & Restaurant über dem Gardasee in Riva del Garda, Trentino."
+    "title": "Bastione — Lounge und Restaurant | Riva del Garda",
+    "description": "Bastione Lounge und Restaurant über dem Gardasee in Riva del Garda, Trentino."
   },
 
   "navigation": {
@@ -20,7 +20,7 @@
     "titlePrefix": "Ein Tisch",
     "titleLake": "über dem",
     "titleGarda": "Gardasee",
-    "eyebrow": "Lounge & Restaurant",
+    "eyebrow": "Lounge und Restaurant",
     "title": "Ein Tisch über dem Gardasee.",
     "location": "Riva del Garda · Trentino · Italien",
     "description": "Ein Erlebnis zwischen See, Bergen und Küche.",
@@ -198,14 +198,14 @@
 
   "place": {
     "eyebrow": "Der Ort",
-    "title": "Geschichte über dem See.",
+    "title": "Geschichte über dem See",
     "description": "Ein historischer Ort, verwandelt in ein zeitgemäßes Erlebnis.",
     "cta": "Terrasse entdecken"
   },
 
   "events": {
     "eyebrow": "Events",
-    "title": "Machen Sie es zu Ihrem Moment.",
+    "title": "Machen Sie es zu Ihrem Moment",
     "description": "Feiern, private Dinner und besondere Erlebnisse.",
     "cta": "Events entdecken",
     "types": {
@@ -225,7 +225,8 @@
   },
 
   "footer": {
-    "subtitle": "Lounge & Restaurant",
+    "brandTitle": "Bastione",
+    "subtitle": "Lounge und Restaurant",
     "email": "info@bastione.eu",
     "phone": "+39 0464 07 68 61",
     "followUs": "Folgen Sie uns",
