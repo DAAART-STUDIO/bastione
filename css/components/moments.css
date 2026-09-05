@@ -136,13 +136,13 @@
     padding: 10px 3px 0;
   }
   .moments__card-label {
-    color: var(--color-ink);
+    color: var(--moments-ink);
     font-family: var(--font-display);
     font-size: 0.9rem;
     line-height: 1.15;
   }
   .moments__card-meta {
-    color: var(--color-ink-soft);
+    color: var(--moments-ink-soft);
     font-size: 0.58rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -218,7 +218,7 @@
     position: absolute;
     left: 2%;
     bottom: 5%;
-    color: var(--color-ink-faint);
+    color: var(--moments-ink-faint);
     font-size: 0.62rem;
     font-weight: 500;
     letter-spacing: 0.18em;

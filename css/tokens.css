@@ -27,6 +27,10 @@
 
   --color-white: #ffffff;
 
+  --moments-ink: #20221f;
+  --moments-ink-soft: #555852;
+  --moments-ink-faint: #777a73;
+
   /* Dark theme */
   --dark-bg: #171916;
   --dark-surface: #20231f;
