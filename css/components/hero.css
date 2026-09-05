@@ -165,7 +165,7 @@
      ──────────────────────────────────────────────────────────── */
   
   .hero__title {
-    max-width: 930px;
+    max-width: 500px;
 
     overflow-wrap: normal;
     word-break: normal;
