@@ -232,6 +232,27 @@
     "followUs": "Seguici",
     "legal": "Raggiungi Bastione con l’ascensore panoramico da Via Monte Oro oppure a piedi lungo il suggestivo sentiero SAT 404. Dalila s.r.l.s. | Via Garberie, 29 – 38062 Arco TN – P.IVA 02581570229",
     "credit": "Realizzato con amore da"
+  },
+
+  "reservation": {
+    "eyebrow": "Prenotazioni",
+    "title": "Prenota il tuo tavolo",
+    "description": "Scegli il modo più comodo per te e contattaci direttamente.",
+    "close": "Chiudi",
+    "email": {
+      "title": "Prenota via email",
+      "description": "Indicaci la data, l'orario e il numero di persone."
+    },
+    "phone": {
+      "title": "Prenota per telefono",
+      "description": "Chiamaci direttamente per organizzare il tuo tavolo."
+    },
+    "contacts": {
+      "title": "Contattaci",
+      "description": "Trova il nostro indirizzo e tutti i recapiti.",
+      "label": "Contatti ufficiali"
+    },
+    "note": "Ti consigliamo di prenotare in anticipo, soprattutto per le serate e le occasioni speciali."
   }
 
 }

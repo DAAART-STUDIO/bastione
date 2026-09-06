@@ -13,6 +13,7 @@ import initDishWheel from './modules/dishes-wheel.js';
 import initMoments from './modules/moments.js';
 import { initScrollMorph } from './modules/scroll-morph.js';
 import { initScrollProgress } from './modules/scroll-progress.js';
+import { initReservationModal } from './modules/reservation-modal.js';
 import { initReveal } from './modules/observer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,5 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMoments();
   initScrollMorph();
   initScrollProgress();
+  initReservationModal();
   initReveal();
 });

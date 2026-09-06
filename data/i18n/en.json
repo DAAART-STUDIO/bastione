@@ -232,6 +232,27 @@
     "followUs": "Follow us",
     "legal": "Reach Bastione by panoramic lift from Via Monte Oro or on foot via the scenic SAT 404 trail. Dalila s.r.l.s. | Via Garberie, 29 – 38062 Arco TN – P.IVA 02581570229",
     "credit": "Made with love by"
+  },
+
+  "reservation": {
+    "eyebrow": "Reservations",
+    "title": "Reserve your table",
+    "description": "Choose the way that is most convenient for you and contact us directly.",
+    "close": "Close",
+    "email": {
+      "title": "Reserve by email",
+      "description": "Send us your preferred date, time and number of guests."
+    },
+    "phone": {
+      "title": "Reserve by phone",
+      "description": "Call us directly to arrange your table."
+    },
+    "contacts": {
+      "title": "Contact us",
+      "description": "Find our address and all contact details.",
+      "label": "Official contacts"
+    },
+    "note": "We recommend booking in advance, especially for evenings and special occasions."
   }
 
 }
