@@ -322,7 +322,7 @@
       width: min(100%, 25rem);
     }
     .moments__title {
-      font-size: clamp(2.4rem, 12vw, 3.6rem);
+      font-size: clamp(2.4rem, 7vw, 3.6rem);
     }
     .moments__description {
       max-width: 20rem;
