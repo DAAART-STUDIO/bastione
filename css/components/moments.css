@@ -333,7 +333,7 @@
        overlapping composition rather than a wide desktop field.
     */
     .moments__stage {
-      height: 650px;
+      height: 520px;
       margin-top: 3.5rem;
     }
     .moments__card {
@@ -350,27 +350,27 @@
       font-size: 0.5rem;
     }
     .moments__card--01 {
-      left: -8%;
+      left: -15%;
       top: 9%;
     }
     .moments__card--02 {
-      left: 2%;
-      top: 37%;
+      left: -5%;
+      top: 33%;
     }
     .moments__card--03 {
-      left: -9%;
-      top: 53%;
+      left: -11%;
+      top: 15%;
     }
     .moments__card--04 {
-      left: 28%;
-      top: 48%;
+      left: 20%;
+      top: 28%;
     }
     .moments__card--05 {
       left: 37%;
-      top: 52%;
+      top: 22%;
     }
     .moments__card--06 {
-      left: 12%;
+      left: 22%;
       top: 15%;
     }
     .moments__card--07 {
@@ -382,8 +382,8 @@
       top: 7%;
     }
     .moments__card--09 {
-      left: 55%;
-      top: 52%;
+      left: 65%;
+      top: 17%;
     }
     .moments__note {
       display: none;

@@ -155,6 +155,7 @@
   .site-footer__social-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.65rem;
   }
   .site-footer__social-links a {
@@ -300,5 +301,8 @@
       padding-block: 0.85rem;
       padding-inline: var(--container-pad);
       font-size: 0.55rem;
+    }
+    .footer-brand, .site-footer__contact a {
+      margin: 0 auto;
     }
   }

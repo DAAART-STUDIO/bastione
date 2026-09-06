@@ -430,6 +430,7 @@
     }
     .view__visual.is-preview {
       border-radius: var(--radius-sm);
+      margin-bottom: 35px;
     }
     .view__visual.is-preview:hover {
       transform:
@@ -449,13 +450,6 @@
     .view__gallery-counter {
       left: 1rem;
       top: 1rem;
-    }
-    .view__gallery-hint {
-      right: 1rem;
-      top: 1rem;
-    }
-    .view__gallery-hint-line {
-      width: 24px;
     }
     .view__location-text {
       font-size: 2rem;
@@ -501,8 +495,8 @@
       font-size: 0.62rem;
     }
     .view__gallery-hint {
-      right: 1rem;
-      bottom: 1rem;
+      right: 1.5rem;
+      bottom: 3rem;
       font-size: 0.62rem;
     }
     .view__gallery-hint-line {
