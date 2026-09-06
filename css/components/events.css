@@ -220,11 +220,11 @@
     .events__fragment {
         width: calc(var(--size) * clamp(150px, 34vw, 200px));
     }
-    .events__fragment--01 { --fx: -26vw; --fy: -25vh; --frot: 6deg; --size: 1.3; }
+    .events__fragment--01 { --fx: -33vw; --fy: -9vh; --frot: 6deg; --size: 1.3; }
     .events__fragment--02 { --fx: -28vw; --fy:  13vh; --frot:  4deg; --size: 1.5; }
-    .events__fragment--03 { --fx:  2vw; --fy: -24vh; --frot: 1deg; --size: 1.8; }
-    .events__fragment--04 { --fx:   1vw; --fy:  18vh; --frot:  -1deg; --size: 2.2; }
-    .events__fragment--05 { --fx:  29vw; --fy: -18vh; --frot: -12deg; --size: 1.2; }
+    .events__fragment--03 { --fx:  -1vw; --fy: -25vh; --frot: 1deg; --size: 1.8; }
+    .events__fragment--04 { --fx:   1vw; --fy:  36vh; --frot:  -1deg; --size: 2.2; }
+    .events__fragment--05 { --fx:  29vw; --fy: -10vh; --frot: -12deg; --size: 1.2; }
     .events__fragment--06 { --fx:  33vw; --fy:  17vh; --frot:  -7deg; --size: 1.7; }
   }
 

@@ -1,0 +1,85 @@
+/* =========================================================
+   THREE CHEVRON SCROLL CUE
+   ========================================================= */
+   .section-scroll-cue {
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    bottom: 2.5rem;
+    width: 32px;
+    height: 58px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+  }
+  .section-scroll-cue__arrow {
+    position: absolute;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-right: 1.5px solid rgba(255, 255, 255, .9);
+    border-bottom: 1.5px solid rgba(255, 255, 255, .9);
+    transform: translateX(-50%) rotate(45deg);
+    animation: scrollCue 1.35s ease-in-out infinite;
+  }
+  /* =========================================================
+     POSITIONS
+     ========================================================= */
+  .section-scroll-cue__arrow--1 {
+    top: 0;
+    animation-delay: 0s;
+  }
+  .section-scroll-cue__arrow--2 {
+    top: 13px;
+    animation-delay: .12s;
+  }
+  .section-scroll-cue__arrow--3 {
+    top: 26px;
+    animation-delay: .24s;
+  }
+  /* =========================================================
+     SIMPLE DOWN MOTION
+     ========================================================= */
+  @keyframes scrollCue {
+    0% {
+      transform: translate(-50%, -3px) rotate(45deg);
+    }
+    50% {
+      transform: translate(-50%, 4px) rotate(45deg);
+    }
+    100% {
+      transform: translate(-50%, -3px) rotate(45deg);
+    }
+  }
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  @media (max-width: 700px) {
+    .section-scroll-cue {
+      bottom: -0.2rem;
+      width: 28px;
+      height: 48px;
+    }
+    .section-scroll-cue__arrow {
+      width: 12px;
+      height: 12px;
+      border-width: 1.5px;
+    }
+    .section-scroll-cue__arrow--1 {
+      top: 0;
+    }
+    .section-scroll-cue__arrow--2 {
+      top: 11px;
+    }
+    .section-scroll-cue__arrow--3 {
+      top: 22px;
+    }
+  }
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+  @media (prefers-reduced-motion: reduce) {
+    .section-scroll-cue__arrow {
+      animation: none;
+    }
+  }
