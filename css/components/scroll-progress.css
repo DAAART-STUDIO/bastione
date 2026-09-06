@@ -1,0 +1,89 @@
+/* =========================================================
+   SCROLL PROGRESS BAR
+   ========================================================= */
+.scroll-progress {
+    position: fixed;
+    top: calc(var(--header-height) - 2.45rem);
+    left: clamp(1rem, 2.5vw, 2.5rem);
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    pointer-events: none;
+    user-select: none;
+    opacity: .44;
+    transition: opacity var(--dur-med) var(--ease-out);
+}
+.scroll-progress__track {
+    position: relative;
+    width: 1px;
+    height: clamp(120px, 24vh, 240px);
+    background: var(--color-line-strong);
+}
+.scroll-progress__bar {
+    position: absolute;
+    inset: 0 0 auto 0;
+    width: 1px;
+    height: 0;
+    background: var(--color-accent);
+    transform-origin: top;
+    transition: height 80ms linear;
+}
+.scroll-progress__thumb {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    background: var(--color-bg);
+    transform: translate(-50%, -50%);
+    transition:
+      top 80ms linear,
+      background-color var(--dur-fast) var(--ease-out);
+}
+.scroll-progress__value {
+    min-width: 2.5rem;
+    color: var(--color-ink-faint);
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    line-height: 1;
+    text-align: left;
+    opacity: .9;
+}
+/* Active state while scrolling */
+.scroll-progress.is-scrolling {
+    opacity: 1;
+}
+.scroll-progress.is-scrolling .scroll-progress__thumb {
+    background: var(--color-accent);
+}
+/* Completed */
+.scroll-progress.is-complete .scroll-progress__bar {
+    background: var(--color-accent-dark);
+}
+.scroll-progress.is-complete .scroll-progress__thumb {
+    background: var(--color-accent);
+}
+
+@media (max-width: 700px) {
+    .scroll-progress {
+      left: .75rem;
+      gap: .5rem;
+      opacity: .6;
+    }
+    .scroll-progress__track {
+      height: 120px;
+    }
+    .scroll-progress__value {
+      min-width: 2rem;
+      font-size: .7rem;
+    }
+    .scroll-progress__thumb {
+      width: 6px;
+      height: 6px;
+    }
+}

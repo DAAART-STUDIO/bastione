@@ -33,16 +33,26 @@
   <link rel="stylesheet" href="css/components/events.css">
   <link rel="stylesheet" href="css/components/visit.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/scroll-progress.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 
 
 <body>
+  <!-- =========================================================
+      SCROLL VERTICAL
+      ========================================================= -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__track">
+      <div class="scroll-progress__bar"></div>
+      <span class="scroll-progress__thumb"></span>
+    </div>
+    <span class="scroll-progress__value">0%</span>
+  </div>
 
   <!-- =========================================================
        HEADER
        ========================================================= -->
-
   <header class="site-header" data-header>
 
     <div class="container site-header__inner">
